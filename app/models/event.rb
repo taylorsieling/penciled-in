@@ -5,4 +5,9 @@ class Event < ApplicationRecord
     belongs_to :category
 
     validates :name, :description, :start_date, :end_date, :start_time, :end_time, presence: true
+
+    def self.ordered_by_date
+        self.order(start_date: :desc)
+    end
+
 end
