@@ -4,6 +4,9 @@ class CreateRsvps < ActiveRecord::Migration[6.1]
       t.string :status
       t.integer :number_of_attendee
 
+      t.integer :user_id
+      t.integer :event_id
+
       t.timestamps
     end
   end
