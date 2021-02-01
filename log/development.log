@@ -1719,3 +1719,283 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 4833)
 
 
+Started GET "/" for ::1 at 2021-02-01 14:51:40 -0600
+Processing by WelcomeController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 120)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 3918)
+Completed 200 OK in 11ms (Views: 10.3ms | Allocations: 4445)
+
+
+Started POST "/auth/google_oauth2" for ::1 at 2021-02-01 14:51:42 -0600
+Started GET "/auth/google_oauth2/callback?state=0e48a31358868b5f2b30e623ad3939f2d34e10dc94af4d08&code=4%2F0AY0e-g5spME7yGrkxw0290VhaHg3YHJnfjfkXI6jcEXWxczu9DXN0b7MabrvAj-opVwGLQ&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=none" for ::1 at 2021-02-01 14:51:42 -0600
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"0e48a31358868b5f2b30e623ad3939f2d34e10dc94af4d08", "code"=>"4/0AY0e-g5spME7yGrkxw0290VhaHg3YHJnfjfkXI6jcEXWxczu9DXN0b7MabrvAj-opVwGLQ", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"none", "provider"=>"google_oauth2"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/user.rb:10:in `from_omniauth'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT ?[0m  [["uid", "117412975562228641600"], ["provider", "google_oauth2"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10:in `from_omniauth'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 31ms (ActiveRecord: 1.5ms | Allocations: 7908)
+
+
+Started GET "/login" for ::1 at 2021-02-01 14:51:43 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+Started GET "/events/new" for ::1 at 2021-02-01 15:17:25 -0600
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 1.0ms | Allocations: 1411)
+  Rendered events/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1735)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1806)
+Completed 500 Internal Server Error in 6ms (Allocations: 2832)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_for @event do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name %> <br>
+
+<%= f.label :description %>
+<%= f.text_area :description%> <br>
+
+<%= f.label :start_date %>
+<%= f.date_field :start_date %>
+
+<%= f.label :end_date %>
+<%= f.date_field :end_date %>
+
+<%= f.label :start_time %>
+<%= f.time_field :start_time %>
+
+<%= f.label :end_time %>
+<%= f.time_field :end_time %>
+
+<%= f.submit "Create" %>
+):
+1:    <%= form_for @event do |f| %>
+2:    
+3:    <%= f.label :name %>
+4:    <%= f.text_field :name %> <br>
+5:    
+6:    <%= f.label :description %>
+7:    <%= f.text_area :description%> <br>
+8:    
+9:    <%= f.label :start_date %>
+10:    <%= f.date_field :start_date %>
+11:    
+12:    <%= f.label :end_date %>
+13:    <%= f.date_field :end_date %>
+14:    
+15:    <%= f.label :start_time %>
+16:    <%= f.time_field :start_time %>
+17:    
+18:    <%= f.label :end_time %>
+19:    <%= f.time_field :end_time %>
+20:    
+21:    <%= f.submit "Create" %>
+  
+app/views/events/_form.html.erb:23: syntax error, unexpected end-of-input, expecting end
+app/views/events/_form.html.erb:23: syntax error, unexpected end-of-input, expecting end
+app/views/events/_form.html.erb:23: syntax error, unexpected end-of-input, expecting end
+app/views/events/_form.html.erb:23: syntax error, unexpected end-of-input, expecting end
+app/views/events/_form.html.erb:23: syntax error, unexpected end-of-input, expecting end
+app/views/events/_form.html.erb:23: syntax error, unexpected end-of-input, expecting end
+app/views/events/new.html.erb:2
+Started GET "/events/new" for ::1 at 2021-02-01 15:17:41 -0600
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 1.4ms | Allocations: 1426)
+  Rendered events/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1747)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1818)
+Completed 500 Internal Server Error in 10ms (Allocations: 2837)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_for @event do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name %> <br>
+
+<%= f.label :description %>
+<%= f.text_area :description%> <br>
+
+<%= f.label :start_date %>
+<%= f.date_field :start_date %>
+
+<%= f.label :end_date %>
+<%= f.date_field :end_date %>
+
+<%= f.label :start_time %>
+<%= f.time_field :start_time %>
+
+<%= f.label :end_time %>
+<%= f.time_field :end_time %>
+
+<%= f.submit %>
+):
+1:    <%= form_for @event do |f| %>
+2:    
+3:    <%= f.label :name %>
+4:    <%= f.text_field :name %> <br>
+5:    
+6:    <%= f.label :description %>
+7:    <%= f.text_area :description%> <br>
+8:    
+9:    <%= f.label :start_date %>
+10:    <%= f.date_field :start_date %>
+11:    
+12:    <%= f.label :end_date %>
+13:    <%= f.date_field :end_date %>
+14:    
+15:    <%= f.label :start_time %>
+16:    <%= f.time_field :start_time %>
+17:    
+18:    <%= f.label :end_time %>
+19:    <%= f.time_field :end_time %>
+20:    
+21:    <%= f.submit %>
+  
+app/views/events/_form.html.erb:23: syntax error, unexpected end-of-input, expecting end
+app/views/events/_form.html.erb:23: syntax error, unexpected end-of-input, expecting end
+app/views/events/_form.html.erb:23: syntax error, unexpected end-of-input, expecting end
+app/views/events/_form.html.erb:23: syntax error, unexpected end-of-input, expecting end
+app/views/events/_form.html.erb:23: syntax error, unexpected end-of-input, expecting end
+app/views/events/_form.html.erb:23: syntax error, unexpected end-of-input, expecting end
+app/views/events/new.html.erb:2
+Started GET "/events/new" for ::1 at 2021-02-01 15:19:14 -0600
+Processing by EventsController#new as HTML
+Completed 500 Internal Server Error in 2ms (Allocations: 1188)
+
+
+  
+SyntaxError (/Users/sieling/Flatiron/rails-project/penciled-in/app/models/event.rb:3: syntax error, unexpected tIDENTIFIER, expecting end
+    has_many :users through: :rsvps
+                    ^~~~~~~):
+  
+app/models/event.rb:3: syntax error, unexpected tIDENTIFIER, expecting end
+app/models/event.rb:3: syntax error, unexpected tIDENTIFIER, expecting end
+app/models/event.rb:3: syntax error, unexpected tIDENTIFIER, expecting end
+app/controllers/events_controller.rb:4:in `new'
+Started GET "/events/new" for ::1 at 2021-02-01 15:19:44 -0600
+Processing by EventsController#new as HTML
+Completed 500 Internal Server Error in 16ms (Allocations: 5169)
+
+
+  
+NameError (undefined local variable or method `event_parmas' for #<EventsController:0x007f829a497f18>
+Did you mean?  event_path):
+  
+app/controllers/events_controller.rb:4:in `new'
+Started GET "/events/new" for ::1 at 2021-02-01 15:19:58 -0600
+Processing by EventsController#new as HTML
+Completed 500 Internal Server Error in 10ms (Allocations: 4327)
+
+
+  
+NameError (undefined local variable or method `event_params' for #<EventsController:0x007f829a107970>
+Did you mean?  event_path):
+  
+app/controllers/events_controller.rb:4:in `new'
+Started GET "/events/new" for ::1 at 2021-02-01 15:20:01 -0600
+Processing by EventsController#new as HTML
+Completed 500 Internal Server Error in 8ms (Allocations: 2571)
+
+
+  
+NameError (undefined local variable or method `event_params' for #<EventsController:0x007f829431d288>
+Did you mean?  event_path):
+  
+app/controllers/events_controller.rb:4:in `new'
+Started GET "/events/new" for ::1 at 2021-02-01 15:20:09 -0600
+Processing by EventsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/events_controller.rb:4:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 1.4ms | Allocations: 1428)
+  Rendered events/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1522)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1593)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.7ms | Allocations: 10363)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_for @event do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name %> <br>
+
+<%= f.label :description %>
+<%= f.text_area :description%> <br>
+
+<%= f.label :start_date %>
+<%= f.date_field :start_date %>
+
+<%= f.label :end_date %>
+<%= f.date_field :end_date %>
+
+<%= f.label :start_time %>
+<%= f.time_field :start_time %>
+
+<%= f.label :end_time %>
+<%= f.time_field :end_time %>
+
+<%= f.submit %>
+):
+1:    <%= form_for @event do |f| %>
+2:    
+3:    <%= f.label :name %>
+4:    <%= f.text_field :name %> <br>
+5:    
+6:    <%= f.label :description %>
+7:    <%= f.text_area :description%> <br>
+8:    
+9:    <%= f.label :start_date %>
+10:    <%= f.date_field :start_date %>
+11:    
+12:    <%= f.label :end_date %>
+13:    <%= f.date_field :end_date %>
+14:    
+15:    <%= f.label :start_time %>
+16:    <%= f.time_field :start_time %>
+17:    
+18:    <%= f.label :end_time %>
+19:    <%= f.time_field :end_time %>
+20:    
+21:    <%= f.submit %>
+  
+app/views/events/_form.html.erb:23: syntax error, unexpected end-of-input, expecting end
+app/views/events/_form.html.erb:23: syntax error, unexpected end-of-input, expecting end
+app/views/events/_form.html.erb:23: syntax error, unexpected end-of-input, expecting end
+app/views/events/_form.html.erb:23: syntax error, unexpected end-of-input, expecting end
+app/views/events/_form.html.erb:23: syntax error, unexpected end-of-input, expecting end
+app/views/events/_form.html.erb:23: syntax error, unexpected end-of-input, expecting end
+app/views/events/new.html.erb:2
+Started GET "/events/new" for ::1 at 2021-02-01 15:20:43 -0600
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 40.3ms | Allocations: 8829)
+  Rendered events/new.html.erb within layouts/application (Duration: 42.2ms | Allocations: 9147)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 48.9ms | Allocations: 13073)
+Completed 200 OK in 53ms (Views: 50.9ms | ActiveRecord: 0.0ms | Allocations: 14222)
+
+
+Started GET "/events/new" for ::1 at 2021-02-01 15:21:10 -0600
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 2.9ms | Allocations: 1752)
+  Rendered events/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2075)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 6100)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.0ms | Allocations: 7245)
+
+
