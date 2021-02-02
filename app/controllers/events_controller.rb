@@ -15,7 +15,13 @@ class EventsController < ApplicationController
 
     def create
         byebug
-
+        @event = current_user.events.build(event_params)
+        if @event.save
+            byebug
+            redirect_to event_path(@event)
+        else
+            render :new
+        end
     end
 
     private
@@ -25,7 +31,7 @@ class EventsController < ApplicationController
     end
 
     def event_params
-        params.require(:event).permit(:name, :description, :start_date, :end_date, :start_time, :end_time)
+        params.require(:event).permit(:name, :description, :start_date, :end_date, :start_time, :end_time, :location)
     end
 
 

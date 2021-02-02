@@ -11,6 +11,7 @@ class User < ApplicationRecord
             u.username = response[:info][:name]
             u.email = response[:info][:email]
             u.password = SecureRandom.hex(15)
+            byebug
         end
     end
 
