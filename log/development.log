@@ -6868,3 +6868,159 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 20ms (Views: 16.5ms | ActiveRecord: 0.3ms | Allocations: 6621)
 
 
+Started GET "/users/3" for ::1 at 2021-02-02 21:41:14 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:42:in `set_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:42:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 137)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 4963)
+Completed 200 OK in 19ms (Views: 15.1ms | ActiveRecord: 0.5ms | Allocations: 7286)
+
+
+Started GET "/users/users/:id/edit" for ::1 at 2021-02-02 21:41:16 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/users/users/:id/edit"):
+  
+Started GET "/users/users/:id/edit" for ::1 at 2021-02-02 21:41:40 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/users/users/:id/edit"):
+  
+Started GET "/users/3" for ::1 at 2021-02-02 21:42:01 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:42:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 133)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 5087)
+Completed 200 OK in 15ms (Views: 10.8ms | ActiveRecord: 0.6ms | Allocations: 6926)
+
+
+Started GET "/users/:id/edit" for ::1 at 2021-02-02 21:42:03 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/users/:id/edit"):
+  
+Started GET "/users/:id/edit" for ::1 at 2021-02-02 21:42:53 -0600
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>":id"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:42:in `set_user'
+Completed 404 Not Found in 18ms (ActiveRecord: 0.5ms | Allocations: 6513)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=:id):
+  
+app/controllers/users_controller.rb:42:in `set_user'
+Started GET "/users/3" for ::1 at 2021-02-02 21:42:57 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:42:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 137)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 8459)
+Completed 200 OK in 25ms (Views: 16.4ms | ActiveRecord: 0.4ms | Allocations: 14297)
+
+
+Started GET "/users/:id/edit" for ::1 at 2021-02-02 21:42:59 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>":id"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:42:in `set_user'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.2ms | Allocations: 1153)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=:id):
+  
+app/controllers/users_controller.rb:42:in `set_user'
+Started GET "/users/3" for ::1 at 2021-02-02 21:43:18 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:42:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 4522)
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 0.3ms | Allocations: 5472)
+
+
+Started GET "/users/:id/edit" for ::1 at 2021-02-02 21:43:22 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>":id"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:42:in `set_user'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1133)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=:id):
+  
+app/controllers/users_controller.rb:42:in `set_user'
+Started GET "/users/3" for ::1 at 2021-02-02 21:44:05 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:42:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 4524)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.2ms | Allocations: 5493)
+
+
+Started GET "/users/3" for ::1 at 2021-02-02 21:45:12 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 40)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3886)
+Completed 200 OK in 17ms (Views: 5.7ms | ActiveRecord: 0.8ms | Allocations: 12579)
+
+
+Started GET "/users/:id/edit" for ::1 at 2021-02-02 21:45:13 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>":id"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 7.3ms | Allocations: 2825)
+  Rendered users/edit.html.erb within layouts/application (Duration: 8.7ms | Allocations: 3144)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 7004)
+Completed 200 OK in 29ms (Views: 21.7ms | ActiveRecord: 2.2ms | Allocations: 8084)
+
+

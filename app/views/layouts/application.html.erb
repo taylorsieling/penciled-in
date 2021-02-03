@@ -19,7 +19,8 @@
       <%= link_to "Register", "/users/new" %></br>
     <% else %>
       <h1>Welcome to Penciled In!</h1>
-      <%= link_to "Log out", "/logout" %></br>
+      <%= link_to "Logout", "/logout" %></br>
+      <%= link_to "Edit Account", "/users/:id/edit" %></br>
     <% end %> 
 
     <%= yield %>
