@@ -11,6 +11,7 @@ class EventsController < ApplicationController
 
     def new
         @event = Event.new
+        @event.category.build
     end
 
     def create

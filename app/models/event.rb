@@ -4,6 +4,8 @@ class Event < ApplicationRecord
     belongs_to :user
     belongs_to :category
 
+    accepts_nested_attributes_for :category
+
     validates :name, :description, :start_date, :end_date, :start_time, :end_time, presence: true
 
     def self.ordered_by_date

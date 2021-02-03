@@ -19,7 +19,15 @@
 <%= f.time_field :start_time %> <br>
 
 <%= f.label :end_time %>
-<%= f.time_field :end_time %> <br>
+<%= f.time_field :end_time %> <br><br>
+
+<%= f.label :category, "Category:" %><br>
+<%= f.fields_for :category do |c| %> <br>
+
+    <%= c.label :name %>
+    <%= c.text_field :name %>
+
+<% end %>
 
 <%= f.submit %>
 <% end %>
