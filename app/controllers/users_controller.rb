@@ -1,11 +1,9 @@
 class UsersController < ApplicationController
 
     before_action :set_user, only: [:show, :edit, :update]
+    before_action :authorized, except: [:new, :create]
 
     def show
-        if session[:user_id] != @user.id
-            redirect_to root_path
-        end
     end
 
     def new
@@ -27,9 +25,16 @@ class UsersController < ApplicationController
     end
 
     def update
+        if @user.update(user_params)
+            redirect_to user_path(@user)
+        else
+            render :edit
+        end
     end
 
     def destroy
+        @user.destroy
+        redirect_to root_path
     end
 
     private

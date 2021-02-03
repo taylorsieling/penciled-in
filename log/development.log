@@ -7694,3 +7694,896 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 18ms (Views: 11.1ms | ActiveRecord: 0.4ms | Allocations: 9669)
 
 
+Started GET "/" for ::1 at 2021-02-03 11:30:16 -0600
+Processing by EventsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/event.rb:10:in `ordered_by_date'
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" ORDER BY "events"."start_date" DESC[0m
+  ↳ app/views/events/index.html.erb:3
+  Rendered events/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 711)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 4572)
+Completed 200 OK in 13ms (Views: 7.7ms | ActiveRecord: 0.7ms | Allocations: 8570)
+
+
+Started GET "/users/3" for ::1 at 2021-02-03 11:30:20 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1048)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/users_controller.rb:6:in `show'
+Started GET "/users/4" for ::1 at 2021-02-03 11:30:24 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1043)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/users_controller.rb:6:in `show'
+Started GET "/" for ::1 at 2021-02-03 11:30:38 -0600
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" ORDER BY "events"."start_date" DESC[0m
+  ↳ app/views/events/index.html.erb:3
+  Rendered events/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 742)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 4761)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.2ms | Allocations: 5276)
+
+
+Started GET "/users/1" for ::1 at 2021-02-03 11:30:46 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 991)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/users_controller.rb:6:in `show'
+Started GET "/users/1" for ::1 at 2021-02-03 11:30:58 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1355)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1425)
+Completed 500 Internal Server Error in 2ms (Allocations: 1998)
+
+
+  
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    1: <h1> <%= @user.username %> - You are logged in! </h1>
+    2: 
+    3: <h2> User's created events will go here. </h2><br><br>
+    4: <h2> User's RSVP'd events will go here. </h2>
+  
+app/views/users/show.html.erb:1
+Started GET "/users/1" for ::1 at 2021-02-03 11:31:24 -0600
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1907)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 1983)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms | Allocations: 4780)
+
+
+  
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    1: <h1> <%= @user.username %> - You are logged in! </h1>
+    2: 
+    3: <h2> User's created events will go here. </h2><br><br>
+    4: <h2> User's RSVP'd events will go here. </h2>
+  
+app/views/users/show.html.erb:1
+Started GET "/" for ::1 at 2021-02-03 11:31:28 -0600
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" ORDER BY "events"."start_date" DESC[0m
+  ↳ app/views/events/index.html.erb:3
+  Rendered events/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 942)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 8658)
+Completed 200 OK in 33ms (Views: 23.6ms | ActiveRecord: 0.5ms | Allocations: 13600)
+
+
+Started GET "/login" for ::1 at 2021-02-03 11:31:30 -0600
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 3424)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 8016)
+Completed 200 OK in 53ms (Views: 30.5ms | ActiveRecord: 1.6ms | Allocations: 15757)
+
+
+Started POST "/login" for ::1 at 2021-02-03 11:31:36 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"hollyh@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hollyh@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:19:in `create'
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 226ms (ActiveRecord: 0.2ms | Allocations: 1412)
+
+
+Started GET "/users/3" for ::1 at 2021-02-03 11:31:36 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 40)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3907)
+Completed 200 OK in 13ms (Views: 8.5ms | ActiveRecord: 0.4ms | Allocations: 4977)
+
+
+Started GET "/users/2" for ::1 at 2021-02-03 11:32:11 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3898)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.2ms | Allocations: 4848)
+
+
+Started GET "/users/1" for ::1 at 2021-02-03 11:32:19 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3898)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.1ms | Allocations: 4848)
+
+
+Started GET "/users/3" for ::1 at 2021-02-03 11:32:22 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 3900)
+Completed 200 OK in 16ms (Views: 10.8ms | ActiveRecord: 0.2ms | Allocations: 4866)
+
+
+Started GET "/users/3" for ::1 at 2021-02-03 11:37:17 -0600
+  
+ArgumentError (Before process_action callback :authorized has not been defined):
+  
+app/controllers/users_controller.rb:4:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/users/3" for ::1 at 2021-02-03 11:40:32 -0600
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 424)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.9ms | Allocations: 8394)
+Completed 200 OK in 60ms (Views: 32.3ms | ActiveRecord: 0.5ms | Allocations: 20619)
+
+
+Started GET "/users/2" for ::1 at 2021-02-03 11:40:36 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 52)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | Allocations: 3911)
+Completed 200 OK in 28ms (Views: 22.4ms | ActiveRecord: 0.2ms | Allocations: 4873)
+
+
+Started GET "/users/2" for ::1 at 2021-02-03 11:40:42 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 52)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3913)
+Completed 200 OK in 13ms (Views: 8.5ms | ActiveRecord: 0.1ms | Allocations: 4890)
+
+
+Started GET "/users/1" for ::1 at 2021-02-03 11:40:44 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 52)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3914)
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 0.2ms | Allocations: 4891)
+
+
+Started GET "/users/1" for ::1 at 2021-02-03 11:40:44 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 52)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3911)
+Completed 200 OK in 12ms (Views: 8.5ms | ActiveRecord: 0.4ms | Allocations: 4872)
+
+
+Started GET "/users/3" for ::1 at 2021-02-03 11:41:44 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 53)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3898)
+Completed 200 OK in 18ms (Views: 5.9ms | ActiveRecord: 0.9ms | Allocations: 12493)
+
+
+Started GET "/users/3" for ::1 at 2021-02-03 11:41:44 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 52)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 3911)
+Completed 200 OK in 14ms (Views: 9.3ms | ActiveRecord: 0.2ms | Allocations: 4870)
+
+
+Started GET "/users/2" for ::1 at 2021-02-03 11:41:47 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 52)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3911)
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 0.1ms | Allocations: 4870)
+
+
+Started GET "/users/2" for ::1 at 2021-02-03 11:41:48 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 52)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 3911)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.2ms | Allocations: 4870)
+
+
+Started GET "/users/1" for ::1 at 2021-02-03 11:41:51 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 52)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 3911)
+Completed 200 OK in 13ms (Views: 9.8ms | ActiveRecord: 0.1ms | Allocations: 4870)
+
+
+Started GET "/users/1" for ::1 at 2021-02-03 11:42:16 -0600
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 353)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.9ms | Allocations: 8042)
+Completed 200 OK in 64ms (Views: 33.7ms | ActiveRecord: 0.6ms | Allocations: 20623)
+
+
+Started GET "/logout" for ::1 at 2021-02-03 11:42:19 -0600
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 318)
+
+
+Started GET "/login" for ::1 at 2021-02-03 11:42:19 -0600
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 14.8ms | Allocations: 3399)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 7279)
+Completed 200 OK in 30ms (Views: 27.2ms | ActiveRecord: 0.0ms | Allocations: 8228)
+
+
+Started POST "/login" for ::1 at 2021-02-03 11:42:25 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"hollyh@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hollyh@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:19:in `create'
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 238ms (ActiveRecord: 0.2ms | Allocations: 1044)
+
+
+Started GET "/users/3" for ::1 at 2021-02-03 11:42:25 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 52)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 3918)
+Completed 200 OK in 15ms (Views: 11.5ms | ActiveRecord: 0.1ms | Allocations: 4879)
+
+
+Started GET "/users/2" for ::1 at 2021-02-03 11:42:29 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 52)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 3911)
+Completed 200 OK in 15ms (Views: 11.8ms | ActiveRecord: 0.2ms | Allocations: 4870)
+
+
+Started GET "/logout" for ::1 at 2021-02-03 11:46:44 -0600
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 247)
+
+
+Started GET "/login" for ::1 at 2021-02-03 11:46:44 -0600
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 683)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 4560)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 4971)
+
+
+Started GET "/users/3" for ::1 at 2021-02-03 11:46:48 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 285)
+
+
+Started GET "/login" for ::1 at 2021-02-03 11:46:49 -0600
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 688)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 4562)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 4965)
+
+
+Started POST "/login" for ::1 at 2021-02-03 11:47:33 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"hollyh@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:19:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hollyh@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:19:in `create'
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 235ms (ActiveRecord: 2.1ms | Allocations: 8302)
+
+
+Started GET "/users/3" for ::1 at 2021-02-03 11:47:34 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 53)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 3917)
+Completed 200 OK in 13ms (Views: 9.8ms | ActiveRecord: 0.2ms | Allocations: 5200)
+
+
+Started GET "/users/:id/edit" for ::1 at 2021-02-03 11:47:36 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>":id"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 5.6ms | Allocations: 1104)
+  Rendered users/edit.html.erb within layouts/application (Duration: 8.6ms | Allocations: 1427)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 5286)
+Completed 200 OK in 26ms (Views: 21.4ms | ActiveRecord: 0.2ms | Allocations: 6375)
+
+
+Started GET "/users/:id/edit" for ::1 at 2021-02-03 11:48:09 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>":id"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 4.8ms | Allocations: 1184)
+  Rendered users/edit.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1538)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 5734)
+Completed 200 OK in 24ms (Views: 19.3ms | ActiveRecord: 0.2ms | Allocations: 8049)
+
+
+Started PATCH "/users/3" for ::1 at 2021-02-03 11:48:32 -0600
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"hollyhawthorn", "email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Create Account", "id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+No template found for UsersController#update, rendering head :no_content
+Completed 204 No Content in 4ms (ActiveRecord: 0.1ms | Allocations: 2134)
+
+
+Started GET "/users" for ::1 at 2021-02-03 12:00:26 -0600
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (6.1.1) lib/abstract_controller/base.rb:160:in `process'
+actionview (6.1.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+omniauth (2.0.1) lib/omniauth/strategy.rb:199:in `call!'
+omniauth (2.0.1) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.0.1) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.1) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.1) lib/rails/engine.rb:539:in `call'
+puma (5.2.0) lib/puma/configuration.rb:247:in `call'
+puma (5.2.0) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.0) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.0) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.0) lib/puma/server.rb:432:in `process_client'
+puma (5.2.0) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/events/new" for ::1 at 2021-02-03 12:00:43 -0600
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 2.7ms | Allocations: 1459)
+  Rendered events/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1784)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 1855)
+Completed 500 Internal Server Error in 7ms (Allocations: 3112)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @event do |f| %>
+    2: 
+    3: <%= f.label :name %>
+    4: <%= f.text_field :name %> <br>
+  
+app/views/events/_form.html.erb:1
+app/views/events/new.html.erb:2
+Started GET "/users/3" for ::1 at 2021-02-03 12:03:41 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 222)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 4530)
+Completed 200 OK in 20ms (Views: 6.9ms | ActiveRecord: 0.6ms | Allocations: 13205)
+
+
+Started GET "/users/:id/edit" for ::1 at 2021-02-03 12:04:06 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>":id"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 7.9ms | Allocations: 1413)
+  Rendered users/edit.html.erb within layouts/application (Duration: 9.1ms | Allocations: 1723)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.7ms | Allocations: 6297)
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.1ms | Allocations: 7388)
+
+
+Started PATCH "/users/3" for ::1 at 2021-02-03 12:04:21 -0600
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"hollyhawthorn", "email"=>"hollyh@dnd.com", "password"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:28:in `update'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "hollyh@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:28:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 5.8ms | Allocations: 1930)
+  Rendered users/edit.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2021)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 5797)
+Completed 200 OK in 25ms (Views: 13.0ms | ActiveRecord: 0.7ms | Allocations: 9947)
+
+
+Started GET "/users/:id/edit" for ::1 at 2021-02-03 12:04:57 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>":id"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.6ms | Allocations: 955)
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1046)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 4884)
+Completed 200 OK in 20ms (Views: 7.3ms | ActiveRecord: 1.1ms | Allocations: 13478)
+
+
+Started GET "/users/:id/edit" for ::1 at 2021-02-03 12:05:00 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>":id"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 3.0ms | Allocations: 891)
+  Rendered users/edit.html.erb within layouts/application (Duration: 3.2ms | Allocations: 982)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 4839)
+Completed 200 OK in 20ms (Views: 16.0ms | ActiveRecord: 0.2ms | Allocations: 5800)
+
+
+Started PATCH "/users/3" for ::1 at 2021-02-03 12:05:05 -0600
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"hollyhawthorn", "email"=>"hollyh@dnd.com", "password"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms | Allocations: 3306)
+
+
+  
+NameError (undefined local variable or method `user' for #<UsersController:0x007fa38db9cca0>
+Did you mean?  @user):
+  
+app/controllers/users_controller.rb:28:in `update'
+Started GET "/users/3" for ::1 at 2021-02-03 12:05:17 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 53)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3918)
+Completed 200 OK in 24ms (Views: 7.2ms | ActiveRecord: 1.4ms | Allocations: 12492)
+
+
+Started GET "/users/:id/edit" for ::1 at 2021-02-03 12:05:18 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>":id"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 3.6ms | Allocations: 951)
+  Rendered users/edit.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1042)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 4899)
+Completed 200 OK in 16ms (Views: 11.9ms | ActiveRecord: 0.2ms | Allocations: 5860)
+
+
+Started PATCH "/users/3" for ::1 at 2021-02-03 12:05:23 -0600
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"hollyhawthorn", "email"=>"hollyh@dnd.com", "password"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms | Allocations: 1372)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/users_controller.rb:28:in `update'
+Started GET "/users/3" for ::1 at 2021-02-03 12:06:04 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 53)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3897)
+Completed 200 OK in 21ms (Views: 7.7ms | ActiveRecord: 0.8ms | Allocations: 12471)
+
+
+Started GET "/users/:id/edit" for ::1 at 2021-02-03 12:06:10 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>":id"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.0ms | Allocations: 951)
+  Rendered users/edit.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1042)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 4902)
+Completed 200 OK in 17ms (Views: 13.9ms | ActiveRecord: 0.3ms | Allocations: 5863)
+
+
+Started PATCH "/users/3" for ::1 at 2021-02-03 12:06:20 -0600
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"hollyhawthorn", "email"=>"hollyh@dnd.com", "password"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms | Allocations: 1368)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/users_controller.rb:28:in `update'
+Started GET "/users/3" for ::1 at 2021-02-03 12:07:22 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 53)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3897)
+Completed 200 OK in 21ms (Views: 6.9ms | ActiveRecord: 1.1ms | Allocations: 12471)
+
+
+Started GET "/users/:id/edit" for ::1 at 2021-02-03 12:07:25 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>":id"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 3.3ms | Allocations: 951)
+  Rendered users/edit.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1042)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 4900)
+Completed 200 OK in 30ms (Views: 27.1ms | ActiveRecord: 0.2ms | Allocations: 5861)
+
+
+Started PATCH "/users/3" for ::1 at 2021-02-03 12:07:29 -0600
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"hollyhawthorn", "email"=>"hollyh@dnd.com", "password"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:28:in `update'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "hollyh@dnd.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:28:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "hollyh@dnd.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 4.0ms | Allocations: 1873)
+  Rendered users/edit.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1964)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 5740)
+Completed 200 OK in 29ms (Views: 10.2ms | ActiveRecord: 1.1ms | Allocations: 12821)
+
+
+Started PATCH "/users/3" for ::1 at 2021-02-03 12:12:57 -0600
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"hollyhawthorn", "email"=>"hollyh@dnd.com", "password"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"3"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:28:in `update'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "hollyh@dnd.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:28:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.7ms | Allocations: 1933)
+  Rendered users/edit.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2024)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 5803)
+Completed 200 OK in 31ms (Views: 11.3ms | ActiveRecord: 1.4ms | Allocations: 17747)
+
+
+Started GET "/users/:id/edit" for ::1 at 2021-02-03 12:13:00 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>":id"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.6ms | Allocations: 892)
+  Rendered users/edit.html.erb within layouts/application (Duration: 3.0ms | Allocations: 983)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 4840)
+Completed 200 OK in 25ms (Views: 20.7ms | ActiveRecord: 0.2ms | Allocations: 5801)
+
+
+Started PATCH "/users/3" for ::1 at 2021-02-03 12:13:07 -0600
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"hollyhawthorn", "email"=>"hollyh@dnd.com", "password"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:28:in `update'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "hollyh@dnd.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:28:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 6.0ms | Allocations: 1870)
+  Rendered users/edit.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1961)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 5737)
+Completed 200 OK in 29ms (Views: 16.3ms | ActiveRecord: 0.8ms | Allocations: 9977)
+
+
+Started GET "/users/3" for ::1 at 2021-02-03 12:13:36 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 219)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 4417)
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 0.2ms | Allocations: 6122)
+
+
+Started GET "/users/:id/edit" for ::1 at 2021-02-03 12:13:37 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>":id"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 4.2ms | Allocations: 1300)
+  Rendered users/edit.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1611)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 5470)
+Completed 200 OK in 22ms (Views: 16.5ms | ActiveRecord: 0.3ms | Allocations: 6560)
+
+
+Started PATCH "/users/3" for ::1 at 2021-02-03 12:13:42 -0600
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"hollyhawthorn", "email"=>"hollyh@dnd.com", "password"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:28:in `update'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "hollyh@dnd.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:28:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 8.3ms | Allocations: 1874)
+  Rendered users/edit.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1965)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.1ms | Allocations: 5741)
+Completed 200 OK in 48ms (Views: 32.7ms | ActiveRecord: 0.5ms | Allocations: 9986)
+
+
