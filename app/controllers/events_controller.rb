@@ -10,17 +10,22 @@ class EventsController < ApplicationController
     end
 
     def new
-        @event = Event.new
     end
 
     def create
-        byebug
-        @event = current_user.events.build(event_params)
+        @event = Event.new(event_params)
         if @event.save
-            byebug
             redirect_to event_path(@event)
         else
             render :new
+        end
+    end
+    
+    def update
+        if @event.update(event_params)
+            redirect_to event_path(@event)
+        else
+            render "new"
         end
     end
 

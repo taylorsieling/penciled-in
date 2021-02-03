@@ -4828,3 +4828,2043 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 8ms (Views: 7.0ms | Allocations: 4592)
 
 
+Started GET "/login" for ::1 at 2021-02-01 21:47:10 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 16.0ms | Allocations: 3216)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 62.3ms | Allocations: 10702)
+Completed 200 OK in 86ms (Views: 73.7ms | ActiveRecord: 0.0ms | Allocations: 13980)
+
+
+Started GET "/login" for ::1 at 2021-02-01 21:47:47 -0600
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 735)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.7ms | Allocations: 4761)
+Completed 200 OK in 34ms (Views: 30.1ms | ActiveRecord: 0.0ms | Allocations: 5884)
+
+
+Started POST "/auth/google_oauth2" for ::1 at 2021-02-01 21:48:08 -0600
+Started GET "/auth/google_oauth2/callback?state=21911cd112621e5a9a3e55a03b35fa881d182b424e6108f1&code=4%2F0AY0e-g5Dy2rLqfm0J5hblN6VpHVlEkPL8iH2oQeGRELTQLS7reV_Wnhx91F3A2IBJ5jCMA&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2021-02-01 21:48:12 -0600
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"21911cd112621e5a9a3e55a03b35fa881d182b424e6108f1", "code"=>"4/0AY0e-g5Dy2rLqfm0J5hblN6VpHVlEkPL8iH2oQeGRELTQLS7reV_Wnhx91F3A2IBJ5jCMA", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"consent", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT ?[0m  [["uid", "117412975562228641600"], ["provider", "google_oauth2"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10:in `from_omniauth'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 1.1ms | Allocations: 252)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 4111)
+Completed 200 OK in 31ms (Views: 12.3ms | ActiveRecord: 0.7ms | Allocations: 13932)
+
+
+Started GET "/" for ::1 at 2021-02-01 21:56:47 -0600
+Processing by SessionsController#welcome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 0.3ms | Allocations: 120)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3923)
+Completed 200 OK in 7ms (Views: 6.0ms | Allocations: 4458)
+
+
+Started GET "/" for ::1 at 2021-02-01 21:56:48 -0600
+Processing by SessionsController#welcome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 0.9ms | Allocations: 118)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 3941)
+Completed 200 OK in 15ms (Views: 14.2ms | Allocations: 4329)
+
+
+Started GET "/login" for ::1 at 2021-02-01 21:56:53 -0600
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1140)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 4976)
+Completed 200 OK in 13ms (Views: 12.3ms | Allocations: 5361)
+
+
+Started POST "/auth/google_oauth2" for ::1 at 2021-02-01 21:56:57 -0600
+Started GET "/auth/google_oauth2/callback?state=3dbfb59a0b6d438bcaaf24acc9193647d83e1cd7aa9b1a99&code=4%2F0AY0e-g6HJfxNnjJLBO2tKIcs7lBfWw7Ae_VLcly5QCB_kri2OP7DxIlZpk2dFyO_Ln4Ivg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2021-02-01 21:57:01 -0600
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"3dbfb59a0b6d438bcaaf24acc9193647d83e1cd7aa9b1a99", "code"=>"4/0AY0e-g6HJfxNnjJLBO2tKIcs7lBfWw7Ae_VLcly5QCB_kri2OP7DxIlZpk2dFyO_Ln4Ivg", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"consent", "provider"=>"google_oauth2"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/user.rb:10:in `from_omniauth'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT ?[0m  [["uid", "117412975562228641600"], ["provider", "google_oauth2"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10:in `from_omniauth'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 0.3ms | Allocations: 118)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3976)
+Completed 200 OK in 33ms (Views: 5.7ms | ActiveRecord: 0.6ms | Allocations: 12430)
+
+
+Started GET "/auth/google_oauth2/callback?state=3dbfb59a0b6d438bcaaf24acc9193647d83e1cd7aa9b1a99&code=4%2F0AY0e-g6HJfxNnjJLBO2tKIcs7lBfWw7Ae_VLcly5QCB_kri2OP7DxIlZpk2dFyO_Ln4Ivg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2021-02-01 21:57:05 -0600
+  
+OmniAuth::Strategies::OAuth2::CallbackError (csrf_detected | CSRF detected):
+  
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:20:in `call'
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:12:in `call'
+omniauth (2.0.1) lib/omniauth/strategy.rb:533:in `fail!'
+omniauth-oauth2 (1.7.1) lib/omniauth/strategies/oauth2.rb:89:in `callback_phase'
+omniauth (2.0.1) lib/omniauth/strategy.rb:268:in `callback_call'
+omniauth (2.0.1) lib/omniauth/strategy.rb:193:in `call!'
+omniauth (2.0.1) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.0.1) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.1) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.1) lib/rails/engine.rb:539:in `call'
+puma (5.2.0) lib/puma/configuration.rb:247:in `call'
+puma (5.2.0) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.0) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.0) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.0) lib/puma/server.rb:432:in `process_client'
+puma (5.2.0) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/auth/google_oauth2/callback?state=3dbfb59a0b6d438bcaaf24acc9193647d83e1cd7aa9b1a99&code=4%2F0AY0e-g7Ch1kiAQ8M8YnI_-XnprefmAZ_filfh76KMMRJdTIUjqLrNUU_0GKDEtnKkwmyNg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2021-02-01 21:57:11 -0600
+  
+OmniAuth::Strategies::OAuth2::CallbackError (csrf_detected | CSRF detected):
+  
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:20:in `call'
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:12:in `call'
+omniauth (2.0.1) lib/omniauth/strategy.rb:533:in `fail!'
+omniauth-oauth2 (1.7.1) lib/omniauth/strategies/oauth2.rb:89:in `callback_phase'
+omniauth (2.0.1) lib/omniauth/strategy.rb:268:in `callback_call'
+omniauth (2.0.1) lib/omniauth/strategy.rb:193:in `call!'
+omniauth (2.0.1) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.0.1) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.1) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.1) lib/rails/engine.rb:539:in `call'
+puma (5.2.0) lib/puma/configuration.rb:247:in `call'
+puma (5.2.0) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.0) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.0) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.0) lib/puma/server.rb:432:in `process_client'
+puma (5.2.0) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-02-01 22:11:31 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#welcome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 1.5ms | Allocations: 390)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 7880)
+Completed 200 OK in 33ms (Views: 19.5ms | ActiveRecord: 0.0ms | Allocations: 10918)
+
+
+Started GET "/" for ::1 at 2021-02-01 22:11:32 -0600
+Processing by SessionsController#welcome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 2.3ms | Allocations: 118)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 3941)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.0ms | Allocations: 4330)
+
+
+Started POST "/auth/google_oauth2" for ::1 at 2021-02-01 22:11:36 -0600
+Started GET "/auth/google_oauth2/callback?state=d434c86f641bde838043ae4af7010b3f1c3b93d20ca78c08&code=4%2F0AY0e-g6AZl5x-ZTtriIJlGZ64_eGMGG8KHzNTw-u7d0n2p2QN_o6uBvxMseHY5eIhtXmbw&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2021-02-01 22:11:39 -0600
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"d434c86f641bde838043ae4af7010b3f1c3b93d20ca78c08", "code"=>"4/0AY0e-g6AZl5x-ZTtriIJlGZ64_eGMGG8KHzNTw-u7d0n2p2QN_o6uBvxMseHY5eIhtXmbw", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"consent", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT ?[0m  [["uid", "117412975562228641600"], ["provider", "google_oauth2"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10:in `from_omniauth'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 0.3ms | Allocations: 119)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3909)
+Completed 200 OK in 32ms (Views: 5.2ms | ActiveRecord: 1.1ms | Allocations: 15318)
+
+
+Started POST "/auth/google_oauth2" for ::1 at 2021-02-01 22:13:29 -0600
+Started GET "/auth/google_oauth2/callback?state=37e448ba6cddf25ab7999d53d4dd3815902ffbee8c39ee9c&code=4%2F0AY0e-g4dy2z_M_LUIwC1EZbL6eWliRZ09_FPSKmW1a7O04yM713wLq5SYaaDgnDyuFjjmA&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2021-02-01 22:13:31 -0600
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"37e448ba6cddf25ab7999d53d4dd3815902ffbee8c39ee9c", "code"=>"4/0AY0e-g4dy2z_M_LUIwC1EZbL6eWliRZ09_FPSKmW1a7O04yM713wLq5SYaaDgnDyuFjjmA", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"consent", "provider"=>"google_oauth2"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/user.rb:10:in `from_omniauth'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT ?[0m  [["uid", "117412975562228641600"], ["provider", "google_oauth2"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10:in `from_omniauth'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 0.7ms | Allocations: 120)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3908)
+Completed 200 OK in 22ms (Views: 7.9ms | ActiveRecord: 0.8ms | Allocations: 13547)
+
+
+Started POST "/auth/google_oauth2" for ::1 at 2021-02-01 22:14:33 -0600
+Started GET "/auth/google_oauth2/callback?state=bc0f10f0c476a6b1d5496a51cbb1c33a9c6152e8eda8c314&code=4%2F0AY0e-g6v5xpFPOnVfbYa51zhohU22AQ1bOovi_9SgBjLGHKLm8lGCWM5F8VQq9Vn_DegCA&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2021-02-01 22:14:35 -0600
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"bc0f10f0c476a6b1d5496a51cbb1c33a9c6152e8eda8c314", "code"=>"4/0AY0e-g6v5xpFPOnVfbYa51zhohU22AQ1bOovi_9SgBjLGHKLm8lGCWM5F8VQq9Vn_DegCA", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"consent", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT ?[0m  [["uid", "117412975562228641600"], ["provider", "google_oauth2"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10:in `from_omniauth'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 0.7ms | Allocations: 249)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 4224)
+Completed 200 OK in 14ms (Views: 9.5ms | ActiveRecord: 0.2ms | Allocations: 6948)
+
+
+Started POST "/auth/google_oauth2" for ::1 at 2021-02-01 22:16:20 -0600
+Started GET "/auth/google_oauth2/callback?state=6de790e0242705b10838591dc316b9e475b4ab4a073c96d5&code=4%2F0AY0e-g4ApR6Vz1Yf4S8fAadukJrFTIl8vR5ciqTkBykDk2MwghnAhbu3A7vjWKQxx04h9Q&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2021-02-01 22:16:23 -0600
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"6de790e0242705b10838591dc316b9e475b4ab4a073c96d5", "code"=>"4/0AY0e-g4ApR6Vz1Yf4S8fAadukJrFTIl8vR5ciqTkBykDk2MwghnAhbu3A7vjWKQxx04h9Q", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"consent", "provider"=>"google_oauth2"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/user.rb:10:in `from_omniauth'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT ?[0m  [["uid", "117412975562228641600"], ["provider", "google_oauth2"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10:in `from_omniauth'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 0.5ms | Allocations: 120)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 12935)
+Completed 200 OK in 342744ms (Views: 15.0ms | ActiveRecord: 2.5ms | Allocations: 65180)
+
+
+Started POST "/auth/google_oauth2" for ::1 at 2021-02-01 22:22:10 -0600
+Started GET "/auth/google_oauth2/callback?state=168b1e41f55bd0f1517997587aa8927a79c9e1282f93aeb3&code=4%2F0AY0e-g6A8SUpmiUXiE-wY6F1vSuoJQsciPRpb6Jw0X3aSaYKpLf7XjMz2qmSNOLdbKoMQw&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2021-02-01 22:22:12 -0600
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"168b1e41f55bd0f1517997587aa8927a79c9e1282f93aeb3", "code"=>"4/0AY0e-g6A8SUpmiUXiE-wY6F1vSuoJQsciPRpb6Jw0X3aSaYKpLf7XjMz2qmSNOLdbKoMQw", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"consent", "provider"=>"google_oauth2"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/user.rb:10:in `from_omniauth'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT ?[0m  [["uid", "117412975562228641600"], ["provider", "google_oauth2"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10:in `from_omniauth'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 0.6ms | Allocations: 123)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 4144)
+Completed 200 OK in 44997ms (Views: 11.3ms | ActiveRecord: 2.2ms | Allocations: 21731)
+
+
+Started POST "/auth/google_oauth2" for ::1 at 2021-02-01 22:23:23 -0600
+Started GET "/auth/google_oauth2/callback?state=3f1ad3c2bad59e6d1d11c342e03fa71df646ae9e896379dd&code=4%2F0AY0e-g5H03GI7XrUZKOvyurqfAroNzG8os9hFmDdYmiRYHAmYA6xGp5NoiBnLXCa8xAOFg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2021-02-01 22:23:25 -0600
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"3f1ad3c2bad59e6d1d11c342e03fa71df646ae9e896379dd", "code"=>"4/0AY0e-g5H03GI7XrUZKOvyurqfAroNzG8os9hFmDdYmiRYHAmYA6xGp5NoiBnLXCa8xAOFg", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"consent", "provider"=>"google_oauth2"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/user.rb:10:in `from_omniauth'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT ?[0m  [["uid", "117412975562228641600"], ["provider", "google_oauth2"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10:in `from_omniauth'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 0.5ms | Allocations: 120)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3908)
+Completed 200 OK in 22ms (Views: 7.6ms | ActiveRecord: 0.9ms | Allocations: 13507)
+
+
+Started POST "/auth/google_oauth2" for ::1 at 2021-02-01 22:23:46 -0600
+Started GET "/auth/google_oauth2/callback?state=73657fd92539e3806b78ce8de5682c553d55c47fa5cf0f95&code=4%2F0AY0e-g7Ph3iWBlk2hJophQs0nDgmaNSRcfCyKHuXkmw_2yTZSXG1P-xIZ97yn4lT3zGUFw&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2021-02-01 22:23:48 -0600
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"73657fd92539e3806b78ce8de5682c553d55c47fa5cf0f95", "code"=>"4/0AY0e-g7Ph3iWBlk2hJophQs0nDgmaNSRcfCyKHuXkmw_2yTZSXG1P-xIZ97yn4lT3zGUFw", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"consent", "provider"=>"google_oauth2"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/user.rb:10:in `from_omniauth'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT ?[0m  [["uid", "117412975562228641600"], ["provider", "google_oauth2"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10:in `from_omniauth'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 0.7ms | Allocations: 120)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 4029)
+Completed 200 OK in 250961ms (Views: 11.5ms | ActiveRecord: 0.9ms | Allocations: 18366)
+
+
+Started GET "/" for ::1 at 2021-02-01 22:39:28 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#welcome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 3.7ms | Allocations: 446)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 39.4ms | Allocations: 8068)
+Completed 200 OK in 57ms (Views: 45.7ms | ActiveRecord: 0.0ms | Allocations: 11134)
+
+
+Started GET "/" for ::1 at 2021-02-01 22:39:30 -0600
+Processing by SessionsController#welcome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 0.4ms | Allocations: 118)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 3944)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.0ms | Allocations: 4333)
+
+
+Started POST "/auth/google_oauth2" for ::1 at 2021-02-01 22:39:31 -0600
+Started GET "/auth/google_oauth2/callback?state=89e82ab6949dfe94faa5ad1028d30ba0b659c20f6ea9a602&code=4%2F0AY0e-g5f8z9jV5vSXY1Om5PgzAX4VGF2yi7YtnG9zgSY092l8dwWLGHlxo-zVsM1VA81CQ&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2021-02-01 22:39:34 -0600
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"89e82ab6949dfe94faa5ad1028d30ba0b659c20f6ea9a602", "code"=>"4/0AY0e-g5f8z9jV5vSXY1Om5PgzAX4VGF2yi7YtnG9zgSY092l8dwWLGHlxo-zVsM1VA81CQ", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"consent", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT ?[0m  [["uid", "117412975562228641600"], ["provider", "google_oauth2"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10:in `from_omniauth'
+Redirected to http://localhost:3000login
+Completed 302 Found in 48636ms (ActiveRecord: 1.2ms | Allocations: 49475)
+
+
+Started GET "/auth/google_oauth2/callback?state=89e82ab6949dfe94faa5ad1028d30ba0b659c20f6ea9a602&code=4%2F0AY0e-g5f8z9jV5vSXY1Om5PgzAX4VGF2yi7YtnG9zgSY092l8dwWLGHlxo-zVsM1VA81CQ&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2021-02-01 22:40:29 -0600
+  
+OmniAuth::Strategies::OAuth2::CallbackError (csrf_detected | CSRF detected):
+  
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:20:in `call'
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:12:in `call'
+omniauth (2.0.1) lib/omniauth/strategy.rb:533:in `fail!'
+omniauth-oauth2 (1.7.1) lib/omniauth/strategies/oauth2.rb:89:in `callback_phase'
+omniauth (2.0.1) lib/omniauth/strategy.rb:268:in `callback_call'
+omniauth (2.0.1) lib/omniauth/strategy.rb:193:in `call!'
+omniauth (2.0.1) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.0.1) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.1) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.1) lib/rails/engine.rb:539:in `call'
+puma (5.2.0) lib/puma/configuration.rb:247:in `call'
+puma (5.2.0) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.0) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.0) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.0) lib/puma/server.rb:432:in `process_client'
+puma (5.2.0) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-02-02 15:03:39 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#welcome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 1.1ms | Allocations: 390)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.7ms | Allocations: 7860)
+Completed 200 OK in 51ms (Views: 34.9ms | ActiveRecord: 0.0ms | Allocations: 10369)
+
+
+Started GET "/" for ::1 at 2021-02-02 15:03:40 -0600
+Processing by SessionsController#welcome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 0.6ms | Allocations: 118)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 3944)
+Completed 200 OK in 29ms (Views: 26.5ms | ActiveRecord: 0.0ms | Allocations: 4333)
+
+
+Started GET "/login" for ::1 at 2021-02-02 15:03:44 -0600
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 8.9ms | Allocations: 3382)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 7220)
+Completed 200 OK in 31ms (Views: 16.2ms | ActiveRecord: 0.9ms | Allocations: 15365)
+
+
+Started POST "/auth/google_oauth2" for ::1 at 2021-02-02 15:03:47 -0600
+Started GET "/auth/google_oauth2/callback?state=cc3f07483da6822175385194602ce19e793c2506844e4cfe&code=4%2F0AY0e-g4rYJXI_-DPs8rOolnzpFrzo6ZsDFlmoUxY-W3UbfcsDJxm5rfkiYhcpNgV0OLQ-g&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2021-02-02 15:03:49 -0600
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"cc3f07483da6822175385194602ce19e793c2506844e4cfe", "code"=>"4/0AY0e-g4rYJXI_-DPs8rOolnzpFrzo6ZsDFlmoUxY-W3UbfcsDJxm5rfkiYhcpNgV0OLQ-g", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"consent", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT ?[0m  [["uid", "117412975562228641600"], ["provider", "google_oauth2"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10:in `from_omniauth'
+Redirected to http://localhost:3000login
+Completed 302 Found in 55201ms (ActiveRecord: 0.2ms | Allocations: 41896)
+
+
+Started GET "/auth/google_oauth2/callback?state=cc3f07483da6822175385194602ce19e793c2506844e4cfe&code=4%2F0AY0e-g4rYJXI_-DPs8rOolnzpFrzo6ZsDFlmoUxY-W3UbfcsDJxm5rfkiYhcpNgV0OLQ-g&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2021-02-02 15:04:46 -0600
+  
+OmniAuth::Strategies::OAuth2::CallbackError (csrf_detected | CSRF detected):
+  
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:20:in `call'
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:12:in `call'
+omniauth (2.0.1) lib/omniauth/strategy.rb:533:in `fail!'
+omniauth-oauth2 (1.7.1) lib/omniauth/strategies/oauth2.rb:89:in `callback_phase'
+omniauth (2.0.1) lib/omniauth/strategy.rb:268:in `callback_call'
+omniauth (2.0.1) lib/omniauth/strategy.rb:193:in `call!'
+omniauth (2.0.1) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.0.1) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.1) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.1) lib/rails/engine.rb:539:in `call'
+puma (5.2.0) lib/puma/configuration.rb:247:in `call'
+puma (5.2.0) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.0) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.0) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.0) lib/puma/server.rb:432:in `process_client'
+puma (5.2.0) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/login" for ::1 at 2021-02-02 15:05:06 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 8.5ms | Allocations: 3907)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 44.4ms | Allocations: 11706)
+Completed 200 OK in 85ms (Views: 48.9ms | ActiveRecord: 1.8ms | Allocations: 22629)
+
+
+Started GET "/login" for ::1 at 2021-02-02 15:05:06 -0600
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 695)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.5ms | Allocations: 4533)
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.0ms | Allocations: 4946)
+
+
+Started POST "/auth/google_oauth2" for ::1 at 2021-02-02 15:05:08 -0600
+Started GET "/auth/google_oauth2/callback?state=ca7ff8e845631276c0cd66e944380d507c9b6f3fa47b0aca&code=4%2F0AY0e-g60XJvSNFa7JbKHf8Q3kYG8W0c5g6cGDnMu1VI_yIfQD4xB1yhTjC52_M1LGMn-FA&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2021-02-02 15:05:10 -0600
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"ca7ff8e845631276c0cd66e944380d507c9b6f3fa47b0aca", "code"=>"4/0AY0e-g60XJvSNFa7JbKHf8Q3kYG8W0c5g6cGDnMu1VI_yIfQD4xB1yhTjC52_M1LGMn-FA", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"consent", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT ?[0m  [["uid", "117412975562228641600"], ["provider", "google_oauth2"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10:in `from_omniauth'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms | Allocations: 4755)
+
+
+  
+NoMethodError (undefined method `password' for #<User:0x00007f8f8b6f7148>
+Did you mean?  password_digest):
+  
+app/controllers/sessions_controller.rb:5:in `omniauth'
+Started GET "/login" for ::1 at 2021-02-02 15:05:35 -0600
+Processing by SessionsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:17:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1486)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 5422)
+Completed 200 OK in 20ms (Views: 8.1ms | ActiveRecord: 0.9ms | Allocations: 13542)
+
+
+Started POST "/auth/google_oauth2" for ::1 at 2021-02-02 15:05:36 -0600
+Started GET "/auth/google_oauth2/callback?state=41cbfe8c37aece8e788bf702549b5d6aeebd76f4d915c5a1&code=4%2F0AY0e-g6MTpauwvcAykZHHGsmaG3lfbrrNv_VQ6BuqAta_vxVZUABItE5-tb_c-BG3WU2Og&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2021-02-02 15:05:38 -0600
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"41cbfe8c37aece8e788bf702549b5d6aeebd76f4d915c5a1", "code"=>"4/0AY0e-g6MTpauwvcAykZHHGsmaG3lfbrrNv_VQ6BuqAta_vxVZUABItE5-tb_c-BG3WU2Og", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"consent", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT ?[0m  [["uid", "117412975562228641600"], ["provider", "google_oauth2"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10:in `from_omniauth'
+Redirected to http://localhost:3000login
+Completed 302 Found in 29990ms (ActiveRecord: 0.2ms | Allocations: 43512)
+
+
+Started GET "/auth/google_oauth2/callback?state=41cbfe8c37aece8e788bf702549b5d6aeebd76f4d915c5a1&code=4%2F0AY0e-g6MTpauwvcAykZHHGsmaG3lfbrrNv_VQ6BuqAta_vxVZUABItE5-tb_c-BG3WU2Og&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2021-02-02 15:06:10 -0600
+  
+OmniAuth::Strategies::OAuth2::CallbackError (csrf_detected | CSRF detected):
+  
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:20:in `call'
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:12:in `call'
+omniauth (2.0.1) lib/omniauth/strategy.rb:533:in `fail!'
+omniauth-oauth2 (1.7.1) lib/omniauth/strategies/oauth2.rb:89:in `callback_phase'
+omniauth (2.0.1) lib/omniauth/strategy.rb:268:in `callback_call'
+omniauth (2.0.1) lib/omniauth/strategy.rb:193:in `call!'
+omniauth (2.0.1) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.0.1) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.1) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.1) lib/rails/engine.rb:539:in `call'
+puma (5.2.0) lib/puma/configuration.rb:247:in `call'
+puma (5.2.0) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.0) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.0) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.0) lib/puma/server.rb:432:in `process_client'
+puma (5.2.0) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/login" for ::1 at 2021-02-02 15:08:07 -0600
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 3528)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.5ms | Allocations: 11013)
+Completed 200 OK in 55ms (Views: 28.0ms | ActiveRecord: 0.5ms | Allocations: 21715)
+
+
+Started POST "/auth/google_oauth2" for ::1 at 2021-02-02 15:08:09 -0600
+Started GET "/auth/google_oauth2/callback?state=5d8d7ec06f1552ad619a66763d0456364e9886d4c33469de&code=4%2F0AY0e-g7HFPbygl4Eh08fz7zq2UvbHyhV_lUKY7dSkkCcCNI3IRyJarGUtesZ1B6fQvwZFw&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2021-02-02 15:08:11 -0600
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"5d8d7ec06f1552ad619a66763d0456364e9886d4c33469de", "code"=>"4/0AY0e-g7HFPbygl4Eh08fz7zq2UvbHyhV_lUKY7dSkkCcCNI3IRyJarGUtesZ1B6fQvwZFw", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"consent", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT ?[0m  [["uid", "117412975562228641600"], ["provider", "google_oauth2"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13:in `from_omniauth'
+Redirected to http://localhost:3000login
+Completed 302 Found in 13656ms (ActiveRecord: 0.3ms | Allocations: 43436)
+
+
+Started GET "/auth/google_oauth2/callback?state=5d8d7ec06f1552ad619a66763d0456364e9886d4c33469de&code=4%2F0AY0e-g7HFPbygl4Eh08fz7zq2UvbHyhV_lUKY7dSkkCcCNI3IRyJarGUtesZ1B6fQvwZFw&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2021-02-02 15:08:27 -0600
+  
+OmniAuth::Strategies::OAuth2::CallbackError (csrf_detected | CSRF detected):
+  
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:20:in `call'
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:12:in `call'
+omniauth (2.0.1) lib/omniauth/strategy.rb:533:in `fail!'
+omniauth-oauth2 (1.7.1) lib/omniauth/strategies/oauth2.rb:89:in `callback_phase'
+omniauth (2.0.1) lib/omniauth/strategy.rb:268:in `callback_call'
+omniauth (2.0.1) lib/omniauth/strategy.rb:193:in `call!'
+omniauth (2.0.1) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.0.1) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.1) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.1) lib/rails/engine.rb:539:in `call'
+puma (5.2.0) lib/puma/configuration.rb:247:in `call'
+puma (5.2.0) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.0) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.0) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.0) lib/puma/server.rb:432:in `process_client'
+puma (5.2.0) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2021-02-02 16:04:55 -0600
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#welcome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 3.0ms | Allocations: 390)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.6ms | Allocations: 7860)
+Completed 200 OK in 49ms (Views: 34.0ms | ActiveRecord: 0.0ms | Allocations: 10370)
+
+
+Started GET "/login" for ::1 at 2021-02-02 16:04:56 -0600
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 27.5ms | Allocations: 3378)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 90.5ms | Allocations: 7221)
+Completed 200 OK in 127ms (Views: 96.2ms | ActiveRecord: 0.6ms | Allocations: 15365)
+
+
+Started GET "/login" for ::1 at 2021-02-02 16:04:57 -0600
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 684)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 38.3ms | Allocations: 4522)
+Completed 200 OK in 41ms (Views: 38.9ms | ActiveRecord: 0.0ms | Allocations: 4927)
+
+
+Started POST "/auth/google_oauth2" for ::1 at 2021-02-02 16:04:59 -0600
+Started GET "/auth/google_oauth2/callback?state=2f7b8e77d27b3bcbc6b851963952a810e087ec45e47a89e9&code=4%2F0AY0e-g5vWVjECN31asDvlzMSKcd1oH8YK6R4TabwAY0ojqwPtFLYy1u-9bNKEbmrHc7vdg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2021-02-02 16:05:08 -0600
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"2f7b8e77d27b3bcbc6b851963952a810e087ec45e47a89e9", "code"=>"4/0AY0e-g5vWVjECN31asDvlzMSKcd1oH8YK6R4TabwAY0ojqwPtFLYy1u-9bNKEbmrHc7vdg", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"consent", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT ?[0m  [["uid", "117412975562228641600"], ["provider", "google_oauth2"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10:in `from_omniauth'
+Redirected to http://localhost:3000login
+Completed 302 Found in 126621ms (ActiveRecord: 0.2ms | Allocations: 44902)
+
+
+Started GET "/auth/google_oauth2/callback?state=2f7b8e77d27b3bcbc6b851963952a810e087ec45e47a89e9&code=4%2F0AY0e-g5vWVjECN31asDvlzMSKcd1oH8YK6R4TabwAY0ojqwPtFLYy1u-9bNKEbmrHc7vdg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2021-02-02 16:07:17 -0600
+  
+OmniAuth::Strategies::OAuth2::CallbackError (csrf_detected | CSRF detected):
+  
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:20:in `call'
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:12:in `call'
+omniauth (2.0.1) lib/omniauth/strategy.rb:533:in `fail!'
+omniauth-oauth2 (1.7.1) lib/omniauth/strategies/oauth2.rb:89:in `callback_phase'
+omniauth (2.0.1) lib/omniauth/strategy.rb:268:in `callback_call'
+omniauth (2.0.1) lib/omniauth/strategy.rb:193:in `call!'
+omniauth (2.0.1) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.0.1) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.1) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.1) lib/rails/engine.rb:539:in `call'
+puma (5.2.0) lib/puma/configuration.rb:247:in `call'
+puma (5.2.0) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.0) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.0) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.0) lib/puma/server.rb:432:in `process_client'
+puma (5.2.0) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddLocationToEvents (20210201214509)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aevents" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "description" text DEFAULT NULL, "start_date" date DEFAULT NULL, "end_date" date DEFAULT NULL, "start_time" time DEFAULT NULL, "end_time" time DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "location" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aevents" ("id","name","description","start_date","end_date","start_time","end_time","user_id","created_at","updated_at","location")
+                     SELECT "id","name","description","start_date","end_date","start_time","end_time","user_id","created_at","updated_at","location" FROM "events"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "events"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "description" text DEFAULT NULL, "start_date" date DEFAULT NULL, "end_date" date DEFAULT NULL, "start_time" time DEFAULT NULL, "end_time" time DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "events" ("id","name","description","start_date","end_date","start_time","end_time","user_id","created_at","updated_at")
+                     SELECT "id","name","description","start_date","end_date","start_time","end_time","user_id","created_at","updated_at" FROM "aevents"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aevents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210201214509"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateRsvps (20210201181201)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "rsvps"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210201181201"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCategories (20210201181127)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "categories"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210201181127"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEvents (20210201181015)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (11.8ms)[0m  [1m[35mDROP TABLE "events"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210201181015"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUidAndProviderToUsers (20210201171223)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer NOT NULL PRIMARY KEY, "username" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "uid" varchar DEFAULT NULL, "provider" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ausers" ("id","username","email","password_digest","created_at","updated_at","uid","provider")
+                     SELECT "id","username","email","password_digest","created_at","updated_at","uid","provider" FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer NOT NULL PRIMARY KEY, "username" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "uid" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id","username","email","password_digest","created_at","updated_at","uid")
+                     SELECT "id","username","email","password_digest","created_at","updated_at","uid" FROM "ausers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "ausers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer NOT NULL PRIMARY KEY, "username" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "uid" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ausers" ("id","username","email","password_digest","created_at","updated_at","uid")
+                     SELECT "id","username","email","password_digest","created_at","updated_at","uid" FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer NOT NULL PRIMARY KEY, "username" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id","username","email","password_digest","created_at","updated_at")
+                     SELECT "id","username","email","password_digest","created_at","updated_at" FROM "ausers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "ausers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210201171223"]]
+  [1m[36mTRANSACTION (9.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsers (20210201161212)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210201161212"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20210201161212)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "email" varchar, "password_digest" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210201161212"]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUidAndProviderToUsers (20210201171223)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "uid" varchar[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "provider" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210201171223"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEvents (20210201181015)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "start_date" date, "end_date" date, "start_time" time, "end_time" time, "user_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210201181015"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCategories (20210201181127)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "categories" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210201181127"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateRsvps (20210201181201)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "rsvps" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "status" varchar, "number_of_attendee" integer, "user_id" integer, "event_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210201181201"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddLocationToEvents (20210201214509)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "events" ADD "location" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210201214509"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/login" for ::1 at 2021-02-02 16:08:46 -0600
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 13.0ms | Allocations: 3528)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 94.2ms | Allocations: 11013)
+Completed 200 OK in 163ms (Views: 115.7ms | ActiveRecord: 1.9ms | Allocations: 21506)
+
+
+Started POST "/auth/google_oauth2" for ::1 at 2021-02-02 16:08:53 -0600
+Started GET "/auth/google_oauth2/callback?state=fee0114996572383778ca26c75269e69dbcdebb11247fa32&code=4%2F0AY0e-g6vaqBm9dUhwFIlb9wRiHCaLPw5d0ELVx37BQf1qx-xeArci6GPbducEdeYQb5Qwg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2021-02-02 16:08:57 -0600
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"fee0114996572383778ca26c75269e69dbcdebb11247fa32", "code"=>"4/0AY0e-g6vaqBm9dUhwFIlb9wRiHCaLPw5d0ELVx37BQf1qx-xeArci6GPbducEdeYQb5Qwg", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"consent", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT ?[0m  [["uid", "117412975562228641600"], ["provider", "google_oauth2"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10:in `from_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:10:in `from_omniauth'
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "uid", "provider") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "Taylor Sieling"], ["email", "taylorasieling@gmail.com"], ["password_digest", "$2a$12$TcxNhaHkYFpDmxmbR9j1SuVIuxTUskY2fWAvTjkKkQnlOsx8DSOrG"], ["created_at", "2021-02-02 22:09:22.927635"], ["updated_at", "2021-02-02 22:09:22.927635"], ["uid", "117412975562228641600"], ["provider", "google_oauth2"]]
+  ↳ app/models/user.rb:10:in `from_omniauth'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:10:in `from_omniauth'
+Redirected to http://localhost:3000/events/new
+Completed 302 Found in 41408ms (ActiveRecord: 2.3ms | Allocations: 51329)
+
+
+Started GET "/events/new" for ::1 at 2021-02-02 16:09:39 -0600
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 7.0ms | Allocations: 2612)
+  Rendered events/new.html.erb within layouts/application (Duration: 8.9ms | Allocations: 2945)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | Allocations: 6744)
+Completed 200 OK in 64ms (Views: 23.2ms | ActiveRecord: 9.2ms | Allocations: 16202)
+
+
+Started GET "/login" for ::1 at 2021-02-02 16:31:29 -0600
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 7.1ms | Allocations: 3640)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 37.0ms | Allocations: 11649)
+Completed 200 OK in 64ms (Views: 41.0ms | ActiveRecord: 0.5ms | Allocations: 22412)
+
+
+Started POST "/auth/google_oauth2" for ::1 at 2021-02-02 16:31:31 -0600
+Started GET "/auth/google_oauth2/callback?state=11928588a25193abd2fd45a1281c63390a5b37be0247419e&code=4%2F0AY0e-g6nlys-uZKdPbGgmdUFCSTqH_22avkCqzCUmaYBf9XguXfxzLI97cHowtM9otbzMg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2021-02-02 16:31:34 -0600
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"11928588a25193abd2fd45a1281c63390a5b37be0247419e", "code"=>"4/0AY0e-g6nlys-uZKdPbGgmdUFCSTqH_22avkCqzCUmaYBf9XguXfxzLI97cHowtM9otbzMg", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"consent", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT ?[0m  [["uid", "117412975562228641600"], ["provider", "google_oauth2"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10:in `from_omniauth'
+Redirected to http://localhost:3000login
+Completed 302 Found in 2929ms (ActiveRecord: 0.2ms | Allocations: 41112)
+
+
+Started GET "/auth/google_oauth2/callback?state=11928588a25193abd2fd45a1281c63390a5b37be0247419e&code=4%2F0AY0e-g6nlys-uZKdPbGgmdUFCSTqH_22avkCqzCUmaYBf9XguXfxzLI97cHowtM9otbzMg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2021-02-02 16:31:38 -0600
+  
+OmniAuth::Strategies::OAuth2::CallbackError (csrf_detected | CSRF detected):
+  
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:20:in `call'
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:12:in `call'
+omniauth (2.0.1) lib/omniauth/strategy.rb:533:in `fail!'
+omniauth-oauth2 (1.7.1) lib/omniauth/strategies/oauth2.rb:89:in `callback_phase'
+omniauth (2.0.1) lib/omniauth/strategy.rb:268:in `callback_call'
+omniauth (2.0.1) lib/omniauth/strategy.rb:193:in `call!'
+omniauth (2.0.1) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.0.1) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.1) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.1) lib/rails/engine.rb:539:in `call'
+puma (5.2.0) lib/puma/configuration.rb:247:in `call'
+puma (5.2.0) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.0) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.0) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.0) lib/puma/server.rb:432:in `process_client'
+puma (5.2.0) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/login" for ::1 at 2021-02-02 16:32:21 -0600
+Processing by SessionsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:15:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1491)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 5427)
+Completed 200 OK in 19ms (Views: 7.3ms | ActiveRecord: 0.7ms | Allocations: 13545)
+
+
+Started POST "/auth/google_oauth2" for ::1 at 2021-02-02 16:32:23 -0600
+Started GET "/auth/google_oauth2/callback?state=001420e2fe80f603402473989cc00668b8da0659602997dd&code=4%2F0AY0e-g7soN8ejMsA5XSGkRGVK8u3bjjCG1KifeLIW7rI4tlziKtk7a6jveWBdstX7BcQ0w&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2021-02-02 16:32:25 -0600
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"001420e2fe80f603402473989cc00668b8da0659602997dd", "code"=>"4/0AY0e-g7soN8ejMsA5XSGkRGVK8u3bjjCG1KifeLIW7rI4tlziKtk7a6jveWBdstX7BcQ0w", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"consent", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT ?[0m  [["uid", "117412975562228641600"], ["provider", "google_oauth2"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10:in `from_omniauth'
+Redirected to http://localhost:3000login
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 2143)
+
+
+Started GET "/auth/google_oauth2/callback?state=001420e2fe80f603402473989cc00668b8da0659602997dd&code=4%2F0AY0e-g7soN8ejMsA5XSGkRGVK8u3bjjCG1KifeLIW7rI4tlziKtk7a6jveWBdstX7BcQ0w&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2021-02-02 16:32:27 -0600
+  
+OmniAuth::Strategies::OAuth2::CallbackError (csrf_detected | CSRF detected):
+  
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:20:in `call'
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:12:in `call'
+omniauth (2.0.1) lib/omniauth/strategy.rb:533:in `fail!'
+omniauth-oauth2 (1.7.1) lib/omniauth/strategies/oauth2.rb:89:in `callback_phase'
+omniauth (2.0.1) lib/omniauth/strategy.rb:268:in `callback_call'
+omniauth (2.0.1) lib/omniauth/strategy.rb:193:in `call!'
+omniauth (2.0.1) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.0.1) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.1) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.1) lib/rails/engine.rb:539:in `call'
+puma (5.2.0) lib/puma/configuration.rb:247:in `call'
+puma (5.2.0) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.0) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.0) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.0) lib/puma/server.rb:432:in `process_client'
+puma (5.2.0) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/login" for ::1 at 2021-02-02 16:37:47 -0600
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 3578)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 51.7ms | Allocations: 15039)
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 0.6ms | Allocations: 25994)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<ActionView::Base:0x007fda875ef1c8>
+Did you mean?  current_page?):
+    12: 
+    13:   <body>
+    14: 
+    15:       <% if !current_user %>
+    16:       <h1>Penciled In</h1>
+    17:       <%= link_to "Log In", "/login" %> ||
+    18:       <%= link_to "Log in with Google", '/auth/google_oauth2', method: "post" %> ||
+  
+app/views/layouts/application.html.erb:15
+Started GET "/login" for ::1 at 2021-02-02 16:39:45 -0600
+Processing by SessionsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:15:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1494)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 6597)
+Completed 200 OK in 22ms (Views: 9.3ms | ActiveRecord: 1.0ms | Allocations: 14637)
+
+
+Started GET "/logout" for ::1 at 2021-02-02 16:39:52 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/login" for ::1 at 2021-02-02 16:41:16 -0600
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 3596)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 41.4ms | Allocations: 12973)
+Completed 200 OK in 64ms (Views: 46.2ms | ActiveRecord: 0.7ms | Allocations: 23954)
+
+
+Started GET "/login" for ::1 at 2021-02-02 16:41:17 -0600
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 690)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 5182)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.2ms | Allocations: 5587)
+
+
+Started POST "/auth/google_oauth2" for ::1 at 2021-02-02 16:41:19 -0600
+Started GET "/login" for ::1 at 2021-02-02 16:41:21 -0600
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 684)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 5176)
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.2ms | Allocations: 5586)
+
+
+Started GET "/logout" for ::1 at 2021-02-02 16:41:22 -0600
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 289)
+
+
+Started GET "/login" for ::1 at 2021-02-02 16:41:22 -0600
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 682)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 4559)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 4969)
+
+
+Started POST "/auth/google_oauth2" for ::1 at 2021-02-02 16:41:27 -0600
+Started GET "/auth/google_oauth2/callback?state=c546139cd9c9166a24be1ac21e6933ec7d3ed52c7e64bf0e&code=4%2F0AY0e-g6nrDNTdU08YI8h0tnibF042azhtNH6gEL041DnUvlAxQS-9bOGoQeSYz5dGiWDHQ&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2021-02-02 16:41:29 -0600
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"c546139cd9c9166a24be1ac21e6933ec7d3ed52c7e64bf0e", "code"=>"4/0AY0e-g6nrDNTdU08YI8h0tnibF042azhtNH6gEL041DnUvlAxQS-9bOGoQeSYz5dGiWDHQ", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"consent", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT ?[0m  [["uid", "117412975562228641600"], ["provider", "google_oauth2"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10:in `from_omniauth'
+Redirected to http://localhost:3000login
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 2164)
+
+
+Started GET "/auth/google_oauth2/callback?state=c546139cd9c9166a24be1ac21e6933ec7d3ed52c7e64bf0e&code=4%2F0AY0e-g6nrDNTdU08YI8h0tnibF042azhtNH6gEL041DnUvlAxQS-9bOGoQeSYz5dGiWDHQ&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2021-02-02 16:41:31 -0600
+  
+OmniAuth::Strategies::OAuth2::CallbackError (csrf_detected | CSRF detected):
+  
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:20:in `call'
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:12:in `call'
+omniauth (2.0.1) lib/omniauth/strategy.rb:533:in `fail!'
+omniauth-oauth2 (1.7.1) lib/omniauth/strategies/oauth2.rb:89:in `callback_phase'
+omniauth (2.0.1) lib/omniauth/strategy.rb:268:in `callback_call'
+omniauth (2.0.1) lib/omniauth/strategy.rb:193:in `call!'
+omniauth (2.0.1) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.0.1) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.1) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.1) lib/rails/engine.rb:539:in `call'
+puma (5.2.0) lib/puma/configuration.rb:247:in `call'
+puma (5.2.0) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.0) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.0) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.0) lib/puma/server.rb:432:in `process_client'
+puma (5.2.0) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/auth/google_oauth2/callback?state=c546139cd9c9166a24be1ac21e6933ec7d3ed52c7e64bf0e&code=4%2F0AY0e-g59VkCqtQd9sSJ-_mUZq-5sjLwy2M2RQbHKWUg4zCzvyQqMGCMDBSQnSweCuXVInQ&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=1&prompt=consent" for ::1 at 2021-02-02 16:41:38 -0600
+  
+OmniAuth::Strategies::OAuth2::CallbackError (csrf_detected | CSRF detected):
+  
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:20:in `call'
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:12:in `call'
+omniauth (2.0.1) lib/omniauth/strategy.rb:533:in `fail!'
+omniauth-oauth2 (1.7.1) lib/omniauth/strategies/oauth2.rb:89:in `callback_phase'
+omniauth (2.0.1) lib/omniauth/strategy.rb:268:in `callback_call'
+omniauth (2.0.1) lib/omniauth/strategy.rb:193:in `call!'
+omniauth (2.0.1) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.0.1) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.1) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.1) lib/rails/engine.rb:539:in `call'
+puma (5.2.0) lib/puma/configuration.rb:247:in `call'
+puma (5.2.0) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.0) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.0) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.0) lib/puma/server.rb:432:in `process_client'
+puma (5.2.0) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/login" for ::1 at 2021-02-02 16:44:55 -0600
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 7.7ms | Allocations: 3528)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.5ms | Allocations: 12105)
+Completed 200 OK in 50ms (Views: 33.0ms | ActiveRecord: 0.4ms | Allocations: 23123)
+
+
+Started POST "/auth/google_oauth2" for ::1 at 2021-02-02 16:44:59 -0600
+Started GET "/auth/google_oauth2/callback?state=494389fefd00276cbd202d7298b703743bcbcdc98022afff&code=4%2F0AY0e-g6bErs35-twfop-m7QoQ9TqMwIYMjy5yEWiN35b7JRQ4DbBRkxf7gryUMKtiwTlVA&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2021-02-02 16:45:01 -0600
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"494389fefd00276cbd202d7298b703743bcbcdc98022afff", "code"=>"4/0AY0e-g6bErs35-twfop-m7QoQ9TqMwIYMjy5yEWiN35b7JRQ4DbBRkxf7gryUMKtiwTlVA", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"consent", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT ?[0m  [["uid", "117412975562228641600"], ["provider", "google_oauth2"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10:in `from_omniauth'
+Redirected to http://localhost:3000login
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms | Allocations: 2525)
+
+
+Started GET "/auth/google_oauth2/callback?state=494389fefd00276cbd202d7298b703743bcbcdc98022afff&code=4%2F0AY0e-g6bErs35-twfop-m7QoQ9TqMwIYMjy5yEWiN35b7JRQ4DbBRkxf7gryUMKtiwTlVA&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2021-02-02 16:45:03 -0600
+  
+OmniAuth::Strategies::OAuth2::CallbackError (csrf_detected | CSRF detected):
+  
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:20:in `call'
+omniauth (2.0.1) lib/omniauth/failure_endpoint.rb:12:in `call'
+omniauth (2.0.1) lib/omniauth/strategy.rb:533:in `fail!'
+omniauth-oauth2 (1.7.1) lib/omniauth/strategies/oauth2.rb:89:in `callback_phase'
+omniauth (2.0.1) lib/omniauth/strategy.rb:268:in `callback_call'
+omniauth (2.0.1) lib/omniauth/strategy.rb:193:in `call!'
+omniauth (2.0.1) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.0.1) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.1) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.1) lib/rails/engine.rb:539:in `call'
+puma (5.2.0) lib/puma/configuration.rb:247:in `call'
+puma (5.2.0) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.0) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.0) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.0) lib/puma/server.rb:432:in `process_client'
+puma (5.2.0) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/login" for ::1 at 2021-02-02 16:45:11 -0600
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 806)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 4809)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 5342)
+
+
+Started GET "/users/new" for ::1 at 2021-02-02 16:45:18 -0600
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 121)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 4098)
+Completed 200 OK in 15ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 5582)
+
+
+Started GET "/login" for ::1 at 2021-02-02 16:45:22 -0600
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 693)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 4571)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 4977)
+
+
+Started GET "/login" for ::1 at 2021-02-02 16:45:28 -0600
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 683)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 4559)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms | Allocations: 4955)
+
+
+Started POST "/auth/google_oauth2" for ::1 at 2021-02-02 16:45:31 -0600
+Started GET "/auth/google_oauth2/callback?state=6960f10e1bd479b4a5ae32a607ece1ab5e5fc1c2e688cda7&code=4%2F0AY0e-g41Pdf-jzo-vfJSnddzpXG8GeBUVsCXi4paSUzYcWSXyCxXnHkndPNXriFfR_4kRQ&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=1&prompt=consent" for ::1 at 2021-02-02 16:45:33 -0600
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"6960f10e1bd479b4a5ae32a607ece1ab5e5fc1c2e688cda7", "code"=>"4/0AY0e-g41Pdf-jzo-vfJSnddzpXG8GeBUVsCXi4paSUzYcWSXyCxXnHkndPNXriFfR_4kRQ", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"1", "prompt"=>"consent", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT ?[0m  [["uid", "109730810514491769677"], ["provider", "google_oauth2"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10:in `from_omniauth'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:10:in `from_omniauth'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "uid", "provider") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "Taylor Sieling"], ["email", "taysieling@gmail.com"], ["password_digest", "$2a$12$1i3v4heMQhGXJbg5FbUF/en0RFiPAVoodHYALBjlZ7YgkvnMzWuw."], ["created_at", "2021-02-02 22:45:34.658992"], ["updated_at", "2021-02-02 22:45:34.658992"], ["uid", "109730810514491769677"], ["provider", "google_oauth2"]]
+  ↳ app/models/user.rb:10:in `from_omniauth'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:10:in `from_omniauth'
+Redirected to http://localhost:3000/events/new
+Completed 302 Found in 232ms (ActiveRecord: 3.6ms | Allocations: 3823)
+
+
+Started GET "/events/new" for ::1 at 2021-02-02 16:45:34 -0600
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 4.0ms | Allocations: 2603)
+  Rendered events/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2924)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 7529)
+Completed 200 OK in 31ms (Views: 14.2ms | ActiveRecord: 0.7ms | Allocations: 16909)
+
+
+Started POST "/events" for ::1 at 2021-02-02 16:46:15 -0600
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"name"=>"Purrfect Match: Cat Adoption Event", "description"=>"Help a kitty find their forever home in time for Valentine's Day.", "location"=>"Galveston Island Humane Society", "start_date"=>"2021-02-13", "end_date"=>"2021-02-13", "start_time"=>"08:00", "end_time"=>"17:00"}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 3.7ms | Allocations: 1679)
+  Rendered events/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1770)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 5543)
+Completed 200 OK in 16973ms (Views: 11.8ms | ActiveRecord: 0.2ms | Allocations: 53337)
+
+
+Started POST "/events" for ::1 at 2021-02-02 16:46:48 -0600
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"name"=>"Purrfect Match: Cat Adoption Event", "description"=>"Help a kitty find their forever home in time for Valentine's Day.", "location"=>"Galveston Island Humane Society", "start_date"=>"2021-02-13", "end_date"=>"2021-02-13", "start_time"=>"08:00:00.000", "end_time"=>"17:00:00.000"}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 4.7ms | Allocations: 1674)
+  Rendered events/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2522)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 12038)
+Completed 200 OK in 24988ms (Views: 17.0ms | ActiveRecord: 0.2ms | Allocations: 20374)
+
+
+Started POST "/events" for ::1 at 2021-02-02 16:47:15 -0600
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"name"=>"Purrfect Match: Cat Adoption Event", "description"=>"Help a kitty find their forever home in time for Valentine's Day.", "location"=>"Galveston Island Humane Society", "start_date"=>"2021-02-13", "end_date"=>"2021-02-13", "start_time"=>"08:00:00.000", "end_time"=>"17:00:00.000"}, "commit"=>"Create Event"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 2.5ms | Allocations: 1738)
+  Rendered events/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1829)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 5605)
+Completed 200 OK in 48ms (Views: 9.0ms | ActiveRecord: 1.4ms | Allocations: 24779)
+
+
+Started POST "/events" for ::1 at 2021-02-02 16:47:33 -0600
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"name"=>"Purrfect Match: Cat Adoption Event", "description"=>"Help a kitty find their forever home in time for Valentine's Day.", "location"=>"Galveston Island Humane Society", "start_date"=>"2021-02-13", "end_date"=>"2021-02-13", "start_time"=>"08:00:00.000", "end_time"=>"17:00:00.000"}, "commit"=>"Create Event"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 2.3ms | Allocations: 1738)
+  Rendered events/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1829)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 5604)
+Completed 200 OK in 33ms (Views: 8.5ms | ActiveRecord: 1.4ms | Allocations: 24730)
+
+
+Started GET "/events" for ::1 at 2021-02-02 16:52:30 -0600
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  Rendered events/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 3970)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 4046)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.3ms | Allocations: 11193)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `each' for #<ActionView::Base:0x007ffdd4eebbd0>):
+    1: <h1> All the Events </h1><br>
+    2: <p>
+    3: <% Event.all each do |e| %>
+    4: <%= e.name %>
+    5: <%= e.start_date %>
+    6: <%= e.start_time %>
+  
+app/views/events/index.html.erb:3
+Started GET "/events" for ::1 at 2021-02-02 16:52:53 -0600
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  Rendered events/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 3535)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 3606)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 4895)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Class:0x00007ffdd889a5c0>):
+    1: <h1> All the Events </h1><br>
+    2: <p>
+    3: <% Event.each do |e| %>
+    4: <%= e.name %>
+    5: <%= e.start_date %>
+    6: <%= e.start_time %>
+  
+app/views/events/index.html.erb:3
+Started GET "/events" for ::1 at 2021-02-02 16:52:57 -0600
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  Rendered events/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 3332)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3403)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 3813)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Class:0x00007ffdd889a5c0>):
+    1: <h1> All the Events </h1><br>
+    2: <p>
+    3: <% Event.each do |e| %>
+    4: <%= e.name %>
+    5: <%= e.start_date %>
+    6: <%= e.start_time %>
+  
+app/views/events/index.html.erb:3
+Started GET "/events" for ::1 at 2021-02-02 16:53:09 -0600
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  Rendered events/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 3503)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3573)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 4718)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Class:0x00007ffdd889a5c0>):
+    1: <h1> All the Events </h1><br>
+    2: <p>
+    3: <%= Event.each do |e| %>
+    4: <%= e.name %>
+    5: <%= e.start_date %>
+    6: <%= e.start_time %>
+  
+app/views/events/index.html.erb:3
+Started GET "/events" for ::1 at 2021-02-02 16:53:42 -0600
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" ORDER BY "events"."start_date" DESC[0m
+  ↳ app/views/events/index.html.erb:3
+  Rendered events/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 955)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 42.0ms | Allocations: 18741)
+Completed 200 OK in 46ms (Views: 42.6ms | ActiveRecord: 1.4ms | Allocations: 19917)
+
+
+Started GET "/events/new" for ::1 at 2021-02-02 16:53:54 -0600
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+Started GET "/events/new" for ::1 at 2021-02-02 16:54:07 -0600
+  Rendered events/_form.html.erb (Duration: 6.4ms | Allocations: 4276)
+  Rendered events/new.html.erb within layouts/application (Duration: 9.6ms | Allocations: 5817)
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 3.7ms | Allocations: 1625)
+  Rendered events/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1716)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[Webpacker] Everything's up-to-date. Nothing to do
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 5657.2ms | Allocations: 22407)
+Completed 200 OK in 18488ms (Views: 5659.4ms | ActiveRecord: 0.6ms | Allocations: 68560)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 11215)
+Completed 200 OK in 5652ms (Views: 22.9ms | ActiveRecord: 0.4ms | Allocations: 18144)
+
+
+Started POST "/events" for ::1 at 2021-02-02 16:54:50 -0600
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"name"=>"Purrfect Match: Cat Adoption Event", "description"=>"Help a kitty find their forever home in time for Valentine's Day.", "location"=>"Galveston Island Humane Society", "start_date"=>"2021-02-13", "end_date"=>"2021-02-13", "start_time"=>"08:00", "end_time"=>"17:00"}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 2.1ms | Allocations: 1678)
+  Rendered events/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1769)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 5542)
+Completed 200 OK in 24ms (Views: 7.5ms | ActiveRecord: 0.1ms | Allocations: 13644)
+
+
+Started POST "/events" for ::1 at 2021-02-02 16:54:52 -0600
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"name"=>"Purrfect Match: Cat Adoption Event", "description"=>"Help a kitty find their forever home in time for Valentine's Day.", "location"=>"Galveston Island Humane Society", "start_date"=>"2021-02-13", "end_date"=>"2021-02-13", "start_time"=>"08:00:00.000", "end_time"=>"17:00:00.000"}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 3.4ms | Allocations: 1674)
+  Rendered events/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1765)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 5539)
+Completed 200 OK in 27ms (Views: 20.4ms | ActiveRecord: 0.3ms | Allocations: 7534)
+
+
+Started POST "/events" for ::1 at 2021-02-02 16:54:53 -0600
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"name"=>"Purrfect Match: Cat Adoption Event", "description"=>"Help a kitty find their forever home in time for Valentine's Day.", "location"=>"Galveston Island Humane Society", "start_date"=>"2021-02-13", "end_date"=>"2021-02-13", "start_time"=>"08:00:00.000", "end_time"=>"17:00:00.000"}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 2.5ms | Allocations: 1674)
+  Rendered events/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1765)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 5537)
+Completed 200 OK in 14ms (Views: 8.3ms | ActiveRecord: 0.2ms | Allocations: 7515)
+
+
+Started POST "/events" for ::1 at 2021-02-02 16:55:26 -0600
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"name"=>"Purrfect Match: Cat Adoption Event", "description"=>"Help a kitty find their forever home in time for Valentine's Day.", "location"=>"Galveston Island Humane Society", "start_date"=>"2021-02-13", "end_date"=>"2021-02-13", "start_time"=>"08:00:00.000", "end_time"=>"17:00:00.000"}, "commit"=>"Create Event"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/events_controller.rb:16:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 2.4ms | Allocations: 1766)
+  Rendered events/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1857)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 10624)
+Completed 200 OK in 30ms (Views: 13.1ms | ActiveRecord: 1.2ms | Allocations: 24406)
+
+
+Started GET "/login" for ::1 at 2021-02-02 21:12:41 -0600
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 18.1ms | Allocations: 3524)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 109.7ms | Allocations: 12280)
+Completed 200 OK in 168ms (Views: 119.6ms | ActiveRecord: 0.8ms | Allocations: 23609)
+
+
+Started GET "/login" for ::1 at 2021-02-02 21:12:41 -0600
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 690)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 44.2ms | Allocations: 5184)
+Completed 200 OK in 46ms (Views: 44.5ms | ActiveRecord: 0.1ms | Allocations: 5589)
+
+
+Started GET "/signup" for ::1 at 2021-02-02 21:12:48 -0600
+  
+SyntaxError (/Users/sieling/Flatiron/rails-project/penciled-in/app/controllers/users_controller.rb:48: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/users_controller.rb:48: syntax error, unexpected end-of-input, expecting end
+app/controllers/users_controller.rb:48: syntax error, unexpected end-of-input, expecting end
+app/controllers/users_controller.rb:48: syntax error, unexpected end-of-input, expecting end
+Started GET "/signup" for ::1 at 2021-02-02 21:13:15 -0600
+Processing by UsersController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:15:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.7ms | Allocations: 1133)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1447)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 6255)
+Completed 200 OK in 22ms (Views: 10.5ms | ActiveRecord: 0.9ms | Allocations: 14729)
+
+
+Started GET "/signup" for ::1 at 2021-02-02 21:13:50 -0600
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.4ms | Allocations: 973)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1283)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 6098)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.1ms | Allocations: 7240)
+
+
+Started GET "/signup" for ::1 at 2021-02-02 21:13:51 -0600
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.6ms | Allocations: 746)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 837)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 5319)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.1ms | Allocations: 5719)
+
+
+Started GET "/signup" for ::1 at 2021-02-02 21:14:06 -0600
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 5.3ms | Allocations: 2855)
+  Rendered users/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 3424)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 48.0ms | Allocations: 13063)
+Completed 200 OK in 70ms (Views: 50.1ms | ActiveRecord: 0.7ms | Allocations: 23756)
+
+
+Started GET "/login" for ::1 at 2021-02-02 21:14:08 -0600
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1608)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 6101)
+Completed 200 OK in 26ms (Views: 22.9ms | ActiveRecord: 0.1ms | Allocations: 7072)
+
+
+Started GET "/logout" for ::1 at 2021-02-02 21:14:11 -0600
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 265)
+
+
+Started GET "/login" for ::1 at 2021-02-02 21:14:11 -0600
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 683)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 4562)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.0ms | Allocations: 4975)
+
+
+Started GET "/users/new" for ::1 at 2021-02-02 21:14:15 -0600
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 3.5ms | Allocations: 749)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 840)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 4716)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.0ms | Allocations: 5117)
+
+
+Started GET "/users/new" for ::1 at 2021-02-02 21:14:33 -0600
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.3ms | Allocations: 967)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1283)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 5492)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 6645)
+
+
+Started POST "/users" for ::1 at 2021-02-02 21:14:42 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"hollyhawthorn", "email"=>"hollyh@email.com", "password"=>"[FILTERED]"}, "commit"=>"Create"}
+[31mUnpermitted parameter: :password[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.9ms | Allocations: 1396)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1487)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 5280)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 6583)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users" for ::1 at 2021-02-02 21:16:07 -0600
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users/new" for ::1 at 2021-02-02 21:16:14 -0600
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 3.7ms | Allocations: 2705)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 3024)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 10711)
+Completed 200 OK in 53ms (Views: 18.9ms | ActiveRecord: 0.6ms | Allocations: 20577)
+
+
+Started POST "/users" for ::1 at 2021-02-02 21:16:21 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"hollyhawthorn", "email"=>"hollyh@email.com", "password"=>"[FILTERED]"}, "commit"=>"Create"}
+[31mUnpermitted parameter: :password[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.7ms | Allocations: 1397)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1894)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 9646)
+Completed 200 OK in 68393ms (Views: 18.0ms | ActiveRecord: 0.0ms | Allocations: 53467)
+
+
+Started POST "/users" for ::1 at 2021-02-02 21:17:35 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"hollyhawthorn", "email"=>"hollyh@email.com", "password"=>"[FILTERED]"}, "commit"=>"Create"}
+[31mUnpermitted parameter: :password[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.8ms | Allocations: 1021)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1331)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 5459)
+Completed 200 OK in 80492ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 21325)
+
+
+Started GET "/" for ::1 at 2021-02-02 21:21:57 -0600
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#welcome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/welcome.html.erb within layouts/application
+  Rendered sessions/welcome.html.erb within layouts/application (Duration: 3.7ms | Allocations: 507)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 8246)
+Completed 200 OK in 30ms (Views: 20.5ms | ActiveRecord: 0.0ms | Allocations: 11470)
+
+
+Started GET "/users/new" for ::1 at 2021-02-02 21:22:00 -0600
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 11.1ms | Allocations: 2875)
+  Rendered users/new.html.erb within layouts/application (Duration: 12.4ms | Allocations: 3227)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 7105)
+Completed 200 OK in 59ms (Views: 28.1ms | ActiveRecord: 1.3ms | Allocations: 16362)
+
+
+Started POST "/users" for ::1 at 2021-02-02 21:22:10 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"hollyhawthorn", "email"=>"hollyh@email.com", "password"=>"[FILTERED]"}, "commit"=>"Create Account"}
+[31mUnpermitted parameter: :password[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 4.0ms | Allocations: 1415)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1636)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 12531)
+Completed 200 OK in 321531ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 54934)
+
+
+Started POST "/users" for ::1 at 2021-02-02 21:27:44 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"hollyhawthorn", "email"=>"hollyh@email.com", "password"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "hollyhawthorn"], ["email", "hollyh@email.com"], ["password_digest", "$2a$12$UUSTnu25LMXa4LmtH2ApEeDj9iYKeatUsSZ4ZKToaCRRNqw2SRtsW"], ["created_at", "2021-02-03 03:28:27.065266"], ["updated_at", "2021-02-03 03:28:27.065266"]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 42347ms (ActiveRecord: 2.2ms | Allocations: 18563)
+
+
+Started GET "/users/3" for ::1 at 2021-02-02 21:28:27 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:42:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 4566)
+Completed 200 OK in 30ms (Views: 13.0ms | ActiveRecord: 0.4ms | Allocations: 8412)
+
+
+Started GET "/users/3" for ::1 at 2021-02-02 21:29:25 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:42:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 132)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 4927)
+Completed 200 OK in 20ms (Views: 16.5ms | ActiveRecord: 0.3ms | Allocations: 6621)
+
+
