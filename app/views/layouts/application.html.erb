@@ -45,17 +45,18 @@
       </nav>
   </div>
 
+  <div class="uk-container">
+
       <% if !current_user %>
       <h1>Penciled In</h1>
       <%= link_to "Log In", "/login" %> ||
       <%= link_to "Log in with Google", '/auth/google_oauth2', method: "post" %> ||
       <%= link_to "Register", "/users/new" %></br>
-    <% else %>
-      <h1>Welcome to Penciled In!</h1>
-      <%= link_to "Logout", "/logout" %></br>
-      <%= link_to "Edit Account", "/users/:id/edit" %></br>
     <% end %> 
 
     <%= yield %>
+
+    </div>
+    
   </body>
 </html>
