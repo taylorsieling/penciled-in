@@ -15,6 +15,7 @@ class EventsController < ApplicationController
 
     def create
         @event = current_user.events.new(event_params)
+        byebug
         if @event.save
             redirect_to event_path(@event)
         else

@@ -8943,3 +8943,19 @@ Completed 200 OK in 45ms (Views: 9.5ms | ActiveRecord: 1.4ms | Allocations: 2483
 
   [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/events" for ::1 at 2021-02-03 12:43:29 -0600
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"name"=>"Succulent Propagation Workshop", "description"=>"Join plant expert Holly Hawthorn for her monthly Succulent Propagation Workshop! Learn how to make your succulent multiply. Attendees will receive a free succulent and pot. Happy Planting!", "location"=>"Tom's Thumb Nursery", "start_date"=>"2021-03-06", "end_date"=>"2021-03-06", "start_time"=>"11:00:00.000", "end_time"=>"13:00:00.000"}, "commit"=>"Create Event"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 7.6ms | Allocations: 1736)
+  Rendered events/new.html.erb within layouts/application (Duration: 10.1ms | Allocations: 2317)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 6102)
+Completed 200 OK in 76614ms (Views: 30.1ms | ActiveRecord: 1.4ms | Allocations: 35268)
+
+
