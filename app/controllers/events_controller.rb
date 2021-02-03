@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
 
-    before_action :set_event, only: [:show]
+    before_action :set_event, only: [:show, :edit, :update]
 
     def index
         @events = Event.ordered_by_date
@@ -10,15 +10,19 @@ class EventsController < ApplicationController
     end
 
     def new
+        @event = Event.new
     end
 
     def create
-        @event = Event.new(event_params)
+        @event = current_user.events.new(event_params)
         if @event.save
             redirect_to event_path(@event)
         else
             render :new
         end
+    end
+
+    def edit
     end
     
     def update

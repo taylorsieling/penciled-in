@@ -8587,3 +8587,359 @@ Processing by UsersController#update as HTML
 Completed 200 OK in 48ms (Views: 32.7ms | ActiveRecord: 0.5ms | Allocations: 9986)
 
 
+Started GET "/events/new" for ::1 at 2021-02-03 12:21:34 -0600
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 0.7ms | Allocations: 1433)
+  Rendered events/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1759)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1829)
+Completed 500 Internal Server Error in 4ms (Allocations: 2994)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @event do |f| %>
+    2: 
+    3: <%= f.label :name %>
+    4: <%= f.text_field :name %> <br>
+  
+app/views/events/_form.html.erb:1
+app/views/events/new.html.erb:2
+Started GET "/events/new" for ::1 at 2021-02-03 12:24:04 -0600
+Processing by EventsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 400 Bad Request in 21ms (ActiveRecord: 0.5ms | Allocations: 11704)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: event):
+  
+app/controllers/events_controller.rb:40:in `event_params'
+app/controllers/events_controller.rb:13:in `new'
+Started GET "/events/new" for ::1 at 2021-02-03 12:25:47 -0600
+Processing by EventsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.2ms | Allocations: 1176)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: event):
+  
+app/controllers/events_controller.rb:40:in `event_params'
+app/controllers/events_controller.rb:13:in `new'
+Started GET "/" for ::1 at 2021-02-03 12:25:56 -0600
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" ORDER BY "events"."start_date" DESC[0m
+  ↳ app/views/events/index.html.erb:3
+  Rendered events/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 899)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 5722)
+Completed 200 OK in 29ms (Views: 23.0ms | ActiveRecord: 1.0ms | Allocations: 7632)
+
+
+Started GET "/events/new" for ::1 at 2021-02-03 12:26:01 -0600
+Processing by EventsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.2ms | Allocations: 1177)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: event):
+  
+app/controllers/events_controller.rb:40:in `event_params'
+app/controllers/events_controller.rb:13:in `new'
+Started GET "/events/new" for ::1 at 2021-02-03 12:26:12 -0600
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 400 Bad Request in 30ms (ActiveRecord: 0.9ms | Allocations: 13988)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: event):
+  
+app/controllers/events_controller.rb:40:in `event_params'
+app/controllers/events_controller.rb:13:in `new'
+Started GET "/" for ::1 at 2021-02-03 12:26:17 -0600
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" ORDER BY "events"."start_date" DESC[0m
+  ↳ app/views/events/index.html.erb:3
+  Rendered events/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 940)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 31.5ms | Allocations: 9283)
+Completed 200 OK in 41ms (Views: 34.8ms | ActiveRecord: 1.4ms | Allocations: 11387)
+
+
+Started GET "/logout" for ::1 at 2021-02-03 12:26:19 -0600
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 318)
+
+
+Started GET "/login" for ::1 at 2021-02-03 12:26:19 -0600
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 8.3ms | Allocations: 3419)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 7299)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.0ms | Allocations: 8248)
+
+
+Started POST "/login" for ::1 at 2021-02-03 12:26:25 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"hollyh@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hollyh@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:19:in `create'
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 237ms (ActiveRecord: 0.4ms | Allocations: 1063)
+
+
+Started GET "/users/3" for ::1 at 2021-02-03 12:26:25 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 219)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 4085)
+Completed 200 OK in 19ms (Views: 13.5ms | ActiveRecord: 0.2ms | Allocations: 5643)
+
+
+Started GET "/users/3" for ::1 at 2021-02-03 12:26:29 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 52)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 3912)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.3ms | Allocations: 4872)
+
+
+Started GET "/events/new" for ::1 at 2021-02-03 12:26:34 -0600
+Processing by EventsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.1ms | Allocations: 1199)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: event):
+  
+app/controllers/events_controller.rb:40:in `event_params'
+app/controllers/events_controller.rb:13:in `new'
+Started GET "/events/new" for ::1 at 2021-02-03 12:27:04 -0600
+Processing by EventsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 400 Bad Request in 17ms (ActiveRecord: 0.9ms | Allocations: 10869)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: event):
+  
+app/controllers/events_controller.rb:40:in `event_params'
+app/controllers/events_controller.rb:13:in `new'
+Started GET "/events/new" for ::1 at 2021-02-03 12:27:33 -0600
+Processing by EventsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 400 Bad Request in 16ms (ActiveRecord: 0.9ms | Allocations: 10775)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: event):
+  
+app/controllers/events_controller.rb:41:in `event_params'
+app/controllers/events_controller.rb:13:in `new'
+Started GET "/events/new" for ::1 at 2021-02-03 12:27:44 -0600
+Processing by EventsController#new as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 400 Bad Request in 15ms (ActiveRecord: 0.8ms | Allocations: 10755)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: event):
+  
+app/controllers/events_controller.rb:42:in `event_params'
+app/controllers/events_controller.rb:13:in `new'
+Started GET "/events/new" for ::1 at 2021-02-03 12:28:02 -0600
+Processing by EventsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 400 Bad Request in 17127ms (ActiveRecord: 1.1ms | Allocations: 54867)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: event):
+  
+app/controllers/events_controller.rb:43:in `event_params'
+app/controllers/events_controller.rb:14:in `new'
+Started GET "/events/new" for ::1 at 2021-02-03 12:28:36 -0600
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 1.6ms | Allocations: 1956)
+  Rendered events/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2280)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 2350)
+Completed 500 Internal Server Error in 5ms (Allocations: 3034)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if @user.errors.any? %>
+    2:   <div>
+    3:     <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+    4:  
+  
+app/views/events/_form.html.erb:1
+app/views/events/new.html.erb:2
+Started GET "/events/new" for ::1 at 2021-02-03 12:28:58 -0600
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 3.0ms | Allocations: 1944)
+  Rendered events/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2265)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2335)
+Completed 500 Internal Server Error in 10ms (Allocations: 3440)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if @event.errors.any? %>
+    2:   <div>
+    3:     <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+    4:  
+  
+app/views/events/_form.html.erb:1
+app/views/events/new.html.erb:2
+Started GET "/events/new" for ::1 at 2021-02-03 12:29:25 -0600
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 17.6ms | Allocations: 4847)
+  Rendered events/new.html.erb within layouts/application (Duration: 18.7ms | Allocations: 5165)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 38.7ms | Allocations: 17355)
+Completed 200 OK in 43ms (Views: 41.6ms | ActiveRecord: 1.2ms | Allocations: 18481)
+
+
+Started GET "/events/new" for ::1 at 2021-02-03 12:29:44 -0600
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 2.0ms | Allocations: 2034)
+  Rendered events/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2357)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | Allocations: 14648)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 1.0ms | Allocations: 15835)
+
+
+Started POST "/events/new" for ::1 at 2021-02-03 12:36:54 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/events/new"):
+  
+Started GET "/events/new" for ::1 at 2021-02-03 12:39:16 -0600
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 0.8ms | Allocations: 1454)
+  Rendered events/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1775)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1845)
+Completed 500 Internal Server Error in 6ms (Allocations: 2950)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @event do |f| %>
+    2: 
+    3: <%= f.label :name %>
+    4: <%= f.text_field :name %> <br>
+  
+app/views/events/_form.html.erb:1
+app/views/events/new.html.erb:2
+Started GET "/events/new" for ::1 at 2021-02-03 12:40:26 -0600
+Processing by EventsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/events_controller.rb:13:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 2.5ms | Allocations: 1930)
+  Rendered events/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2021)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 25.2ms | Allocations: 12749)
+Completed 200 OK in 38ms (Views: 25.9ms | ActiveRecord: 0.9ms | Allocations: 22201)
+
+
+Started POST "/events" for ::1 at 2021-02-03 12:41:02 -0600
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"name"=>"Succulent Propagation Workshop", "description"=>"Join plant expert Holly Hawthorn for her monthly Succulent Propagation Workshop! Learn how to make your succulent multiply. Attendees will receive a free succulent and pot. Happy Planting!", "location"=>"Tom's Thumb Nursery", "start_date"=>"2021-03-06", "end_date"=>"2021-03-06", "start_time"=>"11:00", "end_time"=>"13:00"}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 2.9ms | Allocations: 1684)
+  Rendered events/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1775)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 5552)
+Completed 200 OK in 14410ms (Views: 8.8ms | ActiveRecord: 0.2ms | Allocations: 20530)
+
+
+Started POST "/events" for ::1 at 2021-02-03 12:41:33 -0600
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"name"=>"Succulent Propagation Workshop", "description"=>"Join plant expert Holly Hawthorn for her monthly Succulent Propagation Workshop! Learn how to make your succulent multiply. Attendees will receive a free succulent and pot. Happy Planting!", "location"=>"Tom's Thumb Nursery", "start_date"=>"2021-03-06", "end_date"=>"2021-03-06", "start_time"=>"11:00:00.000", "end_time"=>"13:00:00.000"}, "commit"=>"Create Event"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 2.4ms | Allocations: 1738)
+  Rendered events/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1829)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 5608)
+Completed 200 OK in 45ms (Views: 9.5ms | ActiveRecord: 1.4ms | Allocations: 24837)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
