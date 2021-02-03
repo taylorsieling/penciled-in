@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
 
-    before_action :set_event, only: [:show, :edit, :update]
+    before_action :set_event, only: [:show, :edit, :update, :destroy]
 
     def index
         @events = Event.ordered_by_date
@@ -10,8 +10,12 @@ class EventsController < ApplicationController
     end
 
     def new
-        @event = Event.new
-        @event.category.build
+        if params[:category_id] && @category = Category.find_by_id(params[:category_id])
+            @event = @category.events.build
+        else
+            @event = Event.new
+            @event.build_category
+        end
     end
 
     def create
@@ -42,7 +46,7 @@ class EventsController < ApplicationController
     end
 
     def event_params
-        params.require(:event).permit(:name, :description, :start_date, :end_date, :start_time, :end_time, :location, :category)
+        params.require(:event).permit(:name, :description, :start_date, :end_date, :start_time, :end_time, :location, category_attributes: [:name])
     end
 
 

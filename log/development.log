@@ -9444,3 +9444,353 @@ Did you mean?  category
                category=):
   
 app/controllers/events_controller.rb:14:in `new'
+Started GET "/events/new" for ::1 at 2021-02-03 16:12:01 -0600
+Processing by EventsController#new as HTML
+Completed 500 Internal Server Error in 4ms (Allocations: 2502)
+
+
+  
+ArgumentError (No association found for name `categories'. Has it been defined yet?):
+  
+app/models/event.rb:7:in `<class:Event>'
+app/models/event.rb:1:in `<main>'
+app/controllers/events_controller.rb:13:in `new'
+Started GET "/events/new" for ::1 at 2021-02-03 16:13:57 -0600
+Processing by EventsController#new as HTML
+Completed 500 Internal Server Error in 5ms (Allocations: 2441)
+
+
+  
+ArgumentError (No association found for name `categories'. Has it been defined yet?):
+  
+app/models/event.rb:7:in `<class:Event>'
+app/models/event.rb:1:in `<main>'
+app/controllers/events_controller.rb:13:in `new'
+Started GET "/events/new" for ::1 at 2021-02-03 16:13:59 -0600
+Processing by EventsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/events_controller.rb:13:in `new'
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 1.4ms | Allocations: 8864)
+
+
+  
+NoMethodError (undefined method `build' for nil:NilClass):
+  
+app/controllers/events_controller.rb:14:in `new'
+Started GET "/events/new" for ::1 at 2021-02-03 16:14:16 -0600
+Processing by EventsController#new as HTML
+Completed 500 Internal Server Error in 3ms (Allocations: 2462)
+
+
+  
+ArgumentError (No association found for name `categories'. Has it been defined yet?):
+  
+app/models/event.rb:7:in `<class:Event>'
+app/models/event.rb:1:in `<main>'
+app/controllers/events_controller.rb:13:in `new'
+Started GET "/events/new" for ::1 at 2021-02-03 16:14:33 -0600
+Processing by EventsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/events_controller.rb:13:in `new'
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.1ms | Allocations: 12783)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `category_id`):
+  
+app/controllers/events_controller.rb:14:in `new'
+Started GET "/" for ::1 at 2021-02-03 16:15:29 -0600
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" ORDER BY "events"."start_date" DESC[0m
+  ↳ app/views/events/index.html.erb:3
+  Rendered events/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1050)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 99.1ms | Allocations: 16591)
+Completed 200 OK in 138ms (Views: 108.1ms | ActiveRecord: 2.1ms | Allocations: 24697)
+
+
+Started GET "/events/new" for ::1 at 2021-02-03 16:15:31 -0600
+Processing by EventsController#new as HTML
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 1.2ms | Allocations: 10743)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `category_id`):
+  
+app/controllers/events_controller.rb:14:in `new'
+Started GET "/events/new" for ::1 at 2021-02-03 16:18:39 -0600
+Processing by EventsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/events_controller.rb:13:in `new'
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.2ms | Allocations: 12972)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `category_id`):
+  
+app/controllers/events_controller.rb:14:in `new'
+Started GET "/events/new" for ::1 at 2021-02-03 16:18:40 -0600
+Processing by EventsController#new as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 789)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `category_id`):
+  
+app/controllers/events_controller.rb:14:in `new'
+Started GET "/events/new" for ::1 at 2021-02-03 16:21:49 -0600
+Processing by EventsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/events_controller.rb:13:in `new'
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.1ms | Allocations: 12925)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `category_id`):
+  
+app/controllers/events_controller.rb:14:in `new'
+Started GET "/events/new" for ::1 at 2021-02-03 16:24:53 -0600
+Processing by EventsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/events_controller.rb:16:in `new'
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.4ms | Allocations: 12817)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `category_id`):
+  
+app/controllers/events_controller.rb:17:in `new'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddCategoryToEvents (20210203222704)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "events" ADD "category_id" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210203222704"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/events/new" for ::1 at 2021-02-03 16:28:29 -0600
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 23.9ms | Allocations: 4589)
+  Rendered events/new.html.erb within layouts/application (Duration: 28.9ms | Allocations: 5037)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 82.2ms | Allocations: 20252)
+Completed 200 OK in 202ms (Views: 107.4ms | ActiveRecord: 2.9ms | Allocations: 39040)
+
+
+Started POST "/events" for ::1 at 2021-02-03 16:29:48 -0600
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"name"=>"Succulent Propagation Workshop", "description"=>"Join plant expert Holly Hawthorn for her monthly Succulent Propagation Workshop! Learn how to make your succulent multiply. Attendees will receive a free succulent and pot. Happy Planting!", "location"=>"Tom's Thumb Nursery", "start_date"=>"2021-03-06", "end_date"=>"2021-03-06", "start_time"=>"11:00", "end_time"=>"13:00", "category_attributes"=>{"name"=>"Gardening"}}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.3ms | Allocations: 5157)
+
+
+  
+NoMethodError (undefined method `find_or_create_by' for nil:NilClass):
+  
+app/models/event.rb:15:in `category_attributes='
+app/controllers/events_controller.rb:22:in `create'
+Started GET "/events/new" for ::1 at 2021-02-03 16:31:04 -0600
+Processing by EventsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/events_controller.rb:16:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 2.8ms | Allocations: 3033)
+  Rendered events/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 3124)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 13747)
+Completed 200 OK in 51ms (Views: 30.6ms | ActiveRecord: 1.8ms | Allocations: 27417)
+
+
+Started POST "/events" for ::1 at 2021-02-03 16:31:08 -0600
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"name"=>"Succulent Propagation Workshop", "description"=>"Join plant expert Holly Hawthorn for her monthly Succulent Propagation Workshop! Learn how to make your succulent multiply. Attendees will receive a free succulent and pot. Happy Planting!", "location"=>"Tom's Thumb Nursery", "start_date"=>"2021-03-06", "end_date"=>"2021-03-06", "start_time"=>"11:00", "end_time"=>"13:00", "category"=>{"name"=>"Gardening"}}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+[31mUnpermitted parameter: :category[0m
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 3.4ms | Allocations: 3209)
+  Rendered events/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 3300)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 12831)
+Completed 200 OK in 142011ms (Views: 15.9ms | ActiveRecord: 0.3ms | Allocations: 59434)
+
+
+Started GET "/events" for ::1 at 2021-02-03 16:33:33 -0600
+Processing by EventsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/event.rb:12:in `ordered_by_date'
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" ORDER BY "events"."start_date" DESC[0m
+  ↳ app/views/events/index.html.erb:3
+  Rendered events/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 911)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 11538)
+Completed 200 OK in 27ms (Views: 18.7ms | ActiveRecord: 1.5ms | Allocations: 15874)
+
+
+Started GET "/events/new" for ::1 at 2021-02-03 16:33:36 -0600
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 3.6ms | Allocations: 2007)
+  Rendered events/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2098)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 6186)
+Completed 200 OK in 49ms (Views: 12.5ms | ActiveRecord: 1.0ms | Allocations: 15835)
+
+
+Started POST "/events" for ::1 at 2021-02-03 16:33:57 -0600
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"name"=>"Succulent Propagation Workshop", "description"=>"Join plant expert Holly Hawthorn for her monthly Succulent Propagation Workshop! Learn how to make your succulent multiply. Attendees will receive a free succulent and pot. Happy Planting!", "location"=>"Tom's Thumb Nursery", "start_date"=>"2021-03-06", "end_date"=>"2021-03-06", "start_time"=>"11:00", "end_time"=>"", "category_attributes"=>{"name"=>""}}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mCategory Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE LOWER("categories"."name") = LOWER(?) LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ (byebug):1:in `create'
+  [1m[36mCACHE Category Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE LOWER("categories"."name") = LOWER(?) LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+Started POST "/events" for ::1 at 2021-02-03 16:37:48 -0600
+  ↳ app/controllers/events_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 7.5ms | Allocations: 3208)
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"name"=>"Succulent Propagation Workshop", "description"=>"Join plant expert Holly Hawthorn for her monthly Succulent Propagation Workshop! Learn how to make your succulent multiply. Attendees will receive a free succulent and pot. Happy Planting!", "location"=>"Tom's Thumb Nursery", "start_date"=>"2021-03-06", "end_date"=>"2021-03-06", "start_time"=>"11:00", "end_time"=>"13:00", "category_attributes"=>{"name"=>"Gardening"}}, "commit"=>"Create Event"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered events/new.html.erb within layouts/application (Duration: 10.3ms | Allocations: 5850)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:24:in `create'
+  [1m[36mCategory Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE LOWER("categories"."name") = LOWER(?) LIMIT ?[0m  [["name", "Gardening"], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:24:in `create'
+  [1m[36mCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Gardening"], ["created_at", "2021-02-03 22:37:52.495359"], ["updated_at", "2021-02-03 22:37:52.495359"]]
+  ↳ app/controllers/events_controller.rb:24:in `create'
+  [1m[36mEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "events" ("name", "description", "start_date", "end_date", "start_time", "end_time", "user_id", "created_at", "updated_at", "location", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Succulent Propagation Workshop"], ["description", "Join plant expert Holly Hawthorn for her monthly Succulent Propagation Workshop! Learn how to make your succulent multiply. Attendees will receive a free succulent and pot. Happy Planting!"], ["start_date", "2021-03-06"], ["end_date", "2021-03-06"], ["start_time", "2000-01-01 11:00:00"], ["end_time", "2000-01-01 13:00:00"], ["user_id", 3], ["created_at", "2021-02-03 22:37:52.500026"], ["updated_at", "2021-02-03 22:37:52.500026"], ["location", "Tom's Thumb Nursery"], ["category_id", 1]]
+  ↳ app/controllers/events_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/events_controller.rb:24:in `create'
+Redirected to http://localhost:3000/events/1
+Completed 302 Found in 4114ms (ActiveRecord: 3.3ms | Allocations: 19728)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4145.5ms | Allocations: 39045)
+Completed 200 OK in 235280ms (Views: 4146.9ms | ActiveRecord: 0.4ms | Allocations: 66444)
+
+
+Started GET "/events/1" for ::1 at 2021-02-03 16:37:52 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/events_controller.rb:45:in `set_event'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:45:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 121)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 38.5ms | Allocations: 18431)
+Completed 200 OK in 61ms (Views: 38.7ms | ActiveRecord: 2.6ms | Allocations: 29026)
+
+
+Started GET "/events/new" for ::1 at 2021-02-03 16:37:55 -0600
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 6.4ms | Allocations: 2005)
+  Rendered events/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 2096)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 6178)
+Completed 200 OK in 30ms (Views: 18.2ms | ActiveRecord: 1.1ms | Allocations: 10179)
+
+
+Started POST "/events" for ::1 at 2021-02-03 16:38:24 -0600
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"name"=>"Succulent Propagation Workshop", "description"=>"Join plant expert Holly Hawthorn for her monthly Succulent Propagation Workshop! Learn how to make your succulent multiply. Attendees will receive a free succulent and pot. Happy Planting!", "location"=>"Tom's Thumb Nursery", "start_date"=>"2021-03-06", "end_date"=>"2021-03-06", "start_time"=>"11:00", "end_time"=>"13:00", "category_attributes"=>{"name"=>"Gardening"}}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (byebug):1:in `create'
+  [1m[36mCategory Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE LOWER("categories"."name") = LOWER(?) LIMIT ?[0m  [["name", "Gardening"], ["LIMIT", 1]]
+  ↳ (byebug):1:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ (byebug):1:in `create'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/events_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:24:in `create'
+  [1m[36mCategory Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE LOWER("categories"."name") = LOWER(?) LIMIT ?[0m  [["name", "Gardening"], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/events_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 5.7ms | Allocations: 2561)
+  Rendered events/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 2652)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 6094)
+Completed 200 OK in 94440ms (Views: 14.7ms | ActiveRecord: 2.7ms | Allocations: 28050)
+
+
+Started POST "/events" for ::1 at 2021-02-03 16:40:25 -0600
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"name"=>"Succulent Propagation Workshop", "description"=>"Join plant expert Holly Hawthorn for her monthly Succulent Propagation Workshop! Learn how to make your succulent multiply. Attendees will receive a free succulent and pot. Happy Planting!", "location"=>"Tom's Thumb Nursery", "start_date"=>"2021-03-06", "end_date"=>"2021-03-06", "start_time"=>"11:00:00.000", "end_time"=>"13:00:00.000", "category_attributes"=>{"name"=>"Gardening"}}, "commit"=>"Create Event"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (byebug):1:in `create'
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Gardening"], ["created_at", "2021-02-03 22:40:47.844632"], ["updated_at", "2021-02-03 22:40:47.844632"]]
+  ↳ (byebug):1:in `create'
+  [1m[36mEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "events" ("name", "description", "start_date", "end_date", "start_time", "end_time", "user_id", "created_at", "updated_at", "location", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Succulent Propagation Workshop"], ["description", "Join plant expert Holly Hawthorn for her monthly Succulent Propagation Workshop! Learn how to make your succulent multiply. Attendees will receive a free succulent and pot. Happy Planting!"], ["start_date", "2021-03-06"], ["end_date", "2021-03-06"], ["start_time", "2000-01-01 11:00:00"], ["end_time", "2000-01-01 13:00:00"], ["user_id", 3], ["created_at", "2021-02-03 22:40:47.850578"], ["updated_at", "2021-02-03 22:40:47.850578"], ["location", "Tom's Thumb Nursery"], ["category_id", 2]]
+  ↳ (byebug):1:in `create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (byebug):1:in `create'
+Redirected to http://localhost:3000/events/2
+Completed 302 Found in 28342ms (ActiveRecord: 5.0ms | Allocations: 39349)
+
+
+Started GET "/events/2" for ::1 at 2021-02-03 16:40:54 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:45:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 4192)
+Completed 200 OK in 23ms (Views: 17.4ms | ActiveRecord: 0.4ms | Allocations: 5416)
+
+
