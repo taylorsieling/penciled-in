@@ -8959,3 +8959,83 @@ Processing by EventsController#create as HTML
 Completed 200 OK in 76614ms (Views: 30.1ms | ActiveRecord: 1.4ms | Allocations: 35268)
 
 
+Started GET "/events" for ::1 at 2021-02-03 12:58:39 -0600
+Processing by EventsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/event.rb:10:in `ordered_by_date'
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" ORDER BY "events"."start_date" DESC[0m
+  ↳ app/views/events/index.html.erb:3
+  Rendered events/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 887)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/sieling/Flatiron/rails-project/penciled-in/public/packs
+[Webpacker] Hash: 415a948d492e21802f43
+Version: webpack 4.46.0
+Time: 1424ms
+Built at: 02/03/2021 12:58:43 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-d5a3c3b4dce84b5eb605.js    125 KiB  application  [emitted] [immutable]  application
+js/application-d5a3c3b4dce84b5eb605.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-d5a3c3b4dce84b5eb605.js js/application-d5a3c3b4dce84b5eb605.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 4251.4ms | Allocations: 7063)
+Completed 200 OK in 4280ms (Views: 4272.3ms | ActiveRecord: 1.1ms | Allocations: 8848)
+
+
+Started GET "/events" for ::1 at 2021-02-03 13:03:25 -0600
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" ORDER BY "events"."start_date" DESC[0m
+  ↳ app/views/events/index.html.erb:3
+  Rendered events/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 859)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 164.6ms | Allocations: 46688)
+Completed 200 OK in 169ms (Views: 166.9ms | ActiveRecord: 0.3ms | Allocations: 47854)
+
+
+Started GET "/events" for ::1 at 2021-02-03 13:04:17 -0600
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" ORDER BY "events"."start_date" DESC[0m
+  ↳ app/views/events/index.html.erb:3
+  Rendered events/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 854)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/sieling/Flatiron/rails-project/penciled-in/public/packs
+[Webpacker] Hash: cd12497beeca4ff0799a
+Version: webpack 4.46.0
+Time: 10698ms
+Built at: 02/03/2021 1:04:30 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-d5a3c3b4dce84b5eb605.js    125 KiB  application  [emitted] [immutable]  application
+js/application-d5a3c3b4dce84b5eb605.js.map    139 KiB  application  [emitted] [dev]        application
+          js/uikit-c19009010fc0e64886bb.js    284 KiB        uikit  [emitted] [immutable]  uikit
+      js/uikit-c19009010fc0e64886bb.js.map    405 KiB        uikit  [emitted] [dev]        uikit
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-d5a3c3b4dce84b5eb605.js js/application-d5a3c3b4dce84b5eb605.js.map
+Entrypoint uikit = js/uikit-c19009010fc0e64886bb.js js/uikit-c19009010fc0e64886bb.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/uikit.js] 280 KiB {uikit} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 13086.7ms | Allocations: 6683)
+Completed 200 OK in 13091ms (Views: 13088.6ms | ActiveRecord: 0.6ms | Allocations: 7844)
+
+
