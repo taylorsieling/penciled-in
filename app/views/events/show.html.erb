@@ -1,1 +1,9 @@
-<h1> The Event Show Page </h1>
+<div class="uk-container">
+<h1><%= @event.name %></h1>
+<p><%= @event.description %></p>
+<br><br>
+<p><%= @event.location %></p>
+<p><%= @event.start_date.strftime("%b %d, %Y") %> at <%= @event.start_time.strftime(" %l:%M %p") %> - <%= @event.end_date.strftime("%b %d, %Y") %> at <%= @event.end_time.strftime(" %l:%M %p") %></p>
+
+<p><%= @event.category.name%></p>
+</div>

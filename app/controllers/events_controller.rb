@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
 
     before_action :set_event, only: [:show, :edit, :update, :destroy]
+    helper_method :readable_date, :readable_time
 
     def index
         @events = Event.ordered_by_date
@@ -49,5 +50,11 @@ class EventsController < ApplicationController
         params.require(:event).permit(:name, :description, :start_date, :end_date, :start_time, :end_time, :location, category_attributes: [:name])
     end
 
+    def readable_date
+        strftime("%b %d, %Y")
+    end
+
+    def readable_time
+    end
 
 end
