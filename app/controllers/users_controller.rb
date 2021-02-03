@@ -2,9 +2,6 @@ class UsersController < ApplicationController
 
     before_action :set_user, only: [:show, :edit, :update]
 
-    def index
-    end
-
     def show
         if session[:user_id] != @user.id
             redirect_to root_path
