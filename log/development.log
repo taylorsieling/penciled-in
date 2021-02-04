@@ -14133,3 +14133,474 @@ Processing by CategoriesController#create as HTML
 Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.1ms | Allocations: 8233)
 
 
+Started GET "/" for ::1 at 2021-02-04 14:56:46 -0600
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" ORDER BY "events"."start_date" DESC[0m
+  ↳ app/views/events/index.html.erb:5
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:9
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:9
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:9
+  Rendered events/index.html.erb within layouts/application (Duration: 54.6ms | Allocations: 15124)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 142.6ms | Allocations: 29900)
+Completed 200 OK in 177ms (Views: 147.3ms | ActiveRecord: 2.7ms | Allocations: 37075)
+
+
+Started GET "/events/3" for ::1 at 2021-02-04 14:56:49 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:51:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:9
+  Rendered events/show.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1185)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 5346)
+Completed 200 OK in 23ms (Views: 16.1ms | ActiveRecord: 1.1ms | Allocations: 6569)
+
+
+Started GET "/events/new" for ::1 at 2021-02-04 14:56:52 -0600
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.5ms | Allocations: 243)
+  Rendered events/_form.html.erb (Duration: 9.7ms | Allocations: 4536)
+  Rendered events/new.html.erb within layouts/application (Duration: 12.3ms | Allocations: 5312)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 9467)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.1ms | Allocations: 10171)
+
+
+Started POST "/events" for ::1 at 2021-02-04 14:58:50 -0600
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"name"=>"Spring and Summer Vegetable Gardening", "description"=>"This time of year is perfect for planting your spring vegetables, seeding your summer garden, and enjoying vibrant and tasty spring greens (kale, spinach, beets, lettuce, etc.) and all the summer superstars: succulent tomatoes, gorgeous eggplant, colorful peppers, unusual and tasty cucumbers, summer squash, summer grown winter squash, fresh corn, edamame, basil -- summer abounds with possibilities! In this class, we will cover gardening from seed to harvest. There will be a focus on soil health and best practices for keeping your soil alive and well. We will review how and why to compost to feed your soil, which in turn, feeds your plants!", "location"=>"Tom's Thumb Nursery", "start_date"=>"2021-03-18", "end_date"=>"2021-03-18", "start_time"=>"16:00", "end_time"=>"17:00", "category_attributes"=>{"name"=>"Gardening"}}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.2ms | Allocations: 5133)
+
+
+  
+NoMethodError (undefined method `find_or_create_by' for nil:NilClass):
+  
+app/models/event.rb:17:in `category_attributes='
+app/controllers/events_controller.rb:23:in `create'
+Started GET "/events/new" for ::1 at 2021-02-04 14:59:41 -0600
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 43)
+  Rendered events/_form.html.erb (Duration: 3.9ms | Allocations: 2011)
+  Rendered events/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2206)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 6523)
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 0.2ms | Allocations: 7277)
+
+
+Started POST "/events" for ::1 at 2021-02-04 14:59:42 -0600
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"name"=>"Spring and Summer Vegetable Gardening", "description"=>"This time of year is perfect for planting your spring vegetables, seeding your summer garden, and enjoying vibrant and tasty spring greens (kale, spinach, beets, lettuce, etc.) and all the summer superstars: succulent tomatoes, gorgeous eggplant, colorful peppers, unusual and tasty cucumbers, summer squash, summer grown winter squash, fresh corn, edamame, basil -- summer abounds with possibilities! In this class, we will cover gardening from seed to harvest. There will be a focus on soil health and best practices for keeping your soil alive and well. We will review how and why to compost to feed your soil, which in turn, feeds your plants!", "location"=>"Tom's Thumb Nursery", "start_date"=>"2021-03-18", "end_date"=>"2021-03-18", "start_time"=>"16:00", "end_time"=>"17:00", "category_attributes"=>{"name"=>"Gardening"}}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms | Allocations: 1933)
+
+
+  
+NoMethodError (undefined method `find_or_create_by' for nil:NilClass):
+  
+app/models/event.rb:17:in `category_attributes='
+app/controllers/events_controller.rb:23:in `create'
+Started GET "/events/new" for ::1 at 2021-02-04 14:59:51 -0600
+Processing by EventsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/events_controller.rb:17:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered events/_form.html.erb (Duration: 3.9ms | Allocations: 2011)
+  Rendered events/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2204)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 33.2ms | Allocations: 12765)
+Completed 200 OK in 52ms (Views: 33.5ms | ActiveRecord: 2.3ms | Allocations: 26317)
+
+
+Started POST "/events" for ::1 at 2021-02-04 14:59:52 -0600
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"name"=>"Spring and Summer Vegetable Gardening", "description"=>"This time of year is perfect for planting your spring vegetables, seeding your summer garden, and enjoying vibrant and tasty spring greens (kale, spinach, beets, lettuce, etc.) and all the summer superstars: succulent tomatoes, gorgeous eggplant, colorful peppers, unusual and tasty cucumbers, summer squash, summer grown winter squash, fresh corn, edamame, basil -- summer abounds with possibilities! In this class, we will cover gardening from seed to harvest. There will be a focus on soil health and best practices for keeping your soil alive and well. We will review how and why to compost to feed your soil, which in turn, feeds your plants!", "location"=>"Tom's Thumb Nursery", "start_date"=>"2021-03-18", "end_date"=>"2021-03-18", "start_time"=>"16:00", "end_time"=>"17:00", "category_attributes"=>{"name"=>"Gardening"}}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:25:in `create'
+  [1m[36mCategory Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE LOWER("categories"."name") = LOWER(?) LIMIT ?[0m  [["name", "Gardening"], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/events_controller.rb:25:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 1.3ms | Allocations: 564)
+  Rendered events/_form.html.erb (Duration: 5.0ms | Allocations: 2506)
+  Rendered events/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 3221)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 6670)
+Completed 200 OK in 10811ms (Views: 15.1ms | ActiveRecord: 0.5ms | Allocations: 57065)
+
+
+Started GET "/events" for ::1 at 2021-02-04 15:05:47 -0600
+Processing by EventsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/event.rb:12:in `ordered_by_date'
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" ORDER BY "events"."start_date" DESC[0m
+  ↳ app/views/events/index.html.erb:5
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:9
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:9
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:9
+  Rendered events/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 3648)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 8147)
+Completed 200 OK in 29ms (Views: 22.8ms | ActiveRecord: 1.5ms | Allocations: 9948)
+
+
+Started GET "/events/new" for ::1 at 2021-02-04 15:05:50 -0600
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.4ms | Allocations: 234)
+  Rendered events/_form.html.erb (Duration: 0.7ms | Allocations: 1547)
+  Rendered events/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2309)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 2381)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 3061)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_for @event do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name %> <br>
+
+<%= f.label :description %>
+<%= f.text_area :description%> <br>
+
+<%= f.label :location %>
+<%= f.text_field :location %> <br>
+
+<%= f.label :start_date %>
+<%= f.date_field :start_date %> <br>
+
+<%= f.label :end_date %>
+<%= f.date_field :end_date %> <br>
+
+<%= f.label :start_time %>
+<%= f.time_field :start_time %> <br>
+
+<%= f.label :end_time %>
+<%= f.time_field :end_time %> <br><br>
+
+  <%= f.collection_select :category_ids, Category.all, :id, :name %>
+
+    <%= c.label :name %>
+    <%= c.text_field :name %>
+
+<% end %>
+
+<%= f.submit %>
+<% end %>
+):
+1:    <%= form_for @event do |f| %>
+2:    
+3:    <%= f.label :name %>
+4:    <%= f.text_field :name %> <br>
+5:    
+6:    <%= f.label :description %>
+7:    <%= f.text_area :description%> <br>
+8:    
+9:    <%= f.label :location %>
+10:    <%= f.text_field :location %> <br>
+11:    
+12:    <%= f.label :start_date %>
+13:    <%= f.date_field :start_date %> <br>
+14:    
+15:    <%= f.label :end_date %>
+16:    <%= f.date_field :end_date %> <br>
+17:    
+18:    <%= f.label :start_time %>
+19:    <%= f.time_field :start_time %> <br>
+20:    
+21:    <%= f.label :end_time %>
+22:    <%= f.time_field :end_time %> <br><br>
+23:    
+24:      <%= f.collection_select :category_ids, Category.all, :id, :name %>
+25:    
+26:        <%= c.label :name %>
+27:        <%= c.text_field :name %>
+28:    
+29:    <% end %>
+30:    
+31:    <%= f.submit %>
+32:    <% end %>
+  
+app/views/events/_form.html.erb:34: syntax error, unexpected end, expecting end-of-input
+app/views/events/_form.html.erb:34: syntax error, unexpected end, expecting end-of-input
+app/views/events/_form.html.erb:34: syntax error, unexpected end, expecting end-of-input
+app/views/events/_form.html.erb:34: syntax error, unexpected end, expecting end-of-input
+app/views/events/_form.html.erb:34: syntax error, unexpected end, expecting end-of-input
+app/views/events/_form.html.erb:34: syntax error, unexpected end, expecting end-of-input
+app/views/events/new.html.erb:3
+Started GET "/events/new" for ::1 at 2021-02-04 15:08:29 -0600
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.5ms | Allocations: 234)
+  Rendered events/_form.html.erb (Duration: 2.1ms | Allocations: 1583)
+  Rendered events/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 2345)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 2417)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 3714)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_for @event do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name %> <br>
+
+<%= f.label :description %>
+<%= f.text_area :description%> <br>
+
+<%= f.label :location %>
+<%= f.text_field :location %> <br>
+
+<%= f.label :start_date %>
+<%= f.date_field :start_date %> <br>
+
+<%= f.label :end_date %>
+<%= f.date_field :end_date %> <br>
+
+<%= f.label :start_time %>
+<%= f.time_field :start_time %> <br>
+
+<%= f.label :end_time %>
+<%= f.time_field :end_time %> <br><br>
+
+  <%= f.collection_select :category_ids, Category.all, :id, :name %>
+  <%= f.fields_for :category do |c| %>
+
+    <%= c.label :name %>
+    <%= c.text_field :name %>
+
+  <% end %>
+
+    
+
+<% end %>
+
+<%= f.submit %>
+<% end %>
+):
+1:    <%= form_for @event do |f| %>
+2:    
+3:    <%= f.label :name %>
+4:    <%= f.text_field :name %> <br>
+5:    
+6:    <%= f.label :description %>
+7:    <%= f.text_area :description%> <br>
+8:    
+9:    <%= f.label :location %>
+10:    <%= f.text_field :location %> <br>
+11:    
+12:    <%= f.label :start_date %>
+13:    <%= f.date_field :start_date %> <br>
+14:    
+15:    <%= f.label :end_date %>
+16:    <%= f.date_field :end_date %> <br>
+17:    
+18:    <%= f.label :start_time %>
+19:    <%= f.time_field :start_time %> <br>
+20:    
+21:    <%= f.label :end_time %>
+22:    <%= f.time_field :end_time %> <br><br>
+23:    
+24:      <%= f.collection_select :category_ids, Category.all, :id, :name %>
+25:      <%= f.fields_for :category do |c| %>
+26:    
+27:        <%= c.label :name %>
+28:        <%= c.text_field :name %>
+29:    
+30:      <% end %>
+31:    
+32:        
+33:    
+34:    <% end %>
+35:    
+36:    <%= f.submit %>
+37:    <% end %>
+  
+app/views/events/_form.html.erb:39: syntax error, unexpected end, expecting end-of-input
+app/views/events/_form.html.erb:39: syntax error, unexpected end, expecting end-of-input
+app/views/events/_form.html.erb:39: syntax error, unexpected end, expecting end-of-input
+app/views/events/_form.html.erb:39: syntax error, unexpected end, expecting end-of-input
+app/views/events/_form.html.erb:39: syntax error, unexpected end, expecting end-of-input
+app/views/events/_form.html.erb:39: syntax error, unexpected end, expecting end-of-input
+app/views/events/new.html.erb:3
+Started GET "/events/new" for ::1 at 2021-02-04 15:08:30 -0600
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered events/_form.html.erb (Duration: 1.7ms | Allocations: 1572)
+  Rendered events/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1768)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1839)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2380)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_for @event do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name %> <br>
+
+<%= f.label :description %>
+<%= f.text_area :description%> <br>
+
+<%= f.label :location %>
+<%= f.text_field :location %> <br>
+
+<%= f.label :start_date %>
+<%= f.date_field :start_date %> <br>
+
+<%= f.label :end_date %>
+<%= f.date_field :end_date %> <br>
+
+<%= f.label :start_time %>
+<%= f.time_field :start_time %> <br>
+
+<%= f.label :end_time %>
+<%= f.time_field :end_time %> <br><br>
+
+  <%= f.collection_select :category_ids, Category.all, :id, :name %>
+  <%= f.fields_for :category do |c| %>
+
+    <%= c.label :name %>
+    <%= c.text_field :name %>
+
+  <% end %>
+
+    
+
+<% end %>
+
+<%= f.submit %>
+<% end %>
+):
+1:    <%= form_for @event do |f| %>
+2:    
+3:    <%= f.label :name %>
+4:    <%= f.text_field :name %> <br>
+5:    
+6:    <%= f.label :description %>
+7:    <%= f.text_area :description%> <br>
+8:    
+9:    <%= f.label :location %>
+10:    <%= f.text_field :location %> <br>
+11:    
+12:    <%= f.label :start_date %>
+13:    <%= f.date_field :start_date %> <br>
+14:    
+15:    <%= f.label :end_date %>
+16:    <%= f.date_field :end_date %> <br>
+17:    
+18:    <%= f.label :start_time %>
+19:    <%= f.time_field :start_time %> <br>
+20:    
+21:    <%= f.label :end_time %>
+22:    <%= f.time_field :end_time %> <br><br>
+23:    
+24:      <%= f.collection_select :category_ids, Category.all, :id, :name %>
+25:      <%= f.fields_for :category do |c| %>
+26:    
+27:        <%= c.label :name %>
+28:        <%= c.text_field :name %>
+29:    
+30:      <% end %>
+31:    
+32:        
+33:    
+34:    <% end %>
+35:    
+36:    <%= f.submit %>
+37:    <% end %>
+  
+app/views/events/_form.html.erb:39: syntax error, unexpected end, expecting end-of-input
+app/views/events/_form.html.erb:39: syntax error, unexpected end, expecting end-of-input
+app/views/events/_form.html.erb:39: syntax error, unexpected end, expecting end-of-input
+app/views/events/_form.html.erb:39: syntax error, unexpected end, expecting end-of-input
+app/views/events/_form.html.erb:39: syntax error, unexpected end, expecting end-of-input
+app/views/events/_form.html.erb:39: syntax error, unexpected end, expecting end-of-input
+app/views/events/new.html.erb:3
+Started GET "/events/new" for ::1 at 2021-02-04 15:08:46 -0600
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.5ms | Allocations: 234)
+  Rendered events/_form.html.erb (Duration: 27.5ms | Allocations: 7772)
+  Rendered events/new.html.erb within layouts/application (Duration: 30.6ms | Allocations: 8534)
+  Rendered layout layouts/application.html.erb (Duration: 30.9ms | Allocations: 8604)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.0ms | Allocations: 9891)
+
+
+  
+ActionView::Template::Error (undefined method `category_ids' for #<Event:0x00007f98b7474940>
+Did you mean?  category_id
+               category_id=
+               category_id?
+               category_id_was):
+    21: <%= f.label :end_time %>
+    22: <%= f.time_field :end_time %> <br><br>
+    23: 
+    24:   <%= f.collection_select :category_ids, Category.all, :id, :name %>
+    25:   <%= f.fields_for :category do |c| %>
+    26: 
+    27:     <%= c.label :name %>
+  
+app/views/events/_form.html.erb:24
+app/views/events/_form.html.erb:1
+app/views/events/new.html.erb:3
+Started GET "/events/new" for ::1 at 2021-02-04 15:08:58 -0600
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.6ms | Allocations: 234)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/events/_form.html.erb:24
+  Rendered events/_form.html.erb (Duration: 7.5ms | Allocations: 3191)
+  Rendered events/new.html.erb within layouts/application (Duration: 10.0ms | Allocations: 3955)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 8431)
+Completed 200 OK in 24ms (Views: 21.1ms | ActiveRecord: 0.3ms | Allocations: 9739)
+
+

@@ -21,13 +21,13 @@
 <%= f.label :end_time %>
 <%= f.time_field :end_time %> <br><br>
 
-<%= f.label :category, "Category:" %><br>
-<%= f.fields_for :category do |c| %> <br>
+  <%= f.collection_select :category_id, Category.all, :id, :name %>
+  <%= f.fields_for :category do |c| %>
 
     <%= c.label :name %>
     <%= c.text_field :name %>
 
-<% end %>
+  <% end %>
 
 <%= f.submit %>
 <% end %>
