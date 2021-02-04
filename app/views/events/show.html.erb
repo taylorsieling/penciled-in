@@ -8,3 +8,6 @@
 
 <p><%= @event.category.name%></p>
 </div>
+
+<%= link_to('delete event', event_path(@event), method: 'delete') %>
+

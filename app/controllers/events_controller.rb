@@ -40,6 +40,11 @@ class EventsController < ApplicationController
         end
     end
 
+    def destroy
+        @event.destroy
+        redirect_to events_path
+    end
+
     private
 
     def set_event
@@ -50,11 +55,11 @@ class EventsController < ApplicationController
         params.require(:event).permit(:name, :description, :start_date, :end_date, :start_time, :end_time, :location, category_attributes: [:name])
     end
 
-    def readable_date
-        strftime("%b %d, %Y")
-    end
+    # def readable_date
+    #     strftime("%b %d, %Y")
+    # end
 
-    def readable_time
-    end
+    # def readable_time
+    # end
 
 end

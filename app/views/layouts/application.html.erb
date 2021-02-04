@@ -18,7 +18,7 @@
         <div class="uk-navbar-left">
 
           <ul class="uk-navbar-nav">
-            <li class="uk-active"><a class="uk-text-large uk-text-warning" href="/">Penciled-In</a></li>
+            <a class="uk-navbar-item uk-logo uk-text-warning uk-text-lowercase" uk-icon="pencil" href="/">Penciled-In</a>
           </ul>
 
         </div>
@@ -43,20 +43,20 @@
         </div>
 
       </nav>
-  </div>
+    </div>
 
-  <div class="uk-container">
+    <div class="uk-container">
 
-      <% if !current_user %>
-      <h1>Penciled In</h1>
-      <%= link_to "Log In", "/login" %> ||
-      <%= link_to "Log in with Google", '/auth/google_oauth2', method: "post" %> ||
-      <%= link_to "Register", "/users/new" %></br>
-    <% end %> 
+        <% if !current_user %>
+          <h1>Penciled In</h1>
+          <%= link_to "Log In", "/login" %> ||
+          <%= link_to "Log in with Google", '/auth/google_oauth2', method: "post" %> ||
+          <%= link_to "Register", "/users/new" %></br>
+        <% end %> 
 
-    <%= yield %>
+      <%= yield %>
 
     </div>
-    
+
   </body>
 </html>
