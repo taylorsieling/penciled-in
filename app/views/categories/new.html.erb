@@ -1,4 +1,7 @@
 <h1>Create an Event Categoy</h1>
+
+<%= render partial: 'layouts/errors', locals: {object: @category} %>
+
 <%= form_for(@category) do |f| %>
 
     <%= f.label :name %>
