@@ -1,0 +1,15 @@
+<h1> All the Events </h1><br>
+
+<div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid>
+
+    <% @categories.each do |c| %>
+    <div>
+        
+        <a href class="uk-display-block uk-card uk-card-body uk-card-default uk-link-toggle uk-width-medium">
+            <h3 class="uk-card-title"><span class="uk-link-heading"><%= c.name %></span></h3>
+        </a>
+       
+     </div>
+    <% end %>
+
+</div>
