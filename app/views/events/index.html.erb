@@ -1,11 +1,26 @@
 <h1> All the Events </h1><br>
-<p>
-<%= @events.each do |e| %>
-<%= e.name %>
-<%= e.start_date %>
-<%= e.start_time %>
-<br>
-- - - 
-<br>
-<% end %>
-</p>
+
+<div class="uk-grid-match uk-child-width-expand@s" uk-grid>
+
+    <%= @events.each do |e| %>
+    <div>
+        
+        <div class="uk-card uk-card-default">
+            <div class="uk-card-header">
+                <h3 class="uk-card-title uk-margin-remove-bottom"><%= e.name %></h3>
+                <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00"><%= e.start_date.strftime("%b %d, %Y") %> at <%= e.start_time.strftime(" %l:%M %p") %></time></p>
+            </div>
+
+            <div class="uk-card-body">
+                <p><%= e.description %></p>
+            </div>
+
+            <div class="uk-card-footer">
+                <a href="#" class="uk-button uk-button-text">Read more</a>
+            </div>
+        </div>
+       
+     </div>
+    <% end %>
+
+</div>
