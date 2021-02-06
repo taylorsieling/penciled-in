@@ -1,0 +1,16 @@
+<%= form_for @rsvp do |f| %>
+
+        <%= f.label :status %> <br><br>
+        <%= f.radio_button :status, "Interested", class: 'uk-radio' %>
+        <%= f.label :status, "Interested" %><br>
+        <%= f.radio_button :status, "Attending", class: 'uk-radio' %>
+        <%= f.label :status, "Attending" %><br>
+         <%= f.radio_button :status, "Declined", class: 'uk-radio' %>
+        <%= f.label :status, "Declined" %><br><br>
+
+        <%= f.label :number_of_attendee, "Number of Attendees" %> <br><br>
+        <%= f.text_field :number_of_attendee, class: 'uk-input' %> <br><br>
+
+        <%= f.submit class: 'uk-button uk-button-secondary' %>
+
+<% end %>

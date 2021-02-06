@@ -3,26 +3,20 @@ class RsvpsController < ApplicationController
     before_action :set_rsvp, only: [:show, :edit, :update, :destroy]
 
     def index
-        @rsvps = current_user.rsvps.all
     end
 
     def show
     end
 
     def new
-        if params[:category_id] && @category = Category.find_by_id(params[:category_id])
-            @rsvp = @category.rsvps.build
-        else
-            @rsvp = rsvp.new
-            @rsvp.build_category
-        end
+        @rsvp = Rsvp.new(event_id: params[:event_id], user_id: current_user.id)
     end
 
     def create
-        @rsvp = current_user.rsvps.new(rsvp_params)
-        byebug
+        @rsvp = Rsvp.new(rsvp_params)
         if @rsvp.save
-            redirect_to rsvp_path(@rsvp)
+            @event = Event.find(@comment.event_id)
+            redirect_to event_path(@event)
         else
             render :new
         end
@@ -32,16 +26,9 @@ class RsvpsController < ApplicationController
     end
     
     def update
-        if @rsvp.update(rsvp_params)
-            redirect_to rsvp_path(@rsvp)
-        else
-            render "new"
-        end
     end
 
     def destroy
-        @rsvp.destroy
-        redirect_to rsvps_path
     end
 
     private
@@ -51,6 +38,6 @@ class RsvpsController < ApplicationController
     end
 
     def rsvp_params
-        params.require(:rsvp).permit(:name, :description, :start_date, :end_date, :start_time, :end_time, :location, category_attributes: [:name])
+        params.require(:rsvp).permit(:status, :number_of_attendee)
     end
 end
