@@ -1,11 +1,23 @@
-  <div class='uk-grid-small' uk-grid>
+<div class='uk-grid-small' uk-grid>
 
-        <div class="uk-width-1-2@s">
+    <div class="uk-width-1-2@s uk-padding-large uk-padding-remove-top">
+
+        <div class="uk-container">
             
+            <h1><%= @event.name %></h1>
+            <h3>About this Event</h3>
+            <p><%= @event.description %></p>
+            <br>
+            <h3>Category</h3>
+            <p><%= @event.category.name%></p>
+        
         </div>
-
-        <div class="uk-width-1-2@s">
-            <%= render 'form' %>
-        </div>
-
+        
     </div>
+        
+
+    <div class="uk-width-1-2@s uk-padding-large uk-padding-remove-top">
+        <%= render 'form' %>
+    </div>
+
+</div>
