@@ -1,33 +1,65 @@
 <%= form_for @event do |f| %>
 
-<%= f.label :name %>
-<%= f.text_field :name %> <br>
+  <div class='uk-grid-small' uk-grid>
+  
+    <div class="uk-width-1-1">
+    <%= f.label :name, "Event Name" %><br><br>
+    <%= f.text_field :name, class: 'uk-input'%> <br><br>
+    </div>
 
-<%= f.label :description %>
-<%= f.text_area :description%> <br>
+    <div class="uk-width-1-1">
+    <%= f.label :description %><br><br>
+    <%= f.text_area :description, class: 'uk-textarea' %> <br><br>
+    </div>
 
-<%= f.label :location %>
-<%= f.text_field :location %> <br>
+    <div class="uk-width-1-1">
+    <%= f.label :location %><br><br>
+    <%= f.text_field :location, class: 'uk-input' %> <br><br>
+    </div>
 
-<%= f.label :start_date %>
-<%= f.date_field :start_date %> <br>
+    <div class="uk-width-1-2@s">
+    <%= f.label :start_date %> <br><br>
+    <%= f.date_field :start_date, class: 'uk-input' %> <br><br>
+    </div>
 
-<%= f.label :end_date %>
-<%= f.date_field :end_date %> <br>
+    <div class="uk-width-1-2@s">
+    <%= f.label :end_date %> <br><br>
+    <%= f.date_field :end_date, class: 'uk-input' %> <br><br>
+    </div>
 
-<%= f.label :start_time %>
-<%= f.time_field :start_time %> <br>
+    <div class="uk-width-1-2@s">
+    <%= f.label :start_time %><br><br>
+    <%= f.time_field :start_time, class: 'uk-input' %> <br><br>
+    </div>
 
-<%= f.label :end_time %>
-<%= f.time_field :end_time %> <br><br>
+    <div class="uk-width-1-2@s">
+    <%= f.label :end_time %><br><br>
+    <%= f.time_field :end_time, class: 'uk-input' %> <br><br>
+    </div>
 
-  <%= f.collection_select :category_id, Category.all, :id, :name, prompt: true %>
-  <%= f.fields_for :category do |c| %>
+      <div class="uk-width-1-2@s">
 
-    <%= c.label :name %>
-    <%= c.text_field :name %>
+      <%= f.label :category, "Choose a Category" %><br><br>
+      <%= f.collection_select :category_id, Category.all, :id, :name, {prompt: true}, { class: 'uk-select' } %><br><br>
 
-  <% end %>
+      </div>
 
-<%= f.submit %>
+      <div class="uk-width-1-2@s">
+      
+        <%= f.fields_for :category do |c| %>
+
+          <%= c.label :name, "Or Create Your Own" %><br><br>
+          <%= c.text_field :name, placeholder: "Category Name", class: 'uk-input' %>
+
+        <% end %>
+
+      </div>
+      <br><br>
+
+      <div class="uk-width-1-1">
+        <%= f.submit class: 'uk-button uk-button-secondary' %>
+      </div>
+    
+    </div>
+
 <% end %>
