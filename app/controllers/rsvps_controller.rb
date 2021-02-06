@@ -3,23 +3,30 @@ class RsvpsController < ApplicationController
     before_action :set_rsvp, only: [:show, :edit, :update, :destroy]
 
     def index
+        @rsvps = current_user.rsvps
     end
 
     def show
     end
 
     def new
-        @rsvp = Rsvp.new(event_id: params[:event_id], user_id: current_user.id)
-        @event = @rsvp.event
+        if params[:event_id] && !Event.exists?(params[:event_id])
+            redirect_to events_path, alert: "Event not found."
+        else
+            @event = Event.find_by_id(params[:event_id])
+            @rsvp = Rsvp.new
+        end
     end
 
     def create
-        @rsvp = Rsvp.new(rsvp_params)
+        @event = Event.find_by_id(params[:event_id])
+        @rsvp = @event.rsvp.build(rsvp_params)
+        @rsvp.user = current_user
+
         if @rsvp.save
-            @event = Event.find(@comment.event_id)
-            redirect_to event_path(@event)
+          redirect_to event_path(@rsvp.event)
         else
-            render :new
+          render :new
         end
     end
 
@@ -41,4 +48,5 @@ class RsvpsController < ApplicationController
     def rsvp_params
         params.require(:rsvp).permit(:status, :number_of_attendee)
     end
+
 end
