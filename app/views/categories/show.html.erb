@@ -1,6 +1,6 @@
 <h1> <%= @category.name %> Events</h1><br>
 
-<div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-grid-match" uk-grid>
+<div class="uk-child-width-1-2@s uk-grid-match" uk-grid>
 
     <% @category.events.each do |e| %>
         
@@ -9,6 +9,7 @@
                 <div class="uk-margin-top">
                     <h3 class="uk-card-title"><span class="uk-link-heading"><%= e.name %></span></h3>
                     <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00"><%= e.start_date.strftime("%b %d, %Y") %> at <%= e.start_time.strftime(" %l:%M %p") %></time></p>
+                    <p><%= e.description %>
                     <p><%= e.location %></p>
                 </div>
             </a>
@@ -18,4 +19,6 @@
 
 </div>
 
-<%= link_to('delete category', category_path(@category), method: 'delete') %>
+<br><br>
+
+
