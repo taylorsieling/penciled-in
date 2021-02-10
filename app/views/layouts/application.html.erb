@@ -33,32 +33,23 @@
                 <%= link_to "Account", user_path %>
                 <div class="uk-navbar-dropdown">
                   <ul class="uk-nav uk-navbar-dropdown-nav">
-                    <li><a href="/users/:id/events">Manage My Events</a></li>
-                    <li><a href="/users/:id/edit">Account Settings</a></li>
-                    <li><a href="/logout">Log Out</a></li>
+                    <li><%= link_to "Manage My Events", "/users/:id/event" %></li>
+                    <li><%= link_to "Account Settings", edit_user_path %></li>
+                    <li><%= link_to "Log Out", logout_path %></li>
                   </ul>
                 </div>
               </li>
     
             <% else %>
 
-              <li class="uk-active"><%= link_to "Create Event", new_event_path %></li>
-                <li class="uk-active"><%= link_to "My RSVPs", rsvps_path %></li>
-                <li>
-                  Account
-                  <div class="uk-navbar-dropdown">
-                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                      <li><a href="/users/:id/events">Manage My Events</a></li>
-                      <li><a href="/users/:id/edit">Account Settings</a></li>
-                      <li><a href="/logout">Log Out</a></li>
-                    </ul>
-                  </div>
-                </li>
+              <li class="uk-active"><%= link_to "Home", root_path %></li>
+              <li class="uk-active"><%= link_to "Signup", signup_path %></li>
+              <li class="uk-active"><%= link_to "Login", login_path %></li>
 
             <% end %>
-
+ 
           </ul>
-
+          
         </div>
 
       </nav>
