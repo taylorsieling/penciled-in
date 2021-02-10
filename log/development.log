@@ -21768,3 +21768,188 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 15ms (Views: 13.9ms | Allocations: 6847)
 
 
+Started GET "/signup" for ::1 at 2021-02-10 14:59:23 -0600
+Processing by UsersController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:10:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.1ms | Allocations: 1555)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1871)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 6007)
+Completed 200 OK in 22ms (Views: 10.1ms | ActiveRecord: 0.3ms | Allocations: 14102)
+
+
+Started GET "/signup" for ::1 at 2021-02-10 14:59:48 -0600
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 3.5ms | Allocations: 2307)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2620)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2690)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 3811)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 1..2)):
+    28:     <br>
+    29: 
+    30:     <%= f.label :password_confirmation %>
+    31:     <%= f.password_field :password_confirmation, "Password Confirmation", class: 'uk-input' %><br>
+    32:     <br>
+    33: 
+    34:     <%= f.submit class: 'uk-button uk-button-secondary' %>
+  
+app/views/users/_form.html.erb:31
+app/views/users/_form.html.erb:13
+app/views/users/new.html.erb:2
+Started GET "/signup" for ::1 at 2021-02-10 14:59:54 -0600
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.3ms | Allocations: 1528)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1842)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1913)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 3040)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% if @user.errors.any? %>
+  <div>
+    <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+ 
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for @user do |f| %>
+
+  <div class='uk-grid-small' uk-grid>
+
+    <div class="uk-width-1-3@s">
+    <%= f.label :username %>
+    <%= f.text_field :username, class: 'uk-input' %><br>
+    <br>
+
+    <%= f.label :email %>
+    <%= f.email_field :email, class: 'uk-input' %><br>
+    <br>
+
+    <%= f.label :password %>
+    <%= f.password_field :password, class: 'uk-input' %><br>
+    <br>
+
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation "Password Confirmation", class: 'uk-input' %><br>
+    <br>
+
+    <%= f.submit class: 'uk-button uk-button-secondary' %>
+    </div><br>
+
+  </div>
+
+<% end %>
+):
+1:    <% if @user.errors.any? %>
+2:      <div>
+3:        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+4:     
+5:        <ul>
+6:        <% @user.errors.full_messages.each do |msg| %>
+7:          <li><%= msg %></li>
+8:        <% end %>
+9:        </ul>
+10:      </div>
+11:    <% end %>
+12:    
+13:    <%= form_for @user do |f| %>
+14:    
+15:      <div class='uk-grid-small' uk-grid>
+16:    
+17:        <div class="uk-width-1-3@s">
+18:        <%= f.label :username %>
+19:        <%= f.text_field :username, class: 'uk-input' %><br>
+20:        <br>
+21:    
+22:        <%= f.label :email %>
+23:        <%= f.email_field :email, class: 'uk-input' %><br>
+24:        <br>
+25:    
+26:        <%= f.label :password %>
+27:        <%= f.password_field :password, class: 'uk-input' %><br>
+28:        <br>
+29:    
+30:        <%= f.label :password_confirmation %>
+31:        <%= f.password_field :password_confirmation "Password Confirmation", class: 'uk-input' %><br>
+32:        <br>
+33:    
+34:        <%= f.submit class: 'uk-button uk-button-secondary' %>
+35:        </div><br>
+36:    
+37:      </div>
+38:    
+39:    <% end %>
+  
+app/views/users/_form.html.erb:31: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/users/_form.html.erb:31: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:31: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/users/_form.html.erb:31: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:31: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/users/_form.html.erb:31: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:31: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/users/_form.html.erb:31: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:31: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/users/_form.html.erb:31: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:31: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/users/_form.html.erb:31: syntax error, unexpected ',', expecting ')'
+app/views/users/new.html.erb:2
+Started GET "/signup" for ::1 at 2021-02-10 15:00:38 -0600
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 4.5ms | Allocations: 1467)
+  Rendered users/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1778)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 5936)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 7083)
+
+
+Started GET "/signup" for ::1 at 2021-02-10 15:02:25 -0600
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.3ms | Allocations: 2306)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2619)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2689)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 3810)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 1..2)):
+    28:     <br>
+    29: 
+    30:     <%= f.label :password_confirmation %>
+    31:     <%= f.password_field :password_confirmation, 'Password Confirmation', class: 'uk-input' %><br>
+    32:     <br>
+    33: 
+    34:     <%= f.submit class: 'uk-button uk-button-secondary' %>
+  
+app/views/users/_form.html.erb:31
+app/views/users/_form.html.erb:13
+app/views/users/new.html.erb:2
+Started GET "/signup" for ::1 at 2021-02-10 15:02:42 -0600
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 3.6ms | Allocations: 1467)
+  Rendered users/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1778)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 5935)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.0ms | Allocations: 7082)
+
+
