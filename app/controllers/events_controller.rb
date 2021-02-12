@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
 
-    before_action :set_event, except: [:index, :new, :create]
+    before_action :set_event, only: [:show, :edit, :update, :destroy]
+
     # helper_method :readable_date, :readable_time
 
     def index
@@ -52,6 +53,7 @@ class EventsController < ApplicationController
     private
 
     def set_event
+        byebug
         @event = Event.find(params[:id])
     end
 
