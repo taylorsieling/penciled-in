@@ -45,6 +45,10 @@ class EventsController < ApplicationController
         redirect_to events_path
     end
 
+    def most_popular
+        @events = Event.most_popular
+    end
+
     private
 
     def set_event

@@ -3,6 +3,7 @@ class UsersController < ApplicationController
     before_action :set_user, only: [:show, :edit, :update]
     before_action :authorized, except: [:new, :create]
 
+
     def show
     end
 
