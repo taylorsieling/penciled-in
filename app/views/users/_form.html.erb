@@ -2,9 +2,6 @@
 
 <%= form_for @user do |f| %>
 
-  <div class='uk-grid-small' uk-grid>
-
-    <div class="uk-width-1-3@s">
     <%= f.label :username %>
     <%= f.text_field :username, class: 'uk-input' %><br>
     <br>
@@ -21,9 +18,6 @@
     <%= f.password_field :password_confirmation, class: 'uk-input' %><br>
     <br>
 
-    <%= f.submit class: 'uk-button uk-button-secondary' %>
-    </div><br>
-
-  </div>
+    <%= f.submit class: 'uk-button uk-button-secondary uk-width-1-1' %>
 
 <% end %>
