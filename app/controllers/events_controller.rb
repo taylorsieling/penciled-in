@@ -22,7 +22,6 @@ class EventsController < ApplicationController
 
     def create
         @event = current_user.events.build(event_params)
-        byebug
         if @event.save
             redirect_to event_path(@event)
         else
@@ -53,8 +52,7 @@ class EventsController < ApplicationController
     private
 
     def set_event
-        byebug
-        @event = Event.find(params[:id])
+        @event = Event.find_by_id(params[:id])
     end
 
     def event_params
