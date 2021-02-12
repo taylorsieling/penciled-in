@@ -8,14 +8,18 @@ class Event < ApplicationRecord
 
     accepts_nested_attributes_for :category
 
+    scope :most_popular, -> { left_outer_joins(:rsvps).group("events.id").order("sum(rsvps.number_of_attendee) DESC") }
+
+
     def self.ordered_by_date
-        self.order(start_date: :desc)
+        self.order(start_date: :asc)
     end
 
-    # def category_attributes=(attr)
-    #     if !attr[:name].blank?
-    #         self.category = category.find_or_create_by(name: attr[:name])
-    #     end 
-    # end 
+    def category_attributes=(attr)
+        if !attr[:name].blank?
+            self.category = Category.find_or_create_by(name: attr[:name])
+        end 
+    end 
+
 
 end

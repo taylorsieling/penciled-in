@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
 
-    before_action :set_event, only: [:show, :edit, :update, :destroy]
-    helper_method :readable_date, :readable_time
+    before_action :set_event, except: [:index, :new, :create]
+    # helper_method :readable_date, :readable_time
 
     def index
         @events = Event.ordered_by_date
@@ -20,7 +20,7 @@ class EventsController < ApplicationController
     end
 
     def create
-        @event = current_user.events.new(event_params)
+        @event = current_user.events.build(event_params)
         byebug
         if @event.save
             redirect_to event_path(@event)

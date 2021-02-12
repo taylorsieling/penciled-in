@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   get 'logout' => 'sessions#destroy'
 
-  get '/auth/:provider/callback' => 'sessions#omniauth'
+  get '/auth/google_oauth2/callback' => 'sessions#omniauth'
 
   resources :users
   resources :rsvps
@@ -21,3 +21,4 @@ Rails.application.routes.draw do
   end
 
 end
+
