@@ -15,13 +15,15 @@ class RsvpsController < ApplicationController
             redirect_to events_path, alert: "Event not found."
         else
             @event = Event.find_by_id(params[:event_id])
-            @rsvp = Rsvp.new
+            byebug
+            @rsvp = @event.rsvps.build
         end
     end
 
     def create
-        @event = Event.find_by_id(params[:event_id])
-        @rsvp = @event.rsvp.build(rsvp_params)
+        
+        @rsvp = @event.rsvps.build(rsvp_params)
+        byebug
         @rsvp.user = current_user
 
         if @rsvp.save
@@ -51,3 +53,24 @@ class RsvpsController < ApplicationController
     end
 
 end
+
+
+def new
+    if params[:chocolate_id] && !Chocolate.exists?(params[:chocolate_id])
+      redirect_to chocolates_path, alert: "Chocolate not found."
+    else
+      @chocolate = Chocolate.find_by_id(params[:chocolate_id])
+      @review = @chocolate.reviews.build
+    end
+  end
+
+  def create
+    @chocolate = Chocolate.find_by_id(params[:chocolate_id])
+    @review = @chocolate.reviews.build(review_params)
+    @review.user = current_user
+    if @review.save
+      redirect_to chocolate_path(@review.chocolate)
+    else
+      render :new
+    end
+  end
