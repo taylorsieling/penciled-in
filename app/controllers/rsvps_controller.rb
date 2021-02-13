@@ -1,7 +1,6 @@
 class RsvpsController < ApplicationController
 
     before_action :set_rsvp, only: [:show, :edit, :update, :destroy]
-    # helper_method :find_event
     helper_method :set_rsvp
 
     def index
@@ -20,9 +19,7 @@ class RsvpsController < ApplicationController
     def create
       @rsvp = Rsvp.new(rsvp_params)
       @rsvp.user_id = current_user.id
-      byebug
       if @rsvp.save
-        byebug
         redirect_to rsvps_path
       else
         render :new
@@ -38,6 +35,8 @@ class RsvpsController < ApplicationController
     def destroy
     end
 
+    
+
     private
 
     def set_rsvp
@@ -47,10 +46,6 @@ class RsvpsController < ApplicationController
     def rsvp_params
         params.require(:rsvp).permit(:status, :number_of_attendee, :user_id, :event_id)
     end
-
-    # def find_event
-    #   @event = Event.find_by_id(params[:id])
-    # end
 
 end
 
