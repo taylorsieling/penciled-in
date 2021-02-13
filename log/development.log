@@ -41288,3 +41288,2036 @@ Processing by CategoriesController#index as HTML
 Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.4ms | Allocations: 5529)
 
 
+Started GET "/categories" for ::1 at 2021-02-13 14:19:47 -0600
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered categories/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1004)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 5798)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.3ms | Allocations: 6923)
+
+
+Started GET "/categories" for ::1 at 2021-02-13 14:19:58 -0600
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered categories/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 999)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 5793)
+Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 0.3ms | Allocations: 6913)
+
+
+Started GET "/categories" for ::1 at 2021-02-13 14:20:08 -0600
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered categories/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 999)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 5793)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.2ms | Allocations: 6913)
+
+
+Started GET "/categories" for ::1 at 2021-02-13 14:21:18 -0600
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered categories/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 999)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 5793)
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.3ms | Allocations: 6913)
+
+
+Started GET "/categories" for ::1 at 2021-02-13 14:21:33 -0600
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered categories/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1004)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 5799)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.3ms | Allocations: 6920)
+
+
+Started GET "/events" for ::1 at 2021-02-13 14:21:41 -0600
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" ORDER BY "events"."start_date" ASC[0m
+  ↳ app/views/events/index.html.erb:11
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  Rendered events/index.html.erb within layouts/application (Duration: 20.2ms | Allocations: 6687)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 29.8ms | Allocations: 11015)
+Completed 200 OK in 34ms (Views: 31.1ms | ActiveRecord: 0.9ms | Allocations: 11944)
+
+
+Started GET "/categories" for ::1 at 2021-02-13 14:21:43 -0600
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered categories/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 834)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 5162)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.3ms | Allocations: 5542)
+
+
+Started GET "/categories/1" for ::1 at 2021-02-13 14:21:46 -0600
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/views/categories/show.html.erb:5
+  Rendered categories/show.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1913)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 6141)
+Completed 200 OK in 19ms (Views: 11.7ms | ActiveRecord: 0.5ms | Allocations: 7292)
+
+
+Started GET "/categories" for ::1 at 2021-02-13 14:21:54 -0600
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered categories/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 834)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 5147)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.3ms | Allocations: 5527)
+
+
+Started GET "/events" for ::1 at 2021-02-13 14:21:55 -0600
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" ORDER BY "events"."start_date" ASC[0m
+  ↳ app/views/events/index.html.erb:11
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  Rendered events/index.html.erb within layouts/application (Duration: 18.7ms | Allocations: 6400)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 25.5ms | Allocations: 10728)
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 1.0ms | Allocations: 11136)
+
+
+Started GET "/categories" for ::1 at 2021-02-13 14:22:02 -0600
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered categories/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 834)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 5148)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.3ms | Allocations: 5528)
+
+
+Started GET "/categories/new" for ::1 at 2021-02-13 14:22:23 -0600
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.4ms | Allocations: 221)
+  Rendered categories/_form.html.erb (Duration: 1.7ms | Allocations: 756)
+  Rendered categories/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1504)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 5817)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.1ms | Allocations: 6327)
+
+
+Started GET "/categories/new" for ::1 at 2021-02-13 14:22:23 -0600
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.2ms | Allocations: 42)
+  Rendered categories/_form.html.erb (Duration: 1.6ms | Allocations: 495)
+  Rendered categories/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 688)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 4993)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.1ms | Allocations: 5376)
+
+
+Started GET "/categories" for ::1 at 2021-02-13 14:22:29 -0600
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered categories/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 834)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 5147)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.3ms | Allocations: 5526)
+
+
+Started GET "/categories/2" for ::1 at 2021-02-13 14:22:42 -0600
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/categories/show.html.erb:5
+  Rendered categories/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 932)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 5245)
+Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 0.6ms | Allocations: 6177)
+
+
+Started GET "/categories/2" for ::1 at 2021-02-13 14:23:33 -0600
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/categories/show.html.erb:5
+  Rendered categories/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1181)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 5975)
+Completed 200 OK in 18ms (Views: 13.7ms | ActiveRecord: 0.4ms | Allocations: 7653)
+
+
+Started GET "/categories/2" for ::1 at 2021-02-13 14:25:40 -0600
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/categories/show.html.erb:5
+  Rendered categories/show.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1193)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 5988)
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.6ms | Allocations: 7667)
+
+
+Started GET "/categories/2" for ::1 at 2021-02-13 14:29:29 -0600
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/categories/show.html.erb:5
+  Rendered categories/show.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1192)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 5986)
+Completed 200 OK in 18ms (Views: 14.7ms | ActiveRecord: 0.4ms | Allocations: 7659)
+
+
+Started GET "/categories/2" for ::1 at 2021-02-13 14:30:00 -0600
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/categories/show.html.erb:5
+  Rendered categories/show.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1190)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 5984)
+Completed 200 OK in 18ms (Views: 14.1ms | ActiveRecord: 0.5ms | Allocations: 7657)
+
+
+Started GET "/events/1" for ::1 at 2021-02-13 14:30:10 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:55:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:14
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered events/show.html.erb within layouts/application (Duration: 8.7ms | Allocations: 2654)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.0ms | Allocations: 6341)
+Completed 200 OK in 36ms (Views: 31.3ms | ActiveRecord: 0.6ms | Allocations: 7810)
+
+
+Started GET "/categories/2" for ::1 at 2021-02-13 14:30:12 -0600
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/categories/show.html.erb:5
+  Rendered categories/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 938)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 5266)
+Completed 200 OK in 17ms (Views: 13.4ms | ActiveRecord: 0.6ms | Allocations: 6199)
+
+
+Started GET "/" for ::1 at 2021-02-13 16:02:52 -0600
+Processing by EventsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/event.rb:13:in `ordered_by_date'
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" ORDER BY "events"."start_date" ASC[0m
+  ↳ app/views/events/index.html.erb:11
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  Rendered events/index.html.erb within layouts/application (Duration: 20.3ms | Allocations: 6735)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 29.7ms | Allocations: 11551)
+Completed 200 OK in 50ms (Views: 30.4ms | ActiveRecord: 1.6ms | Allocations: 13325)
+
+
+Started GET "/events/new" for ::1 at 2021-02-13 16:02:55 -0600
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 1.6ms | Allocations: 1692)
+  Rendered events/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2013)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2084)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2747)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= render partial: "layouts/errors", locals: {object: @event} %>
+
+<%= form_for (@event]) do |f| %>
+
+  <div class='uk-grid-small' uk-grid>
+  
+    <div class="uk-width-1-1">
+    <%= f.label :name, "Event Name" %><br><br>
+    <%= f.text_field :name, class: 'uk-input'%> <br><br>
+    </div>
+
+    <div class="uk-width-1-1">
+    <%= f.label :description %><br><br>
+    <%= f.text_area :description, rows: 5, class: 'uk-textarea' %> <br><br>
+    </div>
+
+    <div class="uk-width-1-1">
+    <%= f.label :location %><br><br>
+    <%= f.text_field :location, class: 'uk-input' %> <br><br>
+    </div>
+
+    <div class="uk-width-1-2@s">
+    <%= f.label :start_date %> <br><br>
+    <%= f.date_field :start_date, class: 'uk-input' %> <br><br>
+    </div>
+
+    <div class="uk-width-1-2@s">
+    <%= f.label :end_date %> <br><br>
+    <%= f.date_field :end_date, class: 'uk-input' %> <br><br>
+    </div>
+
+    <div class="uk-width-1-2@s">
+    <%= f.label :start_time %><br><br>
+    <%= f.time_field :start_time, class: 'uk-input' %> <br><br>
+    </div>
+
+    <div class="uk-width-1-2@s">
+    <%= f.label :end_time %><br><br>
+    <%= f.time_field :end_time, class: 'uk-input' %> <br><br>
+    </div>
+
+      <% unless @category %>
+
+        <div class="uk-width-1-2@s">
+
+        <%= f.label :category, "Choose a Category" %><br><br>
+        <%= f.collection_select :category_id, Category.all, :id, :name, {prompt: true}, { class: 'uk-select' } %><br><br>
+
+        </div>
+
+        <div class="uk-width-1-2@s">
+        
+          <%= f.fields_for :category do |c| %>
+
+            <%= c.label :name, "Or Create Your Own" %><br><br>
+            <%= c.text_field :name, class: 'uk-input' %>
+
+          <% end %>
+
+        </div>
+
+      <% end %>
+      <br><br>
+
+      <div class="uk-width-1-1">
+        <%= f.submit class: 'uk-button uk-button-secondary' %>
+      </div>
+    
+    </div>
+
+<% end %>
+):
+1:    <%= render partial: "layouts/errors", locals: {object: @event} %>
+2:    
+3:    <%= form_for (@event]) do |f| %>
+4:    
+5:      <div class='uk-grid-small' uk-grid>
+6:      
+7:        <div class="uk-width-1-1">
+8:        <%= f.label :name, "Event Name" %><br><br>
+9:        <%= f.text_field :name, class: 'uk-input'%> <br><br>
+10:        </div>
+11:    
+12:        <div class="uk-width-1-1">
+13:        <%= f.label :description %><br><br>
+14:        <%= f.text_area :description, rows: 5, class: 'uk-textarea' %> <br><br>
+15:        </div>
+16:    
+17:        <div class="uk-width-1-1">
+18:        <%= f.label :location %><br><br>
+19:        <%= f.text_field :location, class: 'uk-input' %> <br><br>
+20:        </div>
+21:    
+22:        <div class="uk-width-1-2@s">
+23:        <%= f.label :start_date %> <br><br>
+24:        <%= f.date_field :start_date, class: 'uk-input' %> <br><br>
+25:        </div>
+26:    
+27:        <div class="uk-width-1-2@s">
+28:        <%= f.label :end_date %> <br><br>
+29:        <%= f.date_field :end_date, class: 'uk-input' %> <br><br>
+30:        </div>
+31:    
+32:        <div class="uk-width-1-2@s">
+33:        <%= f.label :start_time %><br><br>
+34:        <%= f.time_field :start_time, class: 'uk-input' %> <br><br>
+35:        </div>
+36:    
+37:        <div class="uk-width-1-2@s">
+38:        <%= f.label :end_time %><br><br>
+39:        <%= f.time_field :end_time, class: 'uk-input' %> <br><br>
+40:        </div>
+41:    
+42:          <% unless @category %>
+43:    
+44:            <div class="uk-width-1-2@s">
+45:    
+46:            <%= f.label :category, "Choose a Category" %><br><br>
+47:            <%= f.collection_select :category_id, Category.all, :id, :name, {prompt: true}, { class: 'uk-select' } %><br><br>
+48:    
+49:            </div>
+50:    
+51:            <div class="uk-width-1-2@s">
+52:            
+53:              <%= f.fields_for :category do |c| %>
+54:    
+55:                <%= c.label :name, "Or Create Your Own" %><br><br>
+56:                <%= c.text_field :name, class: 'uk-input' %>
+57:    
+58:              <% end %>
+59:    
+60:            </div>
+61:    
+62:          <% end %>
+63:          <br><br>
+64:    
+65:          <div class="uk-width-1-1">
+66:            <%= f.submit class: 'uk-button uk-button-secondary' %>
+67:          </div>
+68:        
+69:        </div>
+70:    
+71:    <% end %>
+  
+app/views/events/_form.html.erb:3: syntax error, unexpected ']', expecting ')'
+app/views/events/_form.html.erb:53: syntax error, unexpected do (for lambda), expecting end
+app/views/events/_form.html.erb:71: syntax error, unexpected end, expecting end-of-input
+app/views/events/_form.html.erb:3: syntax error, unexpected ']', expecting ')'
+app/views/events/_form.html.erb:53: syntax error, unexpected do (for lambda), expecting end
+app/views/events/_form.html.erb:71: syntax error, unexpected end, expecting end-of-input
+app/views/events/_form.html.erb:3: syntax error, unexpected ']', expecting ')'
+app/views/events/_form.html.erb:53: syntax error, unexpected do (for lambda), expecting end
+app/views/events/_form.html.erb:71: syntax error, unexpected end, expecting end-of-input
+app/views/events/_form.html.erb:3: syntax error, unexpected ']', expecting ')'
+app/views/events/_form.html.erb:53: syntax error, unexpected do (for lambda), expecting end
+app/views/events/_form.html.erb:71: syntax error, unexpected end, expecting end-of-input
+app/views/events/_form.html.erb:3: syntax error, unexpected ']', expecting ')'
+app/views/events/_form.html.erb:53: syntax error, unexpected do (for lambda), expecting end
+app/views/events/_form.html.erb:71: syntax error, unexpected end, expecting end-of-input
+app/views/events/_form.html.erb:3: syntax error, unexpected ']', expecting ')'
+app/views/events/_form.html.erb:53: syntax error, unexpected do (for lambda), expecting end
+app/views/events/_form.html.erb:71: syntax error, unexpected end, expecting end-of-input
+app/views/events/new.html.erb:2
+Started GET "/events/new" for ::1 at 2021-02-13 16:03:32 -0600
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.6ms | Allocations: 221)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/events/_form.html.erb:47
+  Rendered events/_form.html.erb (Duration: 8.0ms | Allocations: 3811)
+  Rendered events/new.html.erb within layouts/application (Duration: 9.2ms | Allocations: 4129)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 8913)
+Completed 200 OK in 25ms (Views: 21.6ms | ActiveRecord: 0.3ms | Allocations: 10206)
+
+
+Started GET "/" for ::1 at 2021-02-13 16:03:35 -0600
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" ORDER BY "events"."start_date" ASC[0m
+  ↳ app/views/events/index.html.erb:11
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  Rendered events/index.html.erb within layouts/application (Duration: 20.0ms | Allocations: 6687)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 26.7ms | Allocations: 11015)
+Completed 200 OK in 29ms (Views: 26.2ms | ActiveRecord: 1.2ms | Allocations: 11551)
+
+
+Started GET "/events/7" for ::1 at 2021-02-13 16:03:37 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:55:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered events/show.html.erb within layouts/application (Duration: 9.7ms | Allocations: 2774)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 6458)
+Completed 200 OK in 20ms (Views: 16.0ms | ActiveRecord: 1.0ms | Allocations: 7563)
+
+
+Started GET "/events/7/edit" for ::1 at 2021-02-13 16:03:39 -0600
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:55:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/edit.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 42)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/events/_form.html.erb:47
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/_form.html.erb:53
+  Rendered events/_form.html.erb (Duration: 12.9ms | Allocations: 3892)
+  Rendered events/edit.html.erb within layouts/application (Duration: 13.5ms | Allocations: 4073)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 31.5ms | Allocations: 8384)
+Completed 200 OK in 34ms (Views: 31.3ms | ActiveRecord: 0.7ms | Allocations: 9461)
+
+
+Started PATCH "/events/7" for ::1 at 2021-02-13 16:03:44 -0600
+Processing by EventsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"name"=>"Paint & Sip", "description"=>"The Student Life Activities Committee is back with another Paint & Sip! Join us on Zoom on February 25th for a painting class, hosted by Clay Cup Studios  Art Kits will be available for the first 50 students to register, but you don't need a kit to participate! Registration starts this Monday, Feb 1st. ", "location"=>"Clay Cup Studios", "start_date"=>"2021-02-25", "end_date"=>"2021-02-25", "start_time"=>"18:00:00.000", "end_time"=>"20:00:00.000", "category_id"=>"10", "category_attributes"=>{"name"=>"Crafts", "id"=>"10"}}, "commit"=>"Update Event", "id"=>"7"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:55:in `set_event'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/event.rb:18:in `category_attributes='
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/models/event.rb:18:in `category_attributes='
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/events_controller.rb:35:in `update'
+Completed 500 Internal Server Error in 17741ms (ActiveRecord: 0.5ms | Allocations: 42559)
+
+
+  
+NoMethodError (undefined method `find_or_create_by' for #<Category:0x00007fe58d7d39d8>):
+  
+app/models/event.rb:18:in `category_attributes='
+app/controllers/events_controller.rb:35:in `update'
+Started GET "/events/7/edit" for ::1 at 2021-02-13 16:04:19 -0600
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:55:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/edit.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 42)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/events/_form.html.erb:47
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/_form.html.erb:53
+  Rendered events/_form.html.erb (Duration: 9.9ms | Allocations: 3883)
+  Rendered events/edit.html.erb within layouts/application (Duration: 10.2ms | Allocations: 3974)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 8277)
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 0.6ms | Allocations: 9224)
+
+
+Started PATCH "/events/7" for ::1 at 2021-02-13 16:04:23 -0600
+Processing by EventsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"name"=>"Paint & Sip", "description"=>"The Student Life Activities Committee is back with another Paint & Sip! Join us on Zoom on February 25th for a painting class, hosted by Clay Cup Studios  Art Kits will be available for the first 50 students to register, but you don't need a kit to participate! Registration starts this Monday, Feb 1st. ", "location"=>"Clay Cup Studios", "start_date"=>"2021-02-25", "end_date"=>"2021-02-25", "start_time"=>"18:00", "end_time"=>"20:00", "category_id"=>"10", "category_attributes"=>{"name"=>"", "id"=>"10"}}, "commit"=>"Update Event", "id"=>"7"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:55:in `set_event'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:35:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:35:in `update'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:35:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/events_controller.rb:35:in `update'
+Redirected to http://localhost:3000/events/7
+Completed 302 Found in 6096ms (ActiveRecord: 0.6ms | Allocations: 78287)
+
+
+Started GET "/events/7" for ::1 at 2021-02-13 16:04:29 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:55:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered events/show.html.erb within layouts/application (Duration: 9.1ms | Allocations: 2447)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | Allocations: 6124)
+Completed 200 OK in 27ms (Views: 23.6ms | ActiveRecord: 0.5ms | Allocations: 7072)
+
+
+Started GET "/events/7/edit" for ::1 at 2021-02-13 16:04:32 -0600
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:55:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/edit.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 42)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/events/_form.html.erb:47
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/_form.html.erb:53
+  Rendered events/_form.html.erb (Duration: 10.0ms | Allocations: 3883)
+  Rendered events/edit.html.erb within layouts/application (Duration: 10.3ms | Allocations: 3974)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 8277)
+Completed 200 OK in 26ms (Views: 20.4ms | ActiveRecord: 1.7ms | Allocations: 9224)
+
+
+Started GET "/events/7" for ::1 at 2021-02-13 16:07:23 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/events_controller.rb:55:in `set_event'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:55:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:14
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered events/show.html.erb within layouts/application (Duration: 23.0ms | Allocations: 13428)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.1ms | Allocations: 17016)
+Completed 200 OK in 54ms (Views: 35.8ms | ActiveRecord: 3.3ms | Allocations: 27757)
+
+
+Started GET "/events/7/edit" for ::1 at 2021-02-13 16:07:25 -0600
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:55:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/edit.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 42)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/events/_form.html.erb:47
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/_form.html.erb:53
+  Rendered events/_form.html.erb (Duration: 10.4ms | Allocations: 3905)
+  Rendered events/edit.html.erb within layouts/application (Duration: 10.8ms | Allocations: 3996)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 8298)
+Completed 200 OK in 28ms (Views: 21.9ms | ActiveRecord: 0.9ms | Allocations: 9245)
+
+
+Started PATCH "/events/7" for ::1 at 2021-02-13 16:07:35 -0600
+Processing by EventsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"name"=>"Paint & Sip", "description"=>"The Student Life Activities Committee is back with another Paint & Sip! Join us on Zoom on February 25th for a painting class, hosted by Clay Cup Studios  Art Kits will be available for the first 50 students to register, but you don't need a kit to participate! Registration starts this Monday, Feb 1st. ", "location"=>"Clay Cup Studios", "start_date"=>"2021-02-25", "end_date"=>"2021-02-25", "start_time"=>"18:00:00.000", "end_time"=>"20:00:00.000", "category_id"=>"9", "category_attributes"=>{"name"=>"Crafts", "id"=>"10"}}, "commit"=>"Update Event", "id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:55:in `set_event'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/event.rb:18:in `category_attributes='
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/models/event.rb:18:in `category_attributes='
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/events_controller.rb:35:in `update'
+Completed 500 Internal Server Error in 11749ms (ActiveRecord: 0.5ms | Allocations: 42657)
+
+
+  
+NoMethodError (undefined method `find_or_create_by' for #<Category:0x00007fe590e3a788>):
+  
+app/models/event.rb:18:in `category_attributes='
+app/controllers/events_controller.rb:35:in `update'
+Started GET "/events/7/edit" for ::1 at 2021-02-13 16:10:13 -0600
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:55:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/edit.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 42)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/events/_form.html.erb:47
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/_form.html.erb:53
+  Rendered events/_form.html.erb (Duration: 11.6ms | Allocations: 3883)
+  Rendered events/edit.html.erb within layouts/application (Duration: 12.0ms | Allocations: 3974)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 8277)
+Completed 200 OK in 23ms (Views: 20.6ms | ActiveRecord: 0.8ms | Allocations: 9223)
+
+
+Started GET "/" for ::1 at 2021-02-13 16:10:27 -0600
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" ORDER BY "events"."start_date" ASC[0m
+  ↳ app/views/events/index.html.erb:11
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  Rendered events/index.html.erb within layouts/application (Duration: 20.5ms | Allocations: 6429)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 29.5ms | Allocations: 10743)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 1.4ms | Allocations: 11151)
+
+
+Started GET "/events/6" for ::1 at 2021-02-13 16:10:29 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:55:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered events/show.html.erb within layouts/application (Duration: 7.4ms | Allocations: 2326)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 6003)
+Completed 200 OK in 19ms (Views: 15.2ms | ActiveRecord: 0.5ms | Allocations: 6950)
+
+
+Started GET "/" for ::1 at 2021-02-13 16:10:31 -0600
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" ORDER BY "events"."start_date" ASC[0m
+  ↳ app/views/events/index.html.erb:11
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  Rendered events/index.html.erb within layouts/application (Duration: 22.4ms | Allocations: 6400)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 30.5ms | Allocations: 10713)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 1.5ms | Allocations: 11120)
+
+
+Started GET "/events/4" for ::1 at 2021-02-13 16:10:32 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:55:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered events/show.html.erb within layouts/application (Duration: 6.8ms | Allocations: 2327)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 6004)
+Completed 200 OK in 18ms (Views: 14.7ms | ActiveRecord: 0.7ms | Allocations: 6951)
+
+
+Started GET "/" for ::1 at 2021-02-13 16:10:34 -0600
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" ORDER BY "events"."start_date" ASC[0m
+  ↳ app/views/events/index.html.erb:11
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  Rendered events/index.html.erb within layouts/application (Duration: 19.2ms | Allocations: 6400)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 27.5ms | Allocations: 10713)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 1.2ms | Allocations: 11120)
+
+
+Started GET "/events/7" for ::1 at 2021-02-13 16:10:35 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:55:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered events/show.html.erb within layouts/application (Duration: 21.3ms | Allocations: 2442)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 6119)
+Completed 200 OK in 30ms (Views: 26.8ms | ActiveRecord: 0.6ms | Allocations: 7067)
+
+
+Started GET "/" for ::1 at 2021-02-13 16:10:37 -0600
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" ORDER BY "events"."start_date" ASC[0m
+  ↳ app/views/events/index.html.erb:11
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  Rendered events/index.html.erb within layouts/application (Duration: 20.8ms | Allocations: 6400)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 29.6ms | Allocations: 10713)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 1.4ms | Allocations: 11120)
+
+
+Started GET "/events" for ::1 at 2021-02-13 16:10:39 -0600
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" ORDER BY "events"."start_date" ASC[0m
+  ↳ app/views/events/index.html.erb:11
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/events/index.html.erb:15
+  Rendered events/index.html.erb within layouts/application (Duration: 20.9ms | Allocations: 6400)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 10713)
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 1.0ms | Allocations: 11120)
+
+
+Started GET "/categories" for ::1 at 2021-02-13 16:10:40 -0600
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered categories/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1009)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 5296)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.4ms | Allocations: 6245)
+
+
+Started GET "/categories/2" for ::1 at 2021-02-13 16:10:42 -0600
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/categories/show.html.erb:5
+  Rendered categories/show.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1992)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 6220)
+Completed 200 OK in 21ms (Views: 16.9ms | ActiveRecord: 0.9ms | Allocations: 7366)
+
+
+Started GET "/categories/2" for ::1 at 2021-02-13 16:17:27 -0600
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/categories/show.html.erb:5
+  Rendered categories/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1224)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 6040)
+Completed 200 OK in 22ms (Views: 13.2ms | ActiveRecord: 2.2ms | Allocations: 8336)
+
+
+Started GET "/categories" for ::1 at 2021-02-13 16:17:32 -0600
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:14
+  Rendered categories/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1021)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 5349)
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 1.2ms | Allocations: 5857)
+
+
+Started GET "/categories" for ::1 at 2021-02-13 16:21:05 -0600
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered categories/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 998)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 5792)
+Completed 200 OK in 20ms (Views: 16.6ms | ActiveRecord: 0.6ms | Allocations: 6912)
+
+
+Started GET "/categories/1" for ::1 at 2021-02-13 16:21:06 -0600
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1660)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1730)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms | Allocations: 2776)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <div class="uk-clearfix">
+    2:     <div class="uk-float-right">
+    3:         <%= button_to "Create #{@catergoy.name} Event", new_category_event_path(@category), method: :get, class: "uk-button uk-button-secondary" %>
+    4:     </div>
+    5:     <div class="uk-float-left">
+    6:         <h1> <%= @category.name %> Events</h1>
+  
+app/views/categories/show.html.erb:3
+Started GET "/categories" for ::1 at 2021-02-13 16:21:27 -0600
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered categories/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 997)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 5792)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.5ms | Allocations: 6917)
+
+
+Started GET "/categories/1" for ::1 at 2021-02-13 16:21:28 -0600
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/views/categories/show.html.erb:13
+  Rendered categories/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1215)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 5531)
+Completed 200 OK in 21ms (Views: 16.8ms | ActiveRecord: 1.3ms | Allocations: 6593)
+
+
+Started GET "/categories/1/events/new" for ::1 at 2021-02-13 16:21:31 -0600
+Processing by EventsController#new as HTML
+  Parameters: {"category_id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:13:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.4ms | Allocations: 221)
+  Rendered events/_form.html.erb (Duration: 4.3ms | Allocations: 2530)
+  Rendered events/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 2848)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 7158)
+Completed 200 OK in 23ms (Views: 17.2ms | ActiveRecord: 0.4ms | Allocations: 8937)
+
+
+Started GET "/categories/1" for ::1 at 2021-02-13 16:21:36 -0600
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/views/categories/show.html.erb:13
+  Rendered categories/show.html.erb within layouts/application (Duration: 4.5ms | Allocations: 927)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 5242)
+Completed 200 OK in 18ms (Views: 14.6ms | ActiveRecord: 0.6ms | Allocations: 6175)
+
+
+Started GET "/categories" for ::1 at 2021-02-13 16:21:37 -0600
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered categories/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 834)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 5148)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.7ms | Allocations: 5527)
+
+
+Started GET "/categories/2" for ::1 at 2021-02-13 16:21:39 -0600
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/categories/show.html.erb:13
+  Rendered categories/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 993)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 5296)
+Completed 200 OK in 18ms (Views: 14.6ms | ActiveRecord: 0.5ms | Allocations: 6228)
+
+
+Started GET "/categories/2/events/new" for ::1 at 2021-02-13 16:21:42 -0600
+Processing by EventsController#new as HTML
+  Parameters: {"category_id"=>"2"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:13:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered events/_form.html.erb (Duration: 2.4ms | Allocations: 1654)
+  Rendered events/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1745)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 6047)
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 0.4ms | Allocations: 7162)
+
+
+Started POST "/events" for ::1 at 2021-02-13 16:24:34 -0600
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"name"=>"Trivia Night: Harry Potter", "description"=>"Think you're the number one Harry Potter fan? Prove it. This week's Trivia Night topic is Harry Potter!", "location"=>"Brew's Brothers ", "start_date"=>"2021-03-18", "end_date"=>"2021-02-18", "start_time"=>"20:00", "end_time"=>"21:00"}, "commit"=>"Create Event"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 1.6ms | Allocations: 583)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/events/_form.html.erb:47
+  Rendered events/_form.html.erb (Duration: 10.1ms | Allocations: 5946)
+  Rendered events/new.html.erb within layouts/application (Duration: 10.3ms | Allocations: 6037)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 9644)
+Completed 200 OK in 46ms (Views: 16.8ms | ActiveRecord: 2.2ms | Allocations: 29697)
+
+
+Started GET "/categories/2/events/new" for ::1 at 2021-02-13 16:24:49 -0600
+Processing by EventsController#new as HTML
+  Parameters: {"category_id"=>"2"}
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:13:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.7ms | Allocations: 42)
+  Rendered events/_form.html.erb (Duration: 6.4ms | Allocations: 1669)
+  Rendered events/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1760)
+Started GET "/categories/2" for ::1 at 2021-02-13 16:25:18 -0600
+Started GET "/categories" for ::1 at 2021-02-13 16:25:18 -0600
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 34.3ms | Allocations: 11455)
+Completed 200 OK in 28565ms (Views: 35.4ms | ActiveRecord: 1.6ms | Allocations: 50931)
+
+
+Processing by CategoriesController#index as HTML
+Processing by CategoriesController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Parameters: {"id"=>"2"}
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/categories/index.html.erb:5
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered categories/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 2302)
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/categories/show.html.erb:13
+  Rendered categories/show.html.erb within layouts/application (Duration: 6.7ms | Allocations: 2461)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 31.5ms | Allocations: 12178)
+Completed 200 OK in 33ms (Views: 31.7ms | ActiveRecord: 0.8ms | Allocations: 12764)
+
+
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 10813)
+Completed 200 OK in 34ms (Views: 27.4ms | ActiveRecord: 0.8ms | Allocations: 12698)
+
+
+Started GET "/categories/1" for ::1 at 2021-02-13 16:25:27 -0600
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/views/categories/show.html.erb:13
+  Rendered categories/show.html.erb within layouts/application (Duration: 4.7ms | Allocations: 923)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 5226)
+Completed 200 OK in 17ms (Views: 13.8ms | ActiveRecord: 0.5ms | Allocations: 6158)
+
+
+Started GET "/categories" for ::1 at 2021-02-13 16:25:28 -0600
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered categories/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 834)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 5148)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.5ms | Allocations: 5528)
+
+
+Started GET "/categories/2" for ::1 at 2021-02-13 16:25:29 -0600
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/categories/show.html.erb:13
+  Rendered categories/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 993)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 5296)
+Completed 200 OK in 20ms (Views: 14.6ms | ActiveRecord: 0.4ms | Allocations: 6228)
+
+
+Started GET "/categories" for ::1 at 2021-02-13 16:25:31 -0600
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered categories/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 834)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 5147)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.4ms | Allocations: 5526)
+
+
+Started GET "/categories/3" for ::1 at 2021-02-13 16:25:32 -0600
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/views/categories/show.html.erb:13
+  Rendered categories/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 856)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 5159)
+Completed 200 OK in 16ms (Views: 12.8ms | ActiveRecord: 0.4ms | Allocations: 6091)
+
+
+Started GET "/categories" for ::1 at 2021-02-13 16:25:33 -0600
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered categories/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 834)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 5147)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.3ms | Allocations: 5526)
+
+
+Started GET "/categories/4" for ::1 at 2021-02-13 16:25:34 -0600
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 4]]
+  ↳ app/views/categories/show.html.erb:13
+  Rendered categories/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 855)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 5158)
+Completed 200 OK in 18ms (Views: 13.4ms | ActiveRecord: 1.1ms | Allocations: 6090)
+
+
+Started GET "/categories" for ::1 at 2021-02-13 16:25:36 -0600
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered categories/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 834)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 5148)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.3ms | Allocations: 5528)
+
+
+Started GET "/categories/5" for ::1 at 2021-02-13 16:25:36 -0600
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 5]]
+  ↳ app/views/categories/show.html.erb:13
+  Rendered categories/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 855)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 5158)
+Completed 200 OK in 17ms (Views: 13.7ms | ActiveRecord: 0.4ms | Allocations: 6090)
+
+
+Started GET "/categories" for ::1 at 2021-02-13 16:25:38 -0600
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered categories/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 834)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 5147)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.4ms | Allocations: 5526)
+
+
+Started GET "/categories/6" for ::1 at 2021-02-13 16:25:39 -0600
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 6]]
+  ↳ app/views/categories/show.html.erb:13
+  Rendered categories/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 855)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 5159)
+Completed 200 OK in 17ms (Views: 13.9ms | ActiveRecord: 0.6ms | Allocations: 6091)
+
+
+Started GET "/categories" for ::1 at 2021-02-13 16:25:40 -0600
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered categories/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 834)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 5147)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.7ms | Allocations: 5526)
+
+
+Started GET "/categories/7" for ::1 at 2021-02-13 16:25:41 -0600
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 7]]
+  ↳ app/views/categories/show.html.erb:13
+  Rendered categories/show.html.erb within layouts/application (Duration: 3.7ms | Allocations: 855)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 5158)
+Completed 200 OK in 16ms (Views: 11.5ms | ActiveRecord: 1.2ms | Allocations: 6090)
+
+
+Started GET "/categories" for ::1 at 2021-02-13 16:25:42 -0600
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered categories/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 834)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 5148)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.6ms | Allocations: 5528)
+
+
+Started GET "/categories/5" for ::1 at 2021-02-13 16:25:45 -0600
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 5]]
+  ↳ app/views/categories/show.html.erb:13
+  Rendered categories/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 855)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 5158)
+Completed 200 OK in 16ms (Views: 12.7ms | ActiveRecord: 0.5ms | Allocations: 6090)
+
+
+Started GET "/categories/5/events/new" for ::1 at 2021-02-13 16:25:46 -0600
+Processing by EventsController#new as HTML
+  Parameters: {"category_id"=>"5"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:13:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered events/_form.html.erb (Duration: 3.3ms | Allocations: 1714)
+  Rendered events/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1906)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 6185)
+Completed 200 OK in 40705ms (Views: 14.1ms | ActiveRecord: 0.4ms | Allocations: 45111)
+
+
+Started POST "/events" for ::1 at 2021-02-13 16:27:07 -0600
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"name"=>"Trivia Night: Harry Potter", "description"=>"Think you're the number one Harry Potter fan? Prove it. This week's Trivia Night topic is Harry Potter!", "location"=>"Brew's Brothers ", "start_date"=>"2021-03-18", "end_date"=>"2021-02-18", "start_time"=>"20:00", "end_time"=>"21:00"}, "commit"=>"Create Event"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.9ms | Allocations: 500)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/events/_form.html.erb:47
+  Rendered events/_form.html.erb (Duration: 13.2ms | Allocations: 5863)
+  Rendered events/new.html.erb within layouts/application (Duration: 13.5ms | Allocations: 5954)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 9561)
+Completed 200 OK in 44960ms (Views: 19.0ms | ActiveRecord: 3.9ms | Allocations: 72700)
+
+
+Started GET "/categories/5/events/new" for ::1 at 2021-02-13 16:27:57 -0600
+Processing by EventsController#new as HTML
+  Parameters: {"category_id"=>"5"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/events_controller.rb:13:in `new'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:13:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered events/_form.html.erb (Duration: 3.5ms | Allocations: 1906)
+  Rendered events/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2455)
+Started GET "/categories/5" for ::1 at 2021-02-13 16:28:06 -0600
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 27.7ms | Allocations: 14243)
+Completed 200 OK in 9650ms (Views: 28.6ms | ActiveRecord: 3.8ms | Allocations: 112686)
+
+
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 5]]
+  ↳ app/views/categories/show.html.erb:13
+  Rendered categories/show.html.erb within layouts/application (Duration: 9.4ms | Allocations: 4373)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 28.9ms | Allocations: 15054)
+Completed 200 OK in 41ms (Views: 27.9ms | ActiveRecord: 4.4ms | Allocations: 20290)
+
+
+Started GET "/categories/5/events/new" for ::1 at 2021-02-13 16:28:10 -0600
+Processing by EventsController#new as HTML
+  Parameters: {"category_id"=>"5"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:13:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+Started GET "/categories/5" for ::1 at 2021-02-13 16:31:30 -0600
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  Rendered layouts/_errors.html.erb (Duration: 0.2ms | Allocations: 42)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Started GET "/categories" for ::1 at 2021-02-13 16:31:30 -0600
+Processing by CategoriesController#index as HTML
+Started GET "/categories/2" for ::1 at 2021-02-13 16:31:30 -0600
+  Rendered events/_form.html.erb (Duration: 18.3ms | Allocations: 10405)
+  Rendering layout layouts/application.html.erb
+Started GET "/categories" for ::1 at 2021-02-13 16:31:30 -0600
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendered events/new.html.erb within layouts/application (Duration: 24.0ms | Allocations: 14696)
+  Rendering categories/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/categories/index.html.erb:5
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  ↳ app/views/categories/index.html.erb:5
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  Rendered categories/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 3110)
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 5]]
+  Rendering layout layouts/application.html.erb
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/categories/show.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendered categories/show.html.erb within layouts/application (Duration: 9.1ms | Allocations: 5194)
+  ↳ app/views/categories/show.html.erb:13
+  ↳ app/views/categories/index.html.erb:5
+  Rendered categories/show.html.erb within layouts/application (Duration: 9.9ms | Allocations: 4472)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered categories/index.html.erb within layouts/application (Duration: 15.4ms | Allocations: 6825)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 75.9ms | Allocations: 41966)
+Completed 200 OK in 200769ms (Views: 80.8ms | ActiveRecord: 0.9ms | Allocations: 171822)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 66.8ms | Allocations: 35465)
+Completed 200 OK in 69ms (Views: 67.0ms | ActiveRecord: 1.1ms | Allocations: 36784)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered layout layouts/application.html.erb (Duration: 70.3ms | Allocations: 33100)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 92ms (Views: 76.2ms | ActiveRecord: 0.9ms | Allocations: 46204)
+
+
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 59.6ms | Allocations: 24236)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 62.0ms | Allocations: 24745)
+Completed 200 OK in 82ms (Views: 64.4ms | ActiveRecord: 0.8ms | Allocations: 36123)
+
+
+Completed 200 OK in 69ms (Views: 68.1ms | ActiveRecord: 0.6ms | Allocations: 31268)
+
+
+Started GET "/categories/5/events/new" for ::1 at 2021-02-13 16:31:33 -0600
+Processing by EventsController#new as HTML
+  Parameters: {"category_id"=>"5"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/events_controller.rb:72:in `find_category'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:72:in `find_category'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.2ms | Allocations: 42)
+  Rendered events/_form.html.erb (Duration: 8.0ms | Allocations: 1722)
+  Rendered events/new.html.erb within layouts/application (Duration: 9.6ms | Allocations: 1813)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 60.3ms | Allocations: 12522)
+Completed 200 OK in 17655ms (Views: 60.9ms | ActiveRecord: 3.3ms | Allocations: 106384)
+
+
+Started POST "/events" for ::1 at 2021-02-13 16:33:23 -0600
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"name"=>"Trivia Night: Harry Potter", "description"=>"Hope you've been studying for you O.W.L.s! This week's trivia topic is Harry Potter! Happy Hour prices apply for the entire trivia hour. ", "location"=>"Brew's Brothers ", "start_date"=>"2021-03-18", "end_date"=>"2021-03-18", "start_time"=>"20:00", "end_time"=>"21:00"}, "commit"=>"Create Event"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:72:in `find_category'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 1.7ms | Allocations: 452)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/events/_form.html.erb:47
+  Rendered events/_form.html.erb (Duration: 9.7ms | Allocations: 3590)
+  Rendered events/new.html.erb within layouts/application (Duration: 9.9ms | Allocations: 3681)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 7277)
+Completed 200 OK in 6430ms (Views: 18.8ms | ActiveRecord: 0.7ms | Allocations: 47642)
+
+
+Started GET "/categories/5/events/new" for ::1 at 2021-02-13 16:34:15 -0600
+Processing by EventsController#new as HTML
+  Parameters: {"category_id"=>"5"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/events_controller.rb:73:in `find_category'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:73:in `find_category'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.2ms | Allocations: 42)
+  Rendered events/_form.html.erb (Duration: 5.2ms | Allocations: 1722)
+  Rendered events/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1813)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 12561)
+Completed 200 OK in 7243ms (Views: 27.2ms | ActiveRecord: 3.4ms | Allocations: 101504)
+
+
+Started POST "/events" for ::1 at 2021-02-13 16:34:29 -0600
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"name"=>"Trivia Night: Harry Potter", "description"=>"Hope you've been studying for you O.W.L.s! This week's trivia topic is Harry Potter! Happy Hour prices apply for the entire trivia hour. ", "location"=>"Brew's Brothers ", "start_date"=>"2021-03-18", "end_date"=>"2021-03-18", "start_time"=>"20:00", "end_time"=>"21:00"}, "commit"=>"Create Event"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:73:in `find_category'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 1.1ms | Allocations: 452)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/events/_form.html.erb:47
+  Rendered events/_form.html.erb (Duration: 6.3ms | Allocations: 3647)
+  Rendered events/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 3738)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 7334)
+Completed 200 OK in 8367ms (Views: 17.2ms | ActiveRecord: 1.0ms | Allocations: 47691)
+
+
+Started GET "/categories/5/events/new" for ::1 at 2021-02-13 16:37:33 -0600
+Processing by EventsController#new as HTML
+  Parameters: {"category_id"=>"5"}
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:73:in `find_category'
+Started GET "/categories/5" for ::1 at 2021-02-13 16:37:40 -0600
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 1.6ms | Allocations: 753)
+  Rendered events/_form.html.erb (Duration: 18.7ms | Allocations: 4669)
+  Rendered events/new.html.erb within layouts/application (Duration: 21.7ms | Allocations: 5341)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 5411)
+Completed 500 Internal Server Error in 6499ms (ActiveRecord: 0.9ms | Allocations: 100676)
+
+
+  
+ActionView::Template::Error (undefined method `event_category_path' for #<ActionView::Base:0x007fe5962d6df0>
+Did you mean?  edit_category_path):
+    1: <%= render partial: "layouts/errors", locals: {object: @event} %>
+    2: 
+    3: <%= form_for ([@event, @category]) do |f| %>
+    4: 
+    5:   <div class='uk-grid-small' uk-grid>
+    6:   
+  
+app/views/events/_form.html.erb:3
+app/views/events/new.html.erb:2
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 5]]
+  ↳ app/views/categories/show.html.erb:13
+  Rendered categories/show.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1758)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 18149)
+Completed 200 OK in 32ms (Views: 25.4ms | ActiveRecord: 0.8ms | Allocations: 25130)
+
+
+Started GET "/categories/5/events/new" for ::1 at 2021-02-13 16:39:15 -0600
+Processing by EventsController#new as HTML
+  Parameters: {"category_id"=>"5"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:73:in `find_category'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered events/_form.html.erb (Duration: 15.0ms | Allocations: 3073)
+  Rendered events/new.html.erb within layouts/application (Duration: 15.2ms | Allocations: 3167)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 3237)
+Completed 500 Internal Server Error in 109435ms (ActiveRecord: 0.4ms | Allocations: 93259)
+
+
+  
+ActionView::Template::Error (undefined method `event_category_path' for #<ActionView::Base:0x007fe59626f290>
+Did you mean?  edit_category_path):
+    1: <%= render partial: "layouts/errors", locals: {object: @event} %>
+    2: 
+    3: <%= form_for ([@event, @category]) do |f| %>
+    4: 
+    5:   <div class='uk-grid-small' uk-grid>
+    6:   
+  
+app/views/events/_form.html.erb:3
+app/views/events/new.html.erb:2
+Started GET "/categories" for ::1 at 2021-02-13 16:49:06 -0600
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/categories/index.html.erb:5
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered categories/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1720)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 6536)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.6ms | Allocations: 7662)
+
+
+Started GET "/categories" for ::1 at 2021-02-13 16:49:06 -0600
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered categories/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 834)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 5147)
+Completed 200 OK in 17ms (Views: 14.4ms | ActiveRecord: 1.0ms | Allocations: 5527)
+
+
+Started GET "/categories" for ::1 at 2021-02-13 16:49:11 -0600
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered categories/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 834)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 5147)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.3ms | Allocations: 5526)
+
+
+Started GET "/categories/2" for ::1 at 2021-02-13 16:49:14 -0600
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/categories/show.html.erb:13
+  Rendered categories/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1316)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 5631)
+Completed 200 OK in 17ms (Views: 14.5ms | ActiveRecord: 0.5ms | Allocations: 6704)
+
+
+Started GET "/categories" for ::1 at 2021-02-13 16:49:17 -0600
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered categories/index.html.erb within layouts/application (Duration: 14.3ms | Allocations: 834)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | Allocations: 5148)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.3ms | Allocations: 5529)
+
+
+Started GET "/categories/new" for ::1 at 2021-02-13 16:49:28 -0600
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.6ms | Allocations: 221)
+  Rendered categories/_form.html.erb (Duration: 3.1ms | Allocations: 1088)
+  Rendered categories/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1408)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 5721)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.1ms | Allocations: 6231)
+
+
+Started GET "/categories/new" for ::1 at 2021-02-13 16:49:29 -0600
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered categories/_form.html.erb (Duration: 2.0ms | Allocations: 597)
+  Rendered categories/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 688)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 4993)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.2ms | Allocations: 5376)
+
+
+Started GET "/categories/new" for ::1 at 2021-02-13 16:51:10 -0600
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.3ms | Allocations: 221)
+  Rendered categories/_form.html.erb (Duration: 2.0ms | Allocations: 1090)
+  Rendered categories/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1427)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 6213)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.1ms | Allocations: 7340)
+
+
+Started GET "/categories/new" for ::1 at 2021-02-13 16:51:42 -0600
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.9ms | Allocations: 221)
+  Rendered categories/_form.html.erb (Duration: 4.0ms | Allocations: 1098)
+  Rendered categories/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1433)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 6219)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.1ms | Allocations: 7342)
+
+
+Started GET "/categories/new" for ::1 at 2021-02-13 16:51:59 -0600
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.3ms | Allocations: 221)
+  Rendered categories/_form.html.erb (Duration: 2.0ms | Allocations: 1100)
+  Rendered categories/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1441)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 6228)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.2ms | Allocations: 7357)
+
+
+Started POST "/categories" for ::1 at 2021-02-13 16:52:12 -0600
+Processing by CategoriesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Social"}, "commit"=>"Create Category"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:18:in `create'
+  [1m[36mCategory Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE LOWER("categories"."name") = LOWER(?) LIMIT ?[0m  [["name", "Social"], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:18:in `create'
+  [1m[36mCategory Create (1.1ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Social"], ["created_at", "2021-02-13 22:52:12.966617"], ["updated_at", "2021-02-13 22:52:12.966617"]]
+  ↳ app/controllers/categories_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/categories_controller.rb:18:in `create'
+Redirected to http://localhost:3000/categories/12
+Completed 302 Found in 11ms (ActiveRecord: 2.7ms | Allocations: 3423)
+
+
+Started GET "/categories/12" for ::1 at 2021-02-13 16:52:13 -0600
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 12]]
+  ↳ app/views/categories/show.html.erb:13
+  Rendered categories/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1141)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 5456)
+Completed 200 OK in 18ms (Views: 12.0ms | ActiveRecord: 0.5ms | Allocations: 6517)
+
+
+Started GET "/categories/12/events/new" for ::1 at 2021-02-13 16:52:15 -0600
+Processing by EventsController#new as HTML
+  Parameters: {"category_id"=>"12"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:73:in `find_category'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.2ms | Allocations: 42)
+  Rendered events/_form.html.erb (Duration: 4.5ms | Allocations: 2221)
+  Rendered events/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2538)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 6784)
+Completed 200 OK in 8044ms (Views: 17.4ms | ActiveRecord: 0.2ms | Allocations: 82847)
+
+

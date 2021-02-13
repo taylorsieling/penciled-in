@@ -16,6 +16,7 @@ class Event < ApplicationRecord
     def category_attributes=(attr)
         if !attr[:name].blank?
             self.category = category.find_or_create_by(name: attr[:name])
+            self.category.update(category)
         end 
     end 
 

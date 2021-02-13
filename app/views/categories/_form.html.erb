@@ -1,7 +1,8 @@
+<%= render partial: 'layouts/errors', locals: {object: @category} %>
 <%= form_for(@category) do |f| %>
 
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: 'uk-input' %><br><br>
 
-<%= f.submit %>
+<%= f.submit class: 'uk-button uk-button-secondary uk-width-1-1' %>
 <% end %>

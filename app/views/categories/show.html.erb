@@ -1,4 +1,12 @@
-<h1> <%= @category.name %> Events</h1><br>
+<div class="uk-clearfix">
+    <div class="uk-float-right">
+        <%= button_to "Create #{@category.name} Event", new_category_event_path(@category), method: :get, class: "uk-button uk-button-secondary" %>
+    </div>
+    <div class="uk-float-left">
+        <h1> <%= @category.name %> Events</h1>
+    </div>
+</div>
+<br>
 
 <div class="uk-child-width-1-2@s uk-grid-match" uk-grid>
 
@@ -7,10 +15,14 @@
         <div>
             <a href="/events/<%= e.id %>" class="uk-display-block uk-card uk-card-body uk-card-default uk-link-toggle">
                 <div class="uk-margin-top">
-                    <h3 class="uk-card-title"><span class="uk-link-heading"><%= e.name %></span></h3>
-                    <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00"><%= e.start_date.strftime("%b %d, %Y") %> at <%= e.start_time.strftime(" %l:%M %p") %></time></p>
-                    <p><%= e.description %>
-                    <p><%= e.location %></p>
+                    <div class="uk-card-header">
+                        <h3 class="uk-card-title"><span class="uk-link-heading"><%= e.name %></span></h3>
+                        <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00"><%= e.start_date.strftime("%b %d, %Y") %> at <%= e.start_time.strftime(" %l:%M %p") %></time></p>
+                    </div>
+                    <div class="uk-card-body">
+                        <p><%= e.description.truncate(200) %>
+                        <p class="uk-text-bold"><%= e.location %></p>
+                    </div>
                 </div>
             </a>
         </div>
