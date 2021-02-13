@@ -13,7 +13,7 @@
         <div uk-grid>
             <% if @event.user == current_user %>
                 <div class="uk-child-width-1-2">
-                    <%= button_to "Edit Event", edit_event_path(@event), class: "uk-button uk-button-secondary" %>
+                    <%= button_to "Edit Event", edit_event_path(@event), method: :get, class: "uk-button uk-button-secondary" %>
                 </div>
                 <div class="uk-child-width-1-2">
                     <%= button_to 'Delete Event', @event, method: :delete, data: { confirm: "Are you sure you want to this event?"}, class: "uk-button uk-button-secondary" %></p>

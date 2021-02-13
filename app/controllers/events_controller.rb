@@ -31,7 +31,9 @@ class EventsController < ApplicationController
     end
     
     def update
+        byebug
         if @event.update(event_params)
+            byebug
             redirect_to event_path(@event)
         else
             render "new"
