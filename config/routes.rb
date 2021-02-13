@@ -16,10 +16,10 @@ Rails.application.routes.draw do
   resources :events do 
     resources :rsvps, shallow: true
   end
+  
   resources :categories do
     resources :events, shallow: true
   end
-
 
 end
 

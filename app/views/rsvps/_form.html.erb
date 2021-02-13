@@ -2,6 +2,9 @@
 
 <%= form_for @rsvp do |f| %>
 
+        <%= f.hidden_field :event_id %>
+        <%= f.hidden_field :user_id %>
+
         <%= f.label :status %> <br><br>
         <%= f.radio_button :status, "Interested", class: 'uk-radio' %>
         <%= f.label :status, "Interested" %><br>
