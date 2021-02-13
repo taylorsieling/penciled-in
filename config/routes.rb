@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   end
 
   get '/most_popular' => 'events#most_popular'
+  get '/happening_today' => 'events#happening_today'
 
 end
 

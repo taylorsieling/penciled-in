@@ -59,6 +59,10 @@ class EventsController < ApplicationController
         @events = Event.most_rsvps.limit(5)
     end
 
+    def happening_today
+        @events = Event.happening_today
+    end
+
     private
 
     def set_event
