@@ -37561,3 +37561,151 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 45ms (Views: 32.1ms | ActiveRecord: 1.6ms | Allocations: 22052)
 
 
+Started GET "/events/new" for ::1 at 2021-02-13 10:45:44 -0600
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.2ms | Allocations: 42)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/events/_form.html.erb:47
+  Rendered events/_form.html.erb (Duration: 4.9ms | Allocations: 2999)
+  Rendered events/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 3090)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 7299)
+Completed 200 OK in 28ms (Views: 13.6ms | ActiveRecord: 0.9ms | Allocations: 17075)
+
+
+Started POST "/events" for ::1 at 2021-02-13 11:16:20 -0600
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"name"=>"Mardi Paws Parade", "description"=>"It's that time of year for Galveston's Annual Mardi Paws Parade! Show off your furry friends and your best festival attire in our 1.4 miles parade around Downtown Galveston. You must have a ticket to Mardi Gras Galveston to enter. All pets must stay on a leash.", "location"=>"Historical Downtown Galveston", "start_date"=>"2021-02-16", "end_date"=>"2021-02-16", "start_time"=>"11:00", "end_time"=>"00:00", "category_id"=>"", "category_attributes"=>{"name"=>"Mardi Gras"}}, "commit"=>"Create Event"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+[31mUnpermitted parameter: :category_id[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "Mardi Gras"], ["LIMIT", 1]]
+  ↳ app/models/event.rb:21:in `category_attributes='
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/event.rb:21:in `category_attributes='
+  [1m[36mCategory Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE LOWER("categories"."name") = LOWER(?) LIMIT ?[0m  [["name", "Mardi Gras"], ["LIMIT", 1]]
+  ↳ app/models/event.rb:21:in `category_attributes='
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Mardi Gras"], ["created_at", "2021-02-13 17:16:20.492489"], ["updated_at", "2021-02-13 17:16:20.492489"]]
+  ↳ app/models/event.rb:21:in `category_attributes='
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/event.rb:21:in `category_attributes='
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (byebug):1:in `create'
+  [1m[36mEvent Create (0.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "description", "start_date", "end_date", "start_time", "end_time", "user_id", "created_at", "updated_at", "location", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mardi Paws Parade"], ["description", "It's that time of year for Galveston's Annual Mardi Paws Parade! Show off your furry friends and your best festival attire in our 1.4 miles parade around Downtown Galveston. You must have a ticket to Mardi Gras Galveston to enter. All pets must stay on a leash."], ["start_date", "2021-02-16"], ["end_date", "2021-02-16"], ["start_time", "2000-01-01 11:00:00"], ["end_time", "2000-01-01 00:00:00"], ["user_id", 5], ["created_at", "2021-02-13 17:16:38.907481"], ["updated_at", "2021-02-13 17:16:38.907481"], ["location", "Historical Downtown Galveston"], ["category_id", 11]]
+  ↳ (byebug):1:in `create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (byebug):1:in `create'
+Redirected to http://localhost:3000/events/7
+Completed 302 Found in 21549ms (ActiveRecord: 5.2ms | Allocations: 131182)
+
+
+Started GET "/events/7" for ::1 at 2021-02-13 11:16:42 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:54:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:9
+  Rendered events/show.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1411)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 5691)
+Completed 200 OK in 30ms (Views: 24.5ms | ActiveRecord: 0.9ms | Allocations: 7088)
+
+
+Started GET "/events/new" for ::1 at 2021-02-13 11:25:33 -0600
+Processing by EventsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/events_controller.rb:16:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.2ms | Allocations: 42)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/events/_form.html.erb:47
+  Rendered events/_form.html.erb (Duration: 6.5ms | Allocations: 3030)
+  Rendered events/new.html.erb within layouts/application (Duration: 6.7ms | Allocations: 3121)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 13317)
+Completed 200 OK in 39ms (Views: 22.4ms | ActiveRecord: 0.7ms | Allocations: 25791)
+
+
+Started POST "/events" for ::1 at 2021-02-13 11:28:44 -0600
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"name"=>"Paint & Sip", "description"=>"Grab a glass of your favorite adult beverage and a paint brush! This week, we will be painting Pop Art Roses for our Friday Night Paint & Sip. Tickets are $35 at the door; reservations are recommended. All painting materials will be provided for you. Beer and wine are available for purchase at the studio, or you can bring your own!", "location"=>"Clay Cup Studios", "start_date"=>"2021-03-12", "end_date"=>"2021-02-12", "start_time"=>"19:00", "end_time"=>"21:00", "category_id"=>"10", "category_attributes"=>{"name"=>""}}, "commit"=>"Create Event"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ (byebug):1:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (byebug):1:in `create'
+  [1m[36mCategory Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE LOWER("categories"."name") = LOWER(?) LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ (byebug):1:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ (byebug):1:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:25:in `create'
+  [1m[36mCategory Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE LOWER("categories"."name") = LOWER(?) LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/events_controller.rb:25:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 2.0ms | Allocations: 631)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/events/_form.html.erb:47
+  Rendered events/_form.html.erb (Duration: 15.6ms | Allocations: 7570)
+  Rendered events/new.html.erb within layouts/application (Duration: 16.3ms | Allocations: 7661)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 11221)
+Completed 200 OK in 392838ms (Views: 25.1ms | ActiveRecord: 1.5ms | Allocations: 138633)
+
+
+Started POST "/events" for ::1 at 2021-02-13 11:35:26 -0600
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"name"=>"Paint & Sip", "description"=>"Grab a glass of your favorite adult beverage and a paint brush! This week, we will be painting Pop Art Roses for our Friday Night Paint & Sip. Tickets are $35 at the door; reservations are recommended. All painting materials will be provided for you. Beer and wine are available for purchase at the studio, or you can bring your own!", "location"=>"Clay Cup Studios", "start_date"=>"2021-03-12", "end_date"=>"2021-02-12", "start_time"=>"19:00:00.000", "end_time"=>"21:00:00.000", "category_id"=>"10", "category_attributes"=>{"name"=>""}}, "commit"=>"Create Event"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:25:in `create'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:25:in `create'
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "description", "start_date", "end_date", "start_time", "end_time", "user_id", "created_at", "updated_at", "location", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Paint & Sip"], ["description", "Grab a glass of your favorite adult beverage and a paint brush! This week, we will be painting Pop Art Roses for our Friday Night Paint & Sip. Tickets are $35 at the door; reservations are recommended. All painting materials will be provided for you. Beer and wine are available for purchase at the studio, or you can bring your own!"], ["start_date", "2021-03-12"], ["end_date", "2021-02-12"], ["start_time", "2000-01-01 19:00:00"], ["end_time", "2000-01-01 21:00:00"], ["user_id", 5], ["created_at", "2021-02-13 17:35:52.108679"], ["updated_at", "2021-02-13 17:35:52.108679"], ["location", "Clay Cup Studios"], ["category_id", 10]]
+  ↳ app/controllers/events_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/events_controller.rb:25:in `create'
+Redirected to http://localhost:3000/events/8
+Completed 302 Found in 25286ms (ActiveRecord: 6.2ms | Allocations: 102027)
+
+
+Started GET "/events/8" for ::1 at 2021-02-13 11:35:52 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:55:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:9
+  Rendered events/show.html.erb within layouts/application (Duration: 4.4ms | Allocations: 960)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 5240)
+Completed 200 OK in 27ms (Views: 21.1ms | ActiveRecord: 1.1ms | Allocations: 6509)
+
+

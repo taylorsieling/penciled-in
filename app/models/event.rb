@@ -3,10 +3,11 @@ class Event < ApplicationRecord
     has_many :users, through: :rsvps
     belongs_to :user
     belongs_to :category
+    accepts_nested_attributes_for :category
 
     validates :name, :description, :start_date, :end_date, :start_time, :end_time, presence: true
 
-    accepts_nested_attributes_for :category
+    
 
     scope :most_popular, -> { left_outer_joins(:rsvps).group("events.id").order("sum(rsvps.number_of_attendee) DESC") }
 
@@ -17,9 +18,8 @@ class Event < ApplicationRecord
 
     def category_attributes=(attr)
         if !attr[:name].blank?
-            self.category = Category.find_or_create_by(name: attr[:name])
+            self.category = category.find_or_create_by(name: attr[:name], owner: attr[:owner])
         end 
     end 
-
 
 end
