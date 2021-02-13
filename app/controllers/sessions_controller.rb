@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
         user = User.from_omniauth(auth)
         if user.save
             session[:user_id] = user.id 
-            redirect_to new_event_path
+            redirect_to user_path(user)
         else
             flash[:message] = user.errors.full_messages.join(", ")
             redirect_to 'login'

@@ -1,7 +1,6 @@
 class RsvpsController < ApplicationController
 
     before_action :set_rsvp, only: [:show, :edit, :update, :destroy]
-    helper_method :set_rsvp
 
     def index
       @user = current_user
@@ -34,8 +33,6 @@ class RsvpsController < ApplicationController
 
     def destroy
     end
-
-    
 
     private
 

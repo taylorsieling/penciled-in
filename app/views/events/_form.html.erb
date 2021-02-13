@@ -1,6 +1,6 @@
 <%= render partial: "layouts/errors", locals: {object: @event} %>
 
-<%= form_for @event do |f| %>
+<%= form_for ([@category, @event]) do |f| %>
 
   <div class='uk-grid-small' uk-grid>
   
@@ -39,23 +39,27 @@
     <%= f.time_field :end_time, class: 'uk-input' %> <br><br>
     </div>
 
-      <div class="uk-width-1-2@s">
+      <% unless @category %>
 
-      <%= f.label :category, "Choose a Category" %><br><br>
-      <%= f.collection_select :category_id, Category.all, :id, :name, {prompt: true}, { class: 'uk-select' } %><br><br>
+        <div class="uk-width-1-2@s">
 
-      </div>
+        <%= f.label :category, "Choose a Category" %><br><br>
+        <%= f.collection_select :category_id, Category.all, :id, :name, {prompt: true}, { class: 'uk-select' } %><br><br>
 
-      <div class="uk-width-1-2@s">
-      
-        <%= f.fields_for :category do |c| %>
+        </div>
 
-          <%= c.label :name, "Or Create Your Own" %><br><br>
-          <%= c.text_field :name, placeholder: "Category Name", class: 'uk-input' %>
+        <div class="uk-width-1-2@s">
+        
+          <%= f.fields_for :category do |c| %>
 
-        <% end %>
+            <%= c.label :name, "Or Create Your Own" %><br><br>
+            <%= c.text_field :name, placeholder: "Category Name", class: 'uk-input' %>
 
-      </div>
+          <% end %>
+
+        </div>
+
+      <% end %>
       <br><br>
 
       <div class="uk-width-1-1">

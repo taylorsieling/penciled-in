@@ -29,12 +29,13 @@ ActiveRecord::Schema.define(version: 2021_02_03_222704) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "location"
-    t.integer "category_id"
+    t.integer "category_id", null: false
+    t.index ["category_id"], name: "index_events_on_category_id"
   end
 
   create_table "rsvps", force: :cascade do |t|
     t.string "status"
-    t.integer "number_of_attendee"
+    t.integer "number_of_attendees"
     t.integer "user_id"
     t.integer "event_id"
     t.datetime "created_at", precision: 6, null: false
@@ -51,4 +52,5 @@ ActiveRecord::Schema.define(version: 2021_02_03_222704) do
     t.string "provider"
   end
 
+  add_foreign_key "events", "categories"
 end
