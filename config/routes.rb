@@ -21,5 +21,7 @@ Rails.application.routes.draw do
     resources :events, shallow: true
   end
 
+  get '/most_popular' => 'events#most_popular'
+
 end
 

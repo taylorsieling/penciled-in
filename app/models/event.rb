@@ -7,7 +7,7 @@ class Event < ApplicationRecord
 
     validates :name, :description, :start_date, :end_date, :start_time, :end_time, presence: true
 
-    scope :most_popular, -> { left_outer_joins(:rsvps).group("events.id").order("sum(rsvps.number_of_attendee) DESC") }
+    scope :most_rsvps, -> { left_outer_joins(:rsvps).group("events.id").order("sum(rsvps.number_of_attendees) DESC") }
 
     def self.ordered_by_date
         self.order(start_date: :asc)

@@ -56,7 +56,7 @@ class EventsController < ApplicationController
     end
 
     def most_popular
-        @events = Event.most_popular
+        @events = Event.most_rsvps.limit(5)
     end
 
     private

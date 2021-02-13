@@ -1,26 +1,3 @@
 <h1> Upcoming Events </h1><br>
 
-<% flash.each do |type, msg| %>
-  <div>
-    <%= msg %>
-  </div>
-<% end %>
-
-<div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-grid-match" uk-grid>
-
-    <% @events.each do |e| %>
-        
-        <div>
-            <a href="/events/<%= e.id %>" class="uk-display-block uk-card uk-card-body uk-card-default uk-link-toggle">
-                <div class="uk-card-badge uk-label uk-label-warning"><%= e.category.name %></div>
-                <div class="uk-margin-top">
-                    <h3 class="uk-card-title"><span class="uk-link-heading"><%= e.name %></span></h3>
-                    <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00"><%= e.start_date.strftime("%b %d, %Y") %> at <%= e.start_time.strftime(" %l:%M %p") %></time></p>
-                    <p><%= e.location %></p>
-                </div>
-            </a>
-        </div>
-       
-    <% end %>
-
-</div>
+<%= render 'event' %>
