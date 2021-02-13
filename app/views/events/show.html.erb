@@ -16,7 +16,7 @@
         <div>
             <%= link_to "RSVP to this Event", new_event_rsvp_path(@event), class: 'uk-button uk-button-secondary' %>
             <h4>Date and Time</h4>
-            <p><%= @event.start_date.strftime("%b %d, %Y") %> at <%= @event.start_time.strftime(" %l:%M %p") %> - <%= @event.end_date.strftime("%b %d, %Y") %> at <%= @event.end_time.strftime(" %l:%M %p") %></p>
+            <p><%= format_date(@event.start_date) %> at <%= format_time(@event.start_time) %> - <%= format_date(@event.end_date) %> at <%= format_time(@event.end_time) %></p>
             <br>
             <h4>Location</h4>
             <p><%= @event.location %></p>

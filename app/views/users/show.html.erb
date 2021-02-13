@@ -22,7 +22,7 @@
                     <div class="uk-card-badge uk-label uk-label-warning"><%= e.category.name %></div>
                     <div class="uk-margin-top">
                         <h3 class="uk-card-title"><span class="uk-link-heading"><%= e.name %></span></h3>
-                        <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00"><%= e.start_date.strftime("%b %d, %Y") %> at <%= e.start_time.strftime(" %l:%M %p") %></time></p>
+                        <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00"><%= format_date(e.start_date) %> at <%= format_time(e.start_time) %></time></p>
                         <p><%= e.location %></p>
                     </div>
                 </a>
@@ -48,11 +48,11 @@
             
             <div>
                 <a href="/events/<%= e.id %>" class="uk-display-block uk-card uk-card-body uk-card-default uk-link-toggle">
-                    <div class="uk-card-badge uk-label uk-label-warning"><%= e.category.name %></div>
+                    <div class="uk-card-badge uk-label uk-label-warning"><%= e.event.category.name %></div>
                     <div class="uk-margin-top">
-                        <h3 class="uk-card-title"><span class="uk-link-heading"><%= e.name %></span></h3>
-                        <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00"><%= e.start_date.strftime("%b %d, %Y") %> at <%= e.start_time.strftime(" %l:%M %p") %></time></p>
-                        <p><%= e.location %></p>
+                        <h3 class="uk-card-title"><span class="uk-link-heading"><%= e.event.name %></span></h3>
+                        <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00"><%= format_date(e.event.start_date) %> at <%= format_time(e.event.start_time) %></time></p>
+                        <p><%= e.event.location %></p>
                     </div>
                 </a>
             </div>
