@@ -40,7 +40,7 @@ class EventsController < ApplicationController
 
     def destroy
         @event.destroy
-        redirect_to events_path
+        redirect_to events_path, flash[:message] = "Your event has been deleted successfully."
     end
 
     def most_popular
