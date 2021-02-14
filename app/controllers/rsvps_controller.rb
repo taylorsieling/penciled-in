@@ -11,8 +11,9 @@ class RsvpsController < ApplicationController
     end
 
     def new
-      @rsvp = Rsvp.new(event_id: params[:event_id], user_id: current_user.id)
-      @event = @rsvp.event
+      byebug
+        @rsvp = Rsvp.new(event_id: params[:event_id], user_id: current_user.id)
+        @event = @rsvp.event
     end
 
     def create
@@ -29,6 +30,11 @@ class RsvpsController < ApplicationController
     end
     
     def update
+      if @rsvp.update(rsvp_params)
+        redirect_to event_path(@rsvp.event)
+      else
+        render "new"
+      end
     end
 
     def destroy
@@ -37,7 +43,7 @@ class RsvpsController < ApplicationController
     private
 
     def set_rsvp
-        @rsvp = rsvp.find(params[:id])
+        @rsvp = Rsvp.find(params[:id])
     end
 
     def rsvp_params

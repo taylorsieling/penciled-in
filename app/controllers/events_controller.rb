@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
 
     before_action :set_event, only: [:show, :edit, :update, :destroy]
-    before_action :find_category, only: [:new, :create]
+    before_action :find_category, only: [:new, :create, :update]
 
     def index
         @events = Event.ordered_by_date.future
@@ -12,9 +12,7 @@ class EventsController < ApplicationController
 
     def new
         if params[:category_id] && @category
-            byebug
             @event = @category.events.build
-            byebug
         else
             @event = Event.new
             @event.build_category
@@ -22,9 +20,7 @@ class EventsController < ApplicationController
     end
 
     def create
-        byebug
         if @category
-            byebug
             @event = @category.events.build(event_params)
             @event.user = current_user
         else
@@ -41,7 +37,7 @@ class EventsController < ApplicationController
     end
     
     def update
-        byebug
+        @category
         if @event.update(event_params)
             byebug
             redirect_to event_path(@event)
