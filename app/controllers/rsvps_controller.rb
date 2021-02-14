@@ -11,7 +11,6 @@ class RsvpsController < ApplicationController
     end
 
     def new
-      byebug
         @rsvp = Rsvp.new(event_id: params[:event_id], user_id: current_user.id)
         @event = @rsvp.event
     end

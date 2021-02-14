@@ -9,24 +9,32 @@
 <br>
 
 <div class="uk-child-width-1-2@s uk-grid-match" uk-grid>
+    
+    <% if @category.events.empty? %>
 
-    <% @category.events.each do |e| %>
+        <p>There are no upcoming events in this category.</p>
+
+    <% else %>
+
+        <% @category.events.each do |e| %>
+            
+            <div>
+                <a href="/events/<%= e.id %>" class="uk-display-block uk-card uk-card-body uk-card-default uk-link-toggle">
+                    <div class="uk-margin-top">
+                        <div class="uk-card-header">
+                            <h3 class="uk-card-title"><span class="uk-link-heading"><%= e.name %></span></h3>
+                            <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00"><%= e.start_date.strftime("%b %d, %Y") %> at <%= e.start_time.strftime(" %l:%M %p") %></time></p>
+                        </div>
+                        <div class="uk-card-body">
+                            <p><%= e.description.truncate(200) %>
+                            <p class="uk-text-bold"><%= e.location %></p>
+                        </div>
+                    </div>
+                </a>
+            </div>
         
-        <div>
-            <a href="/events/<%= e.id %>" class="uk-display-block uk-card uk-card-body uk-card-default uk-link-toggle">
-                <div class="uk-margin-top">
-                    <div class="uk-card-header">
-                        <h3 class="uk-card-title"><span class="uk-link-heading"><%= e.name %></span></h3>
-                        <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00"><%= e.start_date.strftime("%b %d, %Y") %> at <%= e.start_time.strftime(" %l:%M %p") %></time></p>
-                    </div>
-                    <div class="uk-card-body">
-                        <p><%= e.description.truncate(200) %>
-                        <p class="uk-text-bold"><%= e.location %></p>
-                    </div>
-                </div>
-            </a>
-        </div>
-       
+        <% end %>
+
     <% end %>
 
 </div>

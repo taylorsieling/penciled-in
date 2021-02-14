@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :rsvps
+
   resources :events do 
     resources :rsvps, shallow: true
   end
