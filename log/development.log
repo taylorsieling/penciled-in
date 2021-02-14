@@ -47937,3 +47937,96 @@ Processing by EventsController#past_events as HTML
 Completed 200 OK in 183ms (Views: 156.9ms | ActiveRecord: 2.2ms | Allocations: 39129)
 
 
+Started GET "/past_events" for ::1 at 2021-02-14 14:22:44 -0600
+Processing by EventsController#past_events as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/past_events.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (end_date <= '2021-02-14') ORDER BY "events"."start_date" ASC[0m
+  ↳ app/views/events/_event.html.erb:9
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  Rendered events/_event.html.erb (Duration: 11.6ms | Allocations: 1927)
+  Rendered events/past_events.html.erb within layouts/application (Duration: 12.3ms | Allocations: 2239)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 7130)
+Completed 200 OK in 34ms (Views: 31.5ms | ActiveRecord: 0.4ms | Allocations: 8362)
+
+
+Started GET "/happening_today" for ::1 at 2021-02-14 14:22:45 -0600
+Processing by EventsController#happening_today as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/happening_today.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."start_date" = ?[0m  [["start_date", "2021-02-14"]]
+  ↳ app/views/events/_event.html.erb:9
+  Rendered events/_event.html.erb (Duration: 2.3ms | Allocations: 786)
+  Rendered events/happening_today.html.erb within layouts/application (Duration: 2.9ms | Allocations: 970)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 5325)
+Completed 200 OK in 16ms (Views: 12.5ms | ActiveRecord: 0.3ms | Allocations: 5888)
+
+
+Started GET "/past_events" for ::1 at 2021-02-14 14:22:48 -0600
+Processing by EventsController#past_events as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/past_events.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (end_date <= '2021-02-14') ORDER BY "events"."start_date" ASC[0m
+  ↳ app/views/events/_event.html.erb:9
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  Rendered events/_event.html.erb (Duration: 4.6ms | Allocations: 1649)
+  Rendered events/past_events.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1740)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 6081)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.4ms | Allocations: 6568)
+
+
+Started GET "/most_popular" for ::1 at 2021-02-14 14:22:50 -0600
+Processing by EventsController#most_popular as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/most_popular.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" LEFT OUTER JOIN "rsvps" ON "rsvps"."event_id" = "events"."id" GROUP BY "events"."id" ORDER BY sum(rsvps.number_of_attendees) DESC, "events"."start_date" ASC LIMIT ?[0m  [["LIMIT", 3]]
+  ↳ app/views/events/_event.html.erb:9
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  Rendered events/_event.html.erb (Duration: 22.3ms | Allocations: 8319)
+  Rendered events/most_popular.html.erb within layouts/application (Duration: 22.8ms | Allocations: 8509)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 12762)
+Completed 200 OK in 32ms (Views: 29.2ms | ActiveRecord: 0.7ms | Allocations: 13396)
+
+
+Started GET "/most_popular" for ::1 at 2021-02-14 14:23:25 -0600
+Processing by EventsController#most_popular as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/event.rb:13:in `block in <class:Event>'
+  Rendering layout layouts/application.html.erb
+  Rendering events/most_popular.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" LEFT OUTER JOIN "rsvps" ON "rsvps"."event_id" = "events"."id" WHERE (end_date >= '2021-02-14') GROUP BY "events"."id" ORDER BY sum(rsvps.number_of_attendees) DESC, "events"."start_date" ASC LIMIT ?[0m  [["LIMIT", 3]]
+  ↳ app/views/events/_event.html.erb:9
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  Rendered events/_event.html.erb (Duration: 20.7ms | Allocations: 14482)
+  Rendered events/most_popular.html.erb within layouts/application (Duration: 20.8ms | Allocations: 14573)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 36.2ms | Allocations: 25291)
+Completed 200 OK in 45ms (Views: 35.5ms | ActiveRecord: 2.3ms | Allocations: 29837)
+
+
