@@ -52,11 +52,15 @@ class EventsController < ApplicationController
     end
 
     def most_popular
-        @events = Event.most_rsvps.limit(3)
+        @events = Event.most_rsvps.ordered_by_date.limit(3)
     end
 
     def happening_today
         @events = Event.happening_today
+    end
+
+    def past_events
+        @events = Event.past.ordered_by_date
     end
 
     private

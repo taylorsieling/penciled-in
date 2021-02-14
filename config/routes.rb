@@ -23,6 +23,7 @@ Rails.application.routes.draw do
 
   get '/most_popular' => 'events#most_popular'
   get '/happening_today' => 'events#happening_today'
+  get '/past_events' => 'events#past_events'
 
 end
 
