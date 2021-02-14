@@ -1,6 +1,7 @@
 class RsvpsController < ApplicationController
 
     before_action :set_rsvp, only: [:show, :edit, :update, :destroy]
+    before_action :set_event, only: [:edit]
 
     def index
       @user = current_user
@@ -11,7 +12,9 @@ class RsvpsController < ApplicationController
     end
 
     def new
+      byebug
         @rsvp = Rsvp.new(event_id: params[:event_id], user_id: current_user.id)
+        byebug
         @event = @rsvp.event
     end
 
@@ -49,6 +52,14 @@ class RsvpsController < ApplicationController
         params.require(:rsvp).permit(:status, :number_of_attendees, :user_id, :event_id)
     end
 
+    def set_event
+      @event = Event.find_by_id(params[:id])
+    end
+
 end
 
 
+# if the user has an rsvp with the event id of the current event
+# show the edit button
+# if the user does not have an rsvp with the event id of the current event
+# show the rsvp button

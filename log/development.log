@@ -48595,3 +48595,1372 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 28ms (Views: 23.4ms | ActiveRecord: 0.8ms | Allocations: 10679)
 
 
+Started GET "/events" for ::1 at 2021-02-14 14:37:19 -0600
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (end_date >= '2021-02-14') ORDER BY "events"."start_date" ASC[0m
+  ↳ app/views/events/_event.html.erb:9
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  Rendered events/_event.html.erb (Duration: 65.8ms | Allocations: 20504)
+  Rendered events/index.html.erb within layouts/application (Duration: 70.3ms | Allocations: 20973)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 142.4ms | Allocations: 36275)
+Completed 200 OK in 172ms (Views: 144.3ms | ActiveRecord: 3.7ms | Allocations: 44025)
+
+
+Started GET "/events/7" for ::1 at 2021-02-14 14:37:23 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:69:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered events/show.html.erb within layouts/application (Duration: 15.0ms | Allocations: 3472)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | Allocations: 7103)
+Completed 200 OK in 33ms (Views: 25.1ms | ActiveRecord: 0.6ms | Allocations: 8374)
+
+
+Started GET "/events/7/rsvps/new" for ::1 at 2021-02-14 14:37:24 -0600
+Processing by RsvpsController#new as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:15:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering rsvps/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/rsvps/new.html.erb:12
+  Rendered layouts/_errors.html.erb (Duration: 0.4ms | Allocations: 229)
+  Rendered rsvps/_form.html.erb (Duration: 7.7ms | Allocations: 3501)
+  Rendered rsvps/new.html.erb within layouts/application (Duration: 11.0ms | Allocations: 4666)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 8330)
+Completed 200 OK in 43ms (Views: 19.1ms | ActiveRecord: 1.2ms | Allocations: 15819)
+
+
+Started POST "/rsvps" for ::1 at 2021-02-14 14:37:27 -0600
+Processing by RsvpsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "rsvp"=>{"event_id"=>"7", "user_id"=>"1", "status"=>"Attending", "number_of_attendees"=>"1"}, "commit"=>"Create Rsvp"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rsvps_controller.rb:21:in `create'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:21:in `create'
+  [1m[36mRsvp Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."event_id" = ? AND "rsvps"."user_id" = ? LIMIT ?[0m  [["event_id", 7], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:21:in `create'
+  [1m[36mRsvp Create (0.6ms)[0m  [1m[32mINSERT INTO "rsvps" ("status", "number_of_attendees", "user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["status", "Attending"], ["number_of_attendees", 1], ["user_id", 1], ["event_id", 7], ["created_at", "2021-02-14 20:37:27.315697"], ["updated_at", "2021-02-14 20:37:27.315697"]]
+  ↳ app/controllers/rsvps_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rsvps_controller.rb:21:in `create'
+Redirected to http://localhost:3000/rsvps
+Completed 302 Found in 22ms (ActiveRecord: 2.7ms | Allocations: 6799)
+
+
+Started GET "/rsvps" for ::1 at 2021-02-14 14:37:27 -0600
+Processing by RsvpsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering rsvps/index.html.erb within layouts/application
+  [1m[36mRsvp Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/rsvps/index.html.erb:8
+  [1m[36mRsvp Load (0.3ms)[0m  [1m[34mSELECT "rsvps".* FROM "rsvps" WHERE "rsvps"."user_id" = ? AND "rsvps"."status" = ?[0m  [["user_id", 1], ["status", "Attending"]]
+  ↳ app/views/rsvps/index.html.erb:14
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/rsvps/index.html.erb:17
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/rsvps/index.html.erb:18
+  [1m[36mCACHE Rsvp Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/rsvps/index.html.erb:37
+  [1m[36mRsvp Load (0.1ms)[0m  [1m[34mSELECT "rsvps".* FROM "rsvps" WHERE "rsvps"."user_id" = ? AND "rsvps"."status" = ?[0m  [["user_id", 1], ["status", "Interested"]]
+  ↳ app/views/rsvps/index.html.erb:43
+  [1m[36mCACHE Rsvp Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/rsvps/index.html.erb:67
+  [1m[36mRsvp Load (0.2ms)[0m  [1m[34mSELECT "rsvps".* FROM "rsvps" WHERE "rsvps"."user_id" = ? AND "rsvps"."status" = ?[0m  [["user_id", 1], ["status", "Declined"]]
+  ↳ app/views/rsvps/index.html.erb:73
+  Rendered rsvps/index.html.erb within layouts/application (Duration: 19.0ms | Allocations: 6883)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.7ms | Allocations: 10564)
+Completed 200 OK in 33ms (Views: 25.3ms | ActiveRecord: 1.3ms | Allocations: 12813)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mRsvp Load (0.2ms)[0m  [1m[34mSELECT "rsvps".* FROM "rsvps" WHERE "rsvps"."user_id" = ? /* loading for inspect */ LIMIT ?[0m  [["user_id", 2], ["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRsvp Load (0.1ms)[0m  [1m[34mSELECT "rsvps".* FROM "rsvps" WHERE "rsvps"."user_id" = ? /* loading for inspect */ LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+Started GET "/rsvps/5/edit" for ::1 at 2021-02-14 14:40:01 -0600
+Processing by RsvpsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRsvp Load (0.2ms)[0m  [1m[34mSELECT "rsvps".* FROM "rsvps" WHERE "rsvps"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:45:in `set_rsvp'
+  Rendering layout layouts/application.html.erb
+  Rendering rsvps/edit.html.erb within layouts/application
+  Rendered rsvps/edit.html.erb within layouts/application (Duration: 12.5ms | Allocations: 4025)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 4095)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.2ms | Allocations: 5256)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    4: 
+    5:         <div class="uk-container">
+    6:             
+    7:             <h1><%= @event.name %></h1>
+    8:             <h3>About this Event</h3>
+    9:             <p><%= @event.description %></p>
+   10:             <br>
+  
+app/views/rsvps/edit.html.erb:7
+Started GET "/rsvps/5/edit" for ::1 at 2021-02-14 14:42:11 -0600
+Processing by RsvpsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/rsvps_controller.rb:46:in `set_rsvp'
+  [1m[36mRsvp Load (0.1ms)[0m  [1m[34mSELECT "rsvps".* FROM "rsvps" WHERE "rsvps"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:46:in `set_rsvp'
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.4ms | Allocations: 10897)
+
+
+  
+NoMethodError (undefined method `set_event' for #<RsvpsController:0x007fb5d8fc7930>
+Did you mean?  set_request!):
+  
+activesupport (6.1.1) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.1) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (6.1.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.1) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (6.1.1) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.1) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.1) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.1) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+actiontext (6.1.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.1) lib/action_text/engine.rb:55:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.1) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.1) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.1) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.1) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.1) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.1) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.1) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+omniauth (2.0.1) lib/omniauth/strategy.rb:199:in `call!'
+omniauth (2.0.1) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.0.1) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.1) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.1) lib/rails/engine.rb:539:in `call'
+puma (5.2.0) lib/puma/configuration.rb:247:in `call'
+puma (5.2.0) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.0) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.0) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.0) lib/puma/server.rb:432:in `process_client'
+puma (5.2.0) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/rsvps/5/edit" for ::1 at 2021-02-14 14:42:32 -0600
+Processing by RsvpsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/rsvps_controller.rb:46:in `set_rsvp'
+  [1m[36mRsvp Load (0.8ms)[0m  [1m[34mSELECT "rsvps".* FROM "rsvps" WHERE "rsvps"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:46:in `set_rsvp'
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:54:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering rsvps/edit.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/rsvps/edit.html.erb:12
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 43)
+  Rendered rsvps/_form.html.erb (Duration: 2.1ms | Allocations: 1182)
+  Rendered rsvps/edit.html.erb within layouts/application (Duration: 9.4ms | Allocations: 5909)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 25.6ms | Allocations: 16748)
+Completed 200 OK in 52ms (Views: 24.9ms | ActiveRecord: 3.8ms | Allocations: 32780)
+
+
+Started PATCH "/rsvps/5" for ::1 at 2021-02-14 14:42:42 -0600
+Processing by RsvpsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "rsvp"=>{"event_id"=>"7", "user_id"=>"1", "status"=>"Interested", "number_of_attendees"=>"1"}, "commit"=>"Update Rsvp", "id"=>"5"}
+  [1m[36mRsvp Load (0.1ms)[0m  [1m[34mSELECT "rsvps".* FROM "rsvps" WHERE "rsvps"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:46:in `set_rsvp'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rsvps_controller.rb:33:in `update'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:33:in `update'
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:33:in `update'
+  [1m[36mRsvp Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."event_id" = ? AND "rsvps"."id" != ? AND "rsvps"."user_id" = ? LIMIT ?[0m  [["event_id", 7], ["id", 5], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:33:in `update'
+  [1m[36mRsvp Update (1.0ms)[0m  [1m[33mUPDATE "rsvps" SET "status" = ?, "updated_at" = ? WHERE "rsvps"."id" = ?[0m  [["status", "Interested"], ["updated_at", "2021-02-14 20:42:42.183819"], ["id", 5]]
+  ↳ app/controllers/rsvps_controller.rb:33:in `update'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rsvps_controller.rb:33:in `update'
+Redirected to http://localhost:3000/events/7
+Completed 302 Found in 32ms (ActiveRecord: 4.2ms | Allocations: 7674)
+
+
+Started GET "/events/7" for ::1 at 2021-02-14 14:42:42 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:69:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered events/show.html.erb within layouts/application (Duration: 7.3ms | Allocations: 3095)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 6726)
+Completed 200 OK in 20ms (Views: 16.6ms | ActiveRecord: 0.6ms | Allocations: 7880)
+
+
+Started GET "/rsvps" for ::1 at 2021-02-14 14:42:58 -0600
+Processing by RsvpsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering rsvps/index.html.erb within layouts/application
+  [1m[36mRsvp Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/rsvps/index.html.erb:8
+  [1m[36mRsvp Load (0.3ms)[0m  [1m[34mSELECT "rsvps".* FROM "rsvps" WHERE "rsvps"."user_id" = ? AND "rsvps"."status" = ?[0m  [["user_id", 1], ["status", "Attending"]]
+  ↳ app/views/rsvps/index.html.erb:14
+  [1m[36mCACHE Rsvp Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/rsvps/index.html.erb:37
+  [1m[36mRsvp Load (0.2ms)[0m  [1m[34mSELECT "rsvps".* FROM "rsvps" WHERE "rsvps"."user_id" = ? AND "rsvps"."status" = ?[0m  [["user_id", 1], ["status", "Interested"]]
+  ↳ app/views/rsvps/index.html.erb:43
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/rsvps/index.html.erb:46
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/rsvps/index.html.erb:47
+  [1m[36mCACHE Rsvp Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/rsvps/index.html.erb:67
+  [1m[36mRsvp Load (0.1ms)[0m  [1m[34mSELECT "rsvps".* FROM "rsvps" WHERE "rsvps"."user_id" = ? AND "rsvps"."status" = ?[0m  [["user_id", 1], ["status", "Declined"]]
+  ↳ app/views/rsvps/index.html.erb:73
+  Rendered rsvps/index.html.erb within layouts/application (Duration: 18.0ms | Allocations: 6107)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.8ms | Allocations: 9772)
+Completed 200 OK in 31ms (Views: 26.4ms | ActiveRecord: 1.1ms | Allocations: 11177)
+
+
+  [1m[36mRsvp Load (0.2ms)[0m  [1m[34mSELECT "rsvps".* FROM "rsvps" WHERE "rsvps"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Started GET "/rsvps" for ::1 at 2021-02-14 15:17:09 -0600
+Processing by RsvpsController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering rsvps/index.html.erb within layouts/application
+  [1m[36mRsvp Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/rsvps/index.html.erb:8
+  [1m[36mRsvp Load (0.2ms)[0m  [1m[34mSELECT "rsvps".* FROM "rsvps" WHERE "rsvps"."user_id" = ? AND "rsvps"."status" = ?[0m  [["user_id", 1], ["status", "Attending"]]
+  ↳ app/views/rsvps/index.html.erb:14
+  [1m[36mCACHE Rsvp Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/rsvps/index.html.erb:37
+  [1m[36mRsvp Load (0.1ms)[0m  [1m[34mSELECT "rsvps".* FROM "rsvps" WHERE "rsvps"."user_id" = ? AND "rsvps"."status" = ?[0m  [["user_id", 1], ["status", "Interested"]]
+  ↳ app/views/rsvps/index.html.erb:43
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/rsvps/index.html.erb:46
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/rsvps/index.html.erb:47
+  [1m[36mCACHE Rsvp Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/rsvps/index.html.erb:67
+  [1m[36mRsvp Load (0.1ms)[0m  [1m[34mSELECT "rsvps".* FROM "rsvps" WHERE "rsvps"."user_id" = ? AND "rsvps"."status" = ?[0m  [["user_id", 1], ["status", "Declined"]]
+  ↳ app/views/rsvps/index.html.erb:73
+  Rendered rsvps/index.html.erb within layouts/application (Duration: 46.0ms | Allocations: 21946)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 53.3ms | Allocations: 25595)
+Completed 200 OK in 69ms (Views: 52.8ms | ActiveRecord: 1.6ms | Allocations: 34990)
+
+
+Started GET "/events/7" for ::1 at 2021-02-14 15:17:11 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:69:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered events/show.html.erb within layouts/application (Duration: 7.7ms | Allocations: 3128)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 6757)
+Completed 200 OK in 22ms (Views: 16.3ms | ActiveRecord: 0.8ms | Allocations: 8047)
+
+
+Started GET "/events/7/rsvps/new" for ::1 at 2021-02-14 15:17:12 -0600
+Processing by RsvpsController#new as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:16:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering rsvps/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/rsvps/new.html.erb:12
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered rsvps/_form.html.erb (Duration: 3.5ms | Allocations: 1019)
+  Rendered rsvps/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1883)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 5601)
+Completed 200 OK in 26ms (Views: 18.4ms | ActiveRecord: 0.5ms | Allocations: 7267)
+
+
+Started POST "/rsvps" for ::1 at 2021-02-14 15:17:17 -0600
+Processing by RsvpsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "rsvp"=>{"event_id"=>"7", "user_id"=>"1", "status"=>"Attending", "number_of_attendees"=>"1"}, "commit"=>"Create Rsvp"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rsvps_controller.rb:22:in `create'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:22:in `create'
+  [1m[36mRsvp Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."event_id" = ? AND "rsvps"."user_id" = ? LIMIT ?[0m  [["event_id", 7], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/rsvps_controller.rb:22:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering rsvps/new.html.erb within layouts/application
+  Rendered rsvps/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1292)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1362)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 2.3ms | Allocations: 7113)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    4: 
+    5:         <div class="uk-container">
+    6:             
+    7:             <h1><%= @event.name %></h1>
+    8:             <h3>About this Event</h3>
+    9:             <p><%= @event.description %></p>
+   10:             <br>
+  
+app/views/rsvps/new.html.erb:7
+app/controllers/rsvps_controller.rb:25:in `create'
+Started GET "/events/7/rsvps/new" for ::1 at 2021-02-14 15:17:28 -0600
+Processing by RsvpsController#new as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:16:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering rsvps/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/rsvps/new.html.erb:12
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered rsvps/_form.html.erb (Duration: 2.5ms | Allocations: 961)
+  Rendered rsvps/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1825)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 5544)
+Completed 200 OK in 22ms (Views: 14.2ms | ActiveRecord: 1.3ms | Allocations: 7198)
+
+
+Started POST "/rsvps" for ::1 at 2021-02-14 15:17:31 -0600
+Processing by RsvpsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "rsvp"=>{"event_id"=>"7", "user_id"=>"1", "status"=>"Attending", "number_of_attendees"=>"1"}, "commit"=>"Create Rsvp"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rsvps_controller.rb:22:in `create'
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:22:in `create'
+  [1m[36mRsvp Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."event_id" = ? AND "rsvps"."user_id" = ? LIMIT ?[0m  [["event_id", 7], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/rsvps_controller.rb:22:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering rsvps/new.html.erb within layouts/application
+  Rendered rsvps/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1292)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1362)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.1ms | Allocations: 6895)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    4: 
+    5:         <div class="uk-container">
+    6:             
+    7:             <h1><%= @event.name %></h1>
+    8:             <h3>About this Event</h3>
+    9:             <p><%= @event.description %></p>
+   10:             <br>
+  
+app/views/rsvps/new.html.erb:7
+app/controllers/rsvps_controller.rb:25:in `create'
+Started GET "/events/7/rsvps/new" for ::1 at 2021-02-14 15:19:42 -0600
+Processing by RsvpsController#new as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:16:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering rsvps/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/rsvps/new.html.erb:12
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered rsvps/_form.html.erb (Duration: 1.7ms | Allocations: 961)
+  Rendered rsvps/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1825)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 5544)
+Completed 200 OK in 19ms (Views: 14.4ms | ActiveRecord: 0.4ms | Allocations: 7199)
+
+
+Started GET "/events/7" for ::1 at 2021-02-14 15:19:44 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:69:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:14
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered events/show.html.erb within layouts/application (Duration: 10.3ms | Allocations: 2352)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 6071)
+Completed 200 OK in 25ms (Views: 19.4ms | ActiveRecord: 0.9ms | Allocations: 7021)
+
+
+Started GET "/events/7" for ::1 at 2021-02-14 15:23:30 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/events_controller.rb:69:in `set_event'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:69:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered events/show.html.erb within layouts/application (Duration: 17.9ms | Allocations: 13291)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | Allocations: 16923)
+Completed 200 OK in 38ms (Views: 22.8ms | ActiveRecord: 2.2ms | Allocations: 27760)
+
+
+Started GET "/events/7/rsvps/new" for ::1 at 2021-02-14 15:23:32 -0600
+Processing by RsvpsController#new as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:16:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering rsvps/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/rsvps/new.html.erb:12
+  Rendered layouts/_errors.html.erb (Duration: 0.2ms | Allocations: 42)
+  Rendered rsvps/_form.html.erb (Duration: 1.9ms | Allocations: 1025)
+  Rendered rsvps/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1889)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 5551)
+Completed 200 OK in 38ms (Views: 11.6ms | ActiveRecord: 1.3ms | Allocations: 12599)
+
+
+Started POST "/rsvps" for ::1 at 2021-02-14 15:23:35 -0600
+Processing by RsvpsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "rsvp"=>{"event_id"=>"7", "user_id"=>"1", "status"=>"Interested", "number_of_attendees"=>"1"}, "commit"=>"Create Rsvp"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rsvps_controller.rb:22:in `create'
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:22:in `create'
+  [1m[36mRsvp Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? AND "rsvps"."event_id" = ? LIMIT ?[0m  [["user_id", 1], ["event_id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/rsvps_controller.rb:22:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering rsvps/new.html.erb within layouts/application
+  Rendered rsvps/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1292)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1362)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.6ms | Allocations: 7649)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    4: 
+    5:         <div class="uk-container">
+    6:             
+    7:             <h1><%= @event.name %></h1>
+    8:             <h3>About this Event</h3>
+    9:             <p><%= @event.description %></p>
+   10:             <br>
+  
+app/views/rsvps/new.html.erb:7
+app/controllers/rsvps_controller.rb:25:in `create'
+Started GET "/events/7/rsvps/new" for ::1 at 2021-02-14 15:25:25 -0600
+Processing by RsvpsController#new as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:16:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering rsvps/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/rsvps/new.html.erb:12
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered rsvps/_form.html.erb (Duration: 2.0ms | Allocations: 961)
+  Rendered rsvps/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1825)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 5547)
+Completed 200 OK in 19ms (Views: 12.2ms | ActiveRecord: 0.5ms | Allocations: 7202)
+
+
+Started GET "/events/7" for ::1 at 2021-02-14 15:25:26 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:69:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:14
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered events/show.html.erb within layouts/application (Duration: 7.8ms | Allocations: 2352)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 6071)
+Completed 200 OK in 20ms (Views: 16.0ms | ActiveRecord: 0.8ms | Allocations: 7021)
+
+
+Started GET "/rsvps" for ::1 at 2021-02-14 15:25:26 -0600
+Processing by RsvpsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering rsvps/index.html.erb within layouts/application
+  [1m[36mRsvp Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/rsvps/index.html.erb:8
+  [1m[36mRsvp Load (0.2ms)[0m  [1m[34mSELECT "rsvps".* FROM "rsvps" WHERE "rsvps"."user_id" = ? AND "rsvps"."status" = ?[0m  [["user_id", 1], ["status", "Attending"]]
+  ↳ app/views/rsvps/index.html.erb:14
+  [1m[36mCACHE Rsvp Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/rsvps/index.html.erb:37
+  [1m[36mRsvp Load (0.2ms)[0m  [1m[34mSELECT "rsvps".* FROM "rsvps" WHERE "rsvps"."user_id" = ? AND "rsvps"."status" = ?[0m  [["user_id", 1], ["status", "Interested"]]
+  ↳ app/views/rsvps/index.html.erb:43
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/rsvps/index.html.erb:46
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/rsvps/index.html.erb:47
+  [1m[36mCACHE Rsvp Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/rsvps/index.html.erb:67
+  [1m[36mRsvp Load (0.2ms)[0m  [1m[34mSELECT "rsvps".* FROM "rsvps" WHERE "rsvps"."user_id" = ? AND "rsvps"."status" = ?[0m  [["user_id", 1], ["status", "Declined"]]
+  ↳ app/views/rsvps/index.html.erb:73
+  Rendered rsvps/index.html.erb within layouts/application (Duration: 18.9ms | Allocations: 6108)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 9772)
+Completed 200 OK in 28ms (Views: 24.7ms | ActiveRecord: 1.3ms | Allocations: 11192)
+
+
+Started GET "/events/7" for ::1 at 2021-02-14 15:25:28 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:69:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:14
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered events/show.html.erb within layouts/application (Duration: 9.1ms | Allocations: 2352)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 6071)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 0.6ms | Allocations: 7021)
+
+
+Started GET "/events/7" for ::1 at 2021-02-14 15:26:10 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/events_controller.rb:69:in `set_event'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:69:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered events/show.html.erb within layouts/application (Duration: 18.7ms | Allocations: 13291)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.3ms | Allocations: 16924)
+Completed 200 OK in 39ms (Views: 24.2ms | ActiveRecord: 2.1ms | Allocations: 27759)
+
+
+Started GET "/events/7/rsvps/new" for ::1 at 2021-02-14 15:26:11 -0600
+  
+SyntaxError (/Users/sieling/Flatiron/rails-project/penciled-in/app/controllers/rsvps_controller.rb:65: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/rsvps_controller.rb:65: syntax error, unexpected end-of-input, expecting end
+app/controllers/rsvps_controller.rb:65: syntax error, unexpected end-of-input, expecting end
+app/controllers/rsvps_controller.rb:65: syntax error, unexpected end-of-input, expecting end
+Started GET "/events/7/rsvps/new" for ::1 at 2021-02-14 15:26:39 -0600
+Processing by RsvpsController#new as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/rsvps_controller.rb:16:in `new'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:16:in `new'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:18:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering rsvps/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/rsvps/new.html.erb:12
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered rsvps/_form.html.erb (Duration: 1.7ms | Allocations: 1027)
+  Rendered rsvps/new.html.erb within layouts/application (Duration: 11.0ms | Allocations: 5664)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 9294)
+Completed 200 OK in 399730ms (Views: 17.0ms | ActiveRecord: 3.2ms | Allocations: 105739)
+
+
+Started GET "/events/7" for ::1 at 2021-02-14 15:50:44 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/events_controller.rb:69:in `set_event'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:69:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered events/show.html.erb within layouts/application (Duration: 17.7ms | Allocations: 12474)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.6ms | Allocations: 16107)
+Completed 200 OK in 41ms (Views: 26.0ms | ActiveRecord: 0.9ms | Allocations: 26233)
+
+
+Started GET "/rsvps" for ::1 at 2021-02-14 15:50:46 -0600
+Processing by RsvpsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering rsvps/index.html.erb within layouts/application
+  [1m[36mRsvp Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/rsvps/index.html.erb:8
+  [1m[36mRsvp Load (0.2ms)[0m  [1m[34mSELECT "rsvps".* FROM "rsvps" WHERE "rsvps"."user_id" = ? AND "rsvps"."status" = ?[0m  [["user_id", 1], ["status", "Attending"]]
+  ↳ app/views/rsvps/index.html.erb:14
+  [1m[36mCACHE Rsvp Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/rsvps/index.html.erb:37
+  [1m[36mRsvp Load (0.1ms)[0m  [1m[34mSELECT "rsvps".* FROM "rsvps" WHERE "rsvps"."user_id" = ? AND "rsvps"."status" = ?[0m  [["user_id", 1], ["status", "Interested"]]
+  ↳ app/views/rsvps/index.html.erb:43
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/rsvps/index.html.erb:46
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/rsvps/index.html.erb:47
+  [1m[36mCACHE Rsvp Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/rsvps/index.html.erb:67
+  [1m[36mRsvp Load (0.1ms)[0m  [1m[34mSELECT "rsvps".* FROM "rsvps" WHERE "rsvps"."user_id" = ? AND "rsvps"."status" = ?[0m  [["user_id", 1], ["status", "Declined"]]
+  ↳ app/views/rsvps/index.html.erb:73
+  Rendered rsvps/index.html.erb within layouts/application (Duration: 32.4ms | Allocations: 10655)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 42.5ms | Allocations: 14299)
+Completed 200 OK in 55ms (Views: 43.8ms | ActiveRecord: 1.0ms | Allocations: 16830)
+
+
+Started GET "/events/7" for ::1 at 2021-02-14 15:50:47 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:69:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered events/show.html.erb within layouts/application (Duration: 28.2ms | Allocations: 2352)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.7ms | Allocations: 6072)
+Completed 200 OK in 40ms (Views: 35.8ms | ActiveRecord: 0.6ms | Allocations: 7023)
+
+
+Started GET "/events/7/rsvps/new" for ::1 at 2021-02-14 15:50:48 -0600
+Processing by RsvpsController#new as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:16:in `new'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:18:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering rsvps/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/rsvps/new.html.erb:12
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered rsvps/_form.html.erb (Duration: 2.3ms | Allocations: 1018)
+  Rendered rsvps/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1882)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 5535)
+Completed 200 OK in 20755ms (Views: 13.5ms | ActiveRecord: 0.6ms | Allocations: 45139)
+
+
+Started POST "/rsvps" for ::1 at 2021-02-14 15:51:22 -0600
+Processing by RsvpsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "rsvp"=>{"event_id"=>"7", "user_id"=>"1", "status"=>"Interested", "number_of_attendees"=>"1"}, "commit"=>"Create Rsvp"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rsvps_controller.rb:25:in `create'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:25:in `create'
+  [1m[36mRsvp Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? AND "rsvps"."event_id" = ? LIMIT ?[0m  [["user_id", 1], ["event_id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/rsvps_controller.rb:25:in `create'
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.7ms | Allocations: 7983)
+
+
+  
+NoMethodError (undefined method `rsvp_id' for #<Rsvp:0x00007fb5e02a74c8>):
+  
+app/controllers/rsvps_controller.rb:25:in `create'
+Started GET "/events/7/rsvps/new" for ::1 at 2021-02-14 15:54:39 -0600
+Processing by RsvpsController#new as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/rsvps_controller.rb:16:in `new'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:16:in `new'
+Started GET "/events/7" for ::1 at 2021-02-14 15:54:45 -0600
+Completed 500 Internal Server Error in 5948ms (ActiveRecord: 1.9ms | Allocations: 49942)
+
+
+  
+SyntaxError (/Users/sieling/Flatiron/rails-project/penciled-in/app/models/rsvp.rb:8: syntax error, unexpected ',', expecting =>
+...: { scope: :event_id, :user_id,  message: "You have already ...
+...                              ^
+/Users/sieling/Flatiron/rails-project/penciled-in/app/models/rsvp.rb:8: syntax error, unexpected '}', expecting end
+...lready RSVP'd to this event." }
+...                              ^):
+  
+app/models/rsvp.rb:8: syntax error, unexpected ',', expecting =>
+app/models/rsvp.rb:8: syntax error, unexpected '}', expecting end
+app/models/rsvp.rb:8: syntax error, unexpected ',', expecting =>
+app/models/rsvp.rb:8: syntax error, unexpected '}', expecting end
+app/models/rsvp.rb:8: syntax error, unexpected ',', expecting =>
+app/models/rsvp.rb:8: syntax error, unexpected '}', expecting end
+app/controllers/rsvps_controller.rb:17:in `new'
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/events_controller.rb:69:in `set_event'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:69:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered events/show.html.erb within layouts/application (Duration: 22.9ms | Allocations: 13312)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.2ms | Allocations: 16945)
+Completed 200 OK in 61ms (Views: 27.2ms | ActiveRecord: 2.8ms | Allocations: 27778)
+
+
+Started GET "/events/7" for ::1 at 2021-02-14 15:54:48 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:69:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered events/show.html.erb within layouts/application (Duration: 8.5ms | Allocations: 2352)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 6071)
+Completed 200 OK in 19ms (Views: 14.8ms | ActiveRecord: 1.0ms | Allocations: 7021)
+
+
+Started GET "/events/7" for ::1 at 2021-02-14 15:54:58 -0600
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:69:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered events/show.html.erb within layouts/application (Duration: 49.2ms | Allocations: 15684)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 85.5ms | Allocations: 25043)
+Completed 200 OK in 124ms (Views: 89.4ms | ActiveRecord: 2.1ms | Allocations: 39445)
+
+
+Started GET "/events/7/rsvps/new" for ::1 at 2021-02-14 15:55:00 -0600
+Processing by RsvpsController#new as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:16:in `new'
+Completed 500 Internal Server Error in 31840ms (ActiveRecord: 0.2ms | Allocations: 77445)
+
+
+  
+SyntaxError (/Users/sieling/Flatiron/rails-project/penciled-in/app/models/rsvp.rb:8: syntax error, unexpected ',', expecting =>
+...: { scope: :event_id, :user_id,  message: "You have already ...
+...                              ^
+/Users/sieling/Flatiron/rails-project/penciled-in/app/models/rsvp.rb:8: syntax error, unexpected '}', expecting end
+...lready RSVP'd to this event." }
+...                              ^):
+  
+app/models/rsvp.rb:8: syntax error, unexpected ',', expecting =>
+app/models/rsvp.rb:8: syntax error, unexpected '}', expecting end
+app/models/rsvp.rb:8: syntax error, unexpected ',', expecting =>
+app/models/rsvp.rb:8: syntax error, unexpected '}', expecting end
+app/models/rsvp.rb:8: syntax error, unexpected ',', expecting =>
+app/models/rsvp.rb:8: syntax error, unexpected '}', expecting end
+app/controllers/rsvps_controller.rb:17:in `new'
+Started GET "/events/7" for ::1 at 2021-02-14 15:55:34 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/events_controller.rb:69:in `set_event'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:69:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:14
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered events/show.html.erb within layouts/application (Duration: 20.4ms | Allocations: 13372)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.8ms | Allocations: 17134)
+Completed 200 OK in 56ms (Views: 26.6ms | ActiveRecord: 2.3ms | Allocations: 28350)
+
+
+Started GET "/events/7" for ::1 at 2021-02-14 15:55:35 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:69:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:14
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered events/show.html.erb within layouts/application (Duration: 9.5ms | Allocations: 2354)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 6075)
+Completed 200 OK in 18ms (Views: 14.6ms | ActiveRecord: 0.6ms | Allocations: 7042)
+
+
+Started GET "/events/7/rsvps/new" for ::1 at 2021-02-14 15:55:37 -0600
+  
+SyntaxError (/Users/sieling/Flatiron/rails-project/penciled-in/app/controllers/rsvps_controller.rb:59: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/rsvps_controller.rb:59: syntax error, unexpected end, expecting end-of-input
+app/controllers/rsvps_controller.rb:59: syntax error, unexpected end, expecting end-of-input
+app/controllers/rsvps_controller.rb:59: syntax error, unexpected end, expecting end-of-input
+Started GET "/events/7" for ::1 at 2021-02-14 15:55:43 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/events_controller.rb:69:in `set_event'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:69:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:14
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered events/show.html.erb within layouts/application (Duration: 40.2ms | Allocations: 13312)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 59.9ms | Allocations: 16945)
+Completed 200 OK in 85ms (Views: 60.1ms | ActiveRecord: 2.9ms | Allocations: 27778)
+
+
+Started GET "/events/7/rsvps/new" for ::1 at 2021-02-14 15:55:45 -0600
+Processing by RsvpsController#new as HTML
+  Parameters: {"event_id"=>"7"}
+Started GET "/rsvps" for ::1 at 2021-02-14 15:56:22 -0600
+Processing by RsvpsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+Completed 500 Internal Server Error in 37244ms (ActiveRecord: 0.0ms | Allocations: 48399)
+
+
+  
+SyntaxError (/Users/sieling/Flatiron/rails-project/penciled-in/app/models/rsvp.rb:8: syntax error, unexpected ',', expecting =>
+...: { scope: :event_id, :user_id,  message: "You have already ...
+...                              ^
+/Users/sieling/Flatiron/rails-project/penciled-in/app/models/rsvp.rb:8: syntax error, unexpected '}', expecting end
+...lready RSVP'd to this event." }
+...                              ^):
+  
+app/models/rsvp.rb:8: syntax error, unexpected ',', expecting =>
+app/models/rsvp.rb:8: syntax error, unexpected '}', expecting end
+app/models/rsvp.rb:8: syntax error, unexpected ',', expecting =>
+app/models/rsvp.rb:8: syntax error, unexpected '}', expecting end
+app/models/rsvp.rb:8: syntax error, unexpected ',', expecting =>
+app/models/rsvp.rb:8: syntax error, unexpected '}', expecting end
+app/controllers/rsvps_controller.rb:16:in `new'
+Completed 500 Internal Server Error in 134ms (ActiveRecord: 0.1ms | Allocations: 93223)
+
+
+  
+SyntaxError (/Users/sieling/Flatiron/rails-project/penciled-in/app/models/rsvp.rb:8: syntax error, unexpected ',', expecting =>
+...: { scope: :event_id, :user_id,  message: "You have already ...
+...                              ^
+/Users/sieling/Flatiron/rails-project/penciled-in/app/models/rsvp.rb:8: syntax error, unexpected '}', expecting end
+...lready RSVP'd to this event." }
+...                              ^):
+  
+app/models/rsvp.rb:8: syntax error, unexpected ',', expecting =>
+app/models/rsvp.rb:8: syntax error, unexpected '}', expecting end
+app/models/rsvp.rb:8: syntax error, unexpected ',', expecting =>
+app/models/rsvp.rb:8: syntax error, unexpected '}', expecting end
+app/models/rsvp.rb:8: syntax error, unexpected ',', expecting =>
+app/models/rsvp.rb:8: syntax error, unexpected '}', expecting end
+app/controllers/rsvps_controller.rb:8:in `index'
+Started GET "/events/7" for ::1 at 2021-02-14 15:56:24 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/events_controller.rb:69:in `set_event'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:69:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered events/show.html.erb within layouts/application (Duration: 30.6ms | Allocations: 13352)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 36.1ms | Allocations: 16987)
+Completed 200 OK in 55ms (Views: 36.0ms | ActiveRecord: 2.6ms | Allocations: 27843)
+
+
+Started GET "/events/7/rsvps/new" for ::1 at 2021-02-14 15:56:26 -0600
+Processing by RsvpsController#new as HTML
+  Parameters: {"event_id"=>"7"}
+Completed 500 Internal Server Error in 4662ms (ActiveRecord: 0.0ms | Allocations: 38062)
+
+
+  
+SyntaxError (/Users/sieling/Flatiron/rails-project/penciled-in/app/models/rsvp.rb:8: syntax error, unexpected ',', expecting =>
+...: { scope: :event_id, :user_id,  message: "You have already ...
+...                              ^
+/Users/sieling/Flatiron/rails-project/penciled-in/app/models/rsvp.rb:8: syntax error, unexpected '}', expecting end
+...lready RSVP'd to this event." }
+...                              ^):
+  
+app/models/rsvp.rb:8: syntax error, unexpected ',', expecting =>
+app/models/rsvp.rb:8: syntax error, unexpected '}', expecting end
+app/models/rsvp.rb:8: syntax error, unexpected ',', expecting =>
+app/models/rsvp.rb:8: syntax error, unexpected '}', expecting end
+app/models/rsvp.rb:8: syntax error, unexpected ',', expecting =>
+app/models/rsvp.rb:8: syntax error, unexpected '}', expecting end
+app/controllers/rsvps_controller.rb:16:in `new'
+Started GET "/events/7/rsvps/new" for ::1 at 2021-02-14 15:57:01 -0600
+Processing by RsvpsController#new as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/rsvps" for ::1 at 2021-02-14 15:57:08 -0600
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/rsvps_controller.rb:18:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering rsvps/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/rsvps/new.html.erb:12
+  Rendered layouts/_errors.html.erb (Duration: 0.3ms | Allocations: 228)
+  Rendered rsvps/_form.html.erb (Duration: 5.1ms | Allocations: 3505)
+  Rendered rsvps/new.html.erb within layouts/application (Duration: 18.0ms | Allocations: 8453)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 12084)
+Completed 200 OK in 8465ms (Views: 27.2ms | ActiveRecord: 3.4ms | Allocations: 116506)
+
+
+Started GET "/events/7" for ::1 at 2021-02-14 15:57:10 -0600
+Processing by RsvpsController#index as HTML
+Processing by EventsController#show as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Parameters: {"id"=>"7"}
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/events_controller.rb:69:in `set_event'
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  ↳ app/controllers/events_controller.rb:69:in `set_event'
+  Rendering rsvps/index.html.erb within layouts/application
+  [1m[36mRsvp Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/rsvps/index.html.erb:8
+  Rendering layout layouts/application.html.erb
+  [1m[36mRsvp Load (0.2ms)[0m  [1m[34mSELECT "rsvps".* FROM "rsvps" WHERE "rsvps"."user_id" = ? AND "rsvps"."status" = ?[0m  [["user_id", 1], ["status", "Attending"]]
+  Rendering events/show.html.erb within layouts/application
+  ↳ app/views/rsvps/index.html.erb:14
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE Rsvp Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/rsvps/index.html.erb:37
+  [1m[36mRsvp Load (0.2ms)[0m  [1m[34mSELECT "rsvps".* FROM "rsvps" WHERE "rsvps"."user_id" = ? AND "rsvps"."status" = ?[0m  [["user_id", 1], ["status", "Interested"]]
+  ↳ app/views/rsvps/index.html.erb:43
+  ↳ app/views/events/show.html.erb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/rsvps/index.html.erb:46
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered events/show.html.erb within layouts/application (Duration: 26.7ms | Allocations: 14056)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/rsvps/index.html.erb:47
+  [1m[36mCACHE Rsvp Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/rsvps/index.html.erb:67
+  [1m[36mRsvp Load (0.1ms)[0m  [1m[34mSELECT "rsvps".* FROM "rsvps" WHERE "rsvps"."user_id" = ? AND "rsvps"."status" = ?[0m  [["user_id", 1], ["status", "Declined"]]
+  ↳ app/views/rsvps/index.html.erb:73
+  Rendered rsvps/index.html.erb within layouts/application (Duration: 43.0ms | Allocations: 20215)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 48.1ms | Allocations: 22821)
+Completed 200 OK in 82ms (Views: 54.1ms | ActiveRecord: 1.8ms | Allocations: 42827)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 65.3ms | Allocations: 32618)
+Completed 200 OK in 93ms (Views: 64.6ms | ActiveRecord: 2.8ms | Allocations: 48166)
+
+
+Started GET "/events/7" for ::1 at 2021-02-14 15:57:12 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:69:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:10
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered events/show.html.erb within layouts/application (Duration: 9.8ms | Allocations: 2352)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 6072)
+Completed 200 OK in 19ms (Views: 14.8ms | ActiveRecord: 1.1ms | Allocations: 7024)
+
+
+Started GET "/events/7/rsvps/new" for ::1 at 2021-02-14 15:57:13 -0600
+Processing by RsvpsController#new as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ (byebug):1:in `new'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ (byebug):1:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering rsvps/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/rsvps/new.html.erb:12
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered rsvps/_form.html.erb (Duration: 3.7ms | Allocations: 1416)
+  Rendered rsvps/new.html.erb within layouts/application (Duration: 9.4ms | Allocations: 4626)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 8715)
+Completed 200 OK in 82765ms (Views: 18.5ms | ActiveRecord: 0.6ms | Allocations: 95205)
+
+
+Started GET "/events" for ::1 at 2021-02-14 15:58:41 -0600
+Processing by EventsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/event.rb:10:in `block in <class:Event>'
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (end_date >= '2021-02-14') ORDER BY "events"."start_date" ASC[0m
+  ↳ app/views/events/_event.html.erb:9
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  Rendered events/_event.html.erb (Duration: 27.7ms | Allocations: 16625)
+  Rendered events/index.html.erb within layouts/application (Duration: 29.1ms | Allocations: 16945)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 43.5ms | Allocations: 27679)
+Completed 200 OK in 53ms (Views: 42.3ms | ActiveRecord: 2.7ms | Allocations: 32289)
+
+
+Started GET "/events/7" for ::1 at 2021-02-14 15:58:43 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:69:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered events/show.html.erb within layouts/application (Duration: 7.7ms | Allocations: 3121)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 6740)
+Completed 200 OK in 20ms (Views: 15.0ms | ActiveRecord: 0.8ms | Allocations: 7857)
+
+
+Started GET "/events/7/rsvps/new" for ::1 at 2021-02-14 15:58:44 -0600
+Processing by RsvpsController#new as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ (byebug):1:in `new'
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ (byebug):1:in `new'
+  [1m[36mRsvp Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."id" IS NULL AND "rsvps"."event_id" = ? AND "rsvps"."user_id" = ? LIMIT ?[0m  [["event_id", 7], ["user_id", 1], ["LIMIT", 1]]
+  ↳ (byebug):1:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering rsvps/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/rsvps/new.html.erb:12
+  Rendered layouts/_errors.html.erb (Duration: 0.2ms | Allocations: 40)
+  Rendered rsvps/_form.html.erb (Duration: 3.7ms | Allocations: 1023)
+  Rendered rsvps/new.html.erb within layouts/application (Duration: 7.9ms | Allocations: 1887)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | Allocations: 8575)
+Completed 200 OK in 79847ms (Views: 25.8ms | ActiveRecord: 1.8ms | Allocations: 92702)
+
+
+Started GET "/events" for ::1 at 2021-02-14 16:00:09 -0600
+Processing by EventsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/event.rb:10:in `block in <class:Event>'
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (end_date >= '2021-02-14') ORDER BY "events"."start_date" ASC[0m
+  ↳ app/views/events/_event.html.erb:9
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  Rendered events/_event.html.erb (Duration: 27.2ms | Allocations: 16326)
+  Rendered events/index.html.erb within layouts/application (Duration: 27.4ms | Allocations: 16417)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 44.0ms | Allocations: 27150)
+Completed 200 OK in 51ms (Views: 42.8ms | ActiveRecord: 2.5ms | Allocations: 31618)
+
+
+Started GET "/events/7" for ::1 at 2021-02-14 16:00:11 -0600
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:69:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:14
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered events/show.html.erb within layouts/application (Duration: 8.4ms | Allocations: 3121)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 6740)
+Completed 200 OK in 20ms (Views: 16.2ms | ActiveRecord: 0.8ms | Allocations: 7858)
+
+
+Started GET "/events/7/rsvps/new" for ::1 at 2021-02-14 16:00:12 -0600
+Processing by RsvpsController#new as HTML
+  Parameters: {"event_id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ (byebug):1:in `new'
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ (byebug):1:in `new'
+  [1m[36mRsvp Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? AND "rsvps"."event_id" = ? LIMIT ?[0m  [["user_id", 1], ["event_id", 7], ["LIMIT", 1]]
+  ↳ (byebug):1:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering rsvps/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/rsvps/new.html.erb:12
+  Rendered layouts/_errors.html.erb (Duration: 1.4ms | Allocations: 435)
+  Rendered rsvps/_form.html.erb (Duration: 4.6ms | Allocations: 1388)
+  Rendered rsvps/new.html.erb within layouts/application (Duration: 7.9ms | Allocations: 2340)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 6002)
+Completed 200 OK in 20339ms (Views: 19.0ms | ActiveRecord: 1.5ms | Allocations: 89635)
+
+
