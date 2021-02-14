@@ -39,27 +39,8 @@
     <%= f.time_field :end_time, class: 'uk-input' %> <br><br>
     </div>
 
-      <% unless @category %>
+      <%= display_category_fields(f) %>
 
-        <div class="uk-width-1-2@s">
-
-        <%= f.label :category, "Choose a Category" %><br><br>
-        <%= f.collection_select :category_id, Category.all, :id, :name, {include_blank: true}, { class: 'uk-select' } %><br><br>
-
-        </div>
-
-        <div class="uk-width-1-2@s">
-        
-          <%= f.fields_for :category do |c| %>
-
-            <%= c.label :name, "Or Create Your Own" %><br><br>
-            <%= c.text_field :name, value: nil, class: 'uk-input' %>
-
-          <% end %>
-
-        </div>
-
-      <% end %>
       <br><br>
 
       <div class="uk-width-1-1">

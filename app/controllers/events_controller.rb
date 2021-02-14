@@ -1,16 +1,21 @@
 class EventsController < ApplicationController
 
-    before_action :set_event, only: [:show, :edit, :update, :destroy]
+    before_action :set_event, only: [:index, :show, :edit, :update, :destroy]
     before_action :find_category, only: [:new, :create, :update]
 
     def index
-        @events = Event.ordered_by_date.future
+        if params[:category_id] && @category
+            @events = @category.events.ordered_by_date.future
+        else
+            @events = Event.all.ordered_by_date.future
+        end
     end
 
     def show
     end
 
     def new
+        byebug
         if params[:category_id] && @category
             @event = @category.events.build
         else
