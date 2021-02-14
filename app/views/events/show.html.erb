@@ -7,7 +7,7 @@
             <p><%= @event.description %></p>
             <br>
             <h3>Category</h3>
-            <p><%= @event.category.name%></p><br>
+            <p><%= link_to "#{@event.category.name}", category_path(@event.category), class: 'uk-link-text' %></p><br>
         </div>
 
         <div uk-grid>
