@@ -19,8 +19,18 @@
 
           <ul class="uk-navbar-nav">
             <a class="uk-navbar-item uk-logo uk-text-warning uk-text-lowercase" uk-icon="pencil" href="/">Penciled-In</a>
-            <li><%= link_to "Events", events_path %></li> 
-            <li><%= link_to "Categories", categories_path %></li> 
+            <li>
+              <%= link_to "Events", events_path %>
+              <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                  <li><%= link_to "Happening Today", "/happening_today" %></li>
+                  <li><%= link_to "Most Popular", "/most_popular" %></li>
+                </ul>
+              </div>
+            </li>
+
+            <li><%= link_to "Categories", categories_path %></li>
+              
           </ul>
 
         </div>

@@ -4,7 +4,7 @@ class EventsController < ApplicationController
     before_action :find_category, only: [:new, :create]
 
     def index
-        @events = Event.ordered_by_date
+        @events = Event.ordered_by_date.future
     end
 
     def show
@@ -56,7 +56,7 @@ class EventsController < ApplicationController
     end
 
     def most_popular
-        @events = Event.most_rsvps.limit(5)
+        @events = Event.most_rsvps.limit(3)
     end
 
     def happening_today
