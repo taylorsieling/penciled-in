@@ -44947,3 +44947,494 @@ Processing by EventsController#show as HTML
 Completed 200 OK in 17ms (Views: 12.9ms | ActiveRecord: 0.6ms | Allocations: 6998)
 
 
+Started GET "/" for ::1 at 2021-02-13 18:37:48 -0600
+Processing by EventsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/event.rb:10:in `block in <class:Event>'
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (end_date >= '2021-02-13') ORDER BY "events"."start_date" ASC[0m
+  ↳ app/views/events/_event.html.erb:9
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  Rendered events/_event.html.erb (Duration: 23.3ms | Allocations: 15712)
+  Rendered events/index.html.erb within layouts/application (Duration: 23.5ms | Allocations: 15803)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 37.9ms | Allocations: 26039)
+Completed 200 OK in 46ms (Views: 37.9ms | ActiveRecord: 1.3ms | Allocations: 29986)
+
+
+Started GET "/users/6/show" for ::1 at 2021-02-13 18:42:02 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/users/6/show"):
+  
+Started GET "/users/5/show" for ::1 at 2021-02-13 18:42:07 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/users/5/show"):
+  
+Started GET "/users/6" for ::1 at 2021-02-13 18:42:14 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "events" WHERE "events"."user_id" = ? LIMIT ?[0m  [["user_id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:22
+  [1m[36mRsvp Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? LIMIT ?[0m  [["user_id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:39
+  [1m[36mRsvp Load (0.2ms)[0m  [1m[34mSELECT "rsvps".* FROM "rsvps" WHERE "rsvps"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/users/show.html.erb:47
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:51
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:51
+  Rendered users/show.html.erb within layouts/application (Duration: 45.9ms | Allocations: 14013)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 52.5ms | Allocations: 17634)
+Completed 200 OK in 59ms (Views: 53.7ms | ActiveRecord: 1.7ms | Allocations: 19165)
+
+
+Started GET "/users/5" for ::1 at 2021-02-13 18:42:18 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "events" WHERE "events"."user_id" = ? LIMIT ?[0m  [["user_id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:22
+  [1m[36mRsvp Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? LIMIT ?[0m  [["user_id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:39
+  [1m[36mRsvp Load (0.1ms)[0m  [1m[34mSELECT "rsvps".* FROM "rsvps" WHERE "rsvps"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/users/show.html.erb:47
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:51
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:51
+  Rendered users/show.html.erb within layouts/application (Duration: 17.3ms | Allocations: 5462)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | Allocations: 9167)
+Completed 200 OK in 28ms (Views: 24.4ms | ActiveRecord: 1.2ms | Allocations: 10116)
+
+
+Started GET "/users/5" for ::1 at 2021-02-13 18:43:41 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "events" WHERE "events"."user_id" = ? LIMIT ?[0m  [["user_id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:22
+  [1m[36mRsvp Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? LIMIT ?[0m  [["user_id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:39
+  [1m[36mRsvp Load (0.2ms)[0m  [1m[34mSELECT "rsvps".* FROM "rsvps" WHERE "rsvps"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/views/users/show.html.erb:47
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:51
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:51
+  Rendered users/show.html.erb within layouts/application (Duration: 34.2ms | Allocations: 25304)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 39.5ms | Allocations: 28929)
+Completed 200 OK in 54ms (Views: 37.8ms | ActiveRecord: 3.3ms | Allocations: 37542)
+
+
+Started GET "/logout" for ::1 at 2021-02-13 18:43:47 -0600
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 281)
+
+
+Started GET "/login" for ::1 at 2021-02-13 18:43:47 -0600
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.5ms | Allocations: 228)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 10.1ms | Allocations: 3931)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 7574)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.0ms | Allocations: 8495)
+
+
+Started GET "/signup" for ::1 at 2021-02-13 18:43:49 -0600
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered users/_form.html.erb (Duration: 14.7ms | Allocations: 1583)
+  Rendered users/new.html.erb within layouts/application (Duration: 16.1ms | Allocations: 2034)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 5677)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.0ms | Allocations: 6189)
+
+
+Started POST "/users" for ::1 at 2021-02-13 18:44:16 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"pikeypoo", "email"=>"pikey@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "pikey@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "pikeypoo"], ["email", "pikey@email.com"], ["password_digest", "$2a$12$rDYKQFfbPjEg8wiifkDkEeXCGwR8OkI5J4aWR/wROm0miu7.dyAxe"], ["created_at", "2021-02-14 00:44:16.903159"], ["updated_at", "2021-02-14 00:44:16.903159"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 227ms (ActiveRecord: 3.3ms | Allocations: 3834)
+
+
+Started GET "/users/6" for ::1 at 2021-02-13 18:44:16 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "events" WHERE "events"."user_id" = ? LIMIT ?[0m  [["user_id", 6], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mRsvp Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? LIMIT ?[0m  [["user_id", 6], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:39
+  Rendered users/show.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1745)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 5444)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.7ms | Allocations: 6399)
+
+
+Started GET "/logout" for ::1 at 2021-02-13 18:44:30 -0600
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (Allocations: 266)
+
+
+Started GET "/login" for ::1 at 2021-02-13 18:44:30 -0600
+Processing by SessionsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:15:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1668)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 9148)
+Completed 200 OK in 24ms (Views: 11.4ms | ActiveRecord: 0.8ms | Allocations: 17010)
+
+
+Started GET "/signup" for ::1 at 2021-02-13 18:44:31 -0600
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered users/_form.html.erb (Duration: 5.3ms | Allocations: 1184)
+  Rendered users/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1358)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 5000)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.0ms | Allocations: 5591)
+
+
+Started POST "/users" for ::1 at 2021-02-13 18:44:46 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"percybaby", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 1.6ms | Allocations: 514)
+  Rendered users/_form.html.erb (Duration: 5.5ms | Allocations: 2234)
+  Rendered users/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 2408)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 5962)
+Completed 200 OK in 239ms (Views: 15.9ms | ActiveRecord: 0.9ms | Allocations: 9385)
+
+
+Started GET "/login" for ::1 at 2021-02-13 18:45:06 -0600
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 800)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 4435)
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 4817)
+
+
+Started POST "/login" for ::1 at 2021-02-13 18:45:16 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"pikey@email.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "pikey@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:19:in `create'
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 220ms (ActiveRecord: 0.3ms | Allocations: 963)
+
+
+Started GET "/users/6" for ::1 at 2021-02-13 18:45:16 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "events" WHERE "events"."user_id" = ? LIMIT ?[0m  [["user_id", 6], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mRsvp Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? LIMIT ?[0m  [["user_id", 6], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:39
+  Rendered users/show.html.erb within layouts/application (Duration: 18.7ms | Allocations: 9158)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 12759)
+Completed 200 OK in 27ms (Views: 23.9ms | ActiveRecord: 0.9ms | Allocations: 13817)
+
+
+Started GET "/users/6" for ::1 at 2021-02-13 18:45:32 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "events" WHERE "events"."user_id" = ? LIMIT ?[0m  [["user_id", 6], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mRsvp Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? LIMIT ?[0m  [["user_id", 6], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:39
+  Rendered users/show.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1738)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 5433)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.4ms | Allocations: 6379)
+
+
+Started GET "/users/6/edit" for ::1 at 2021-02-13 18:45:34 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered users/_form.html.erb (Duration: 1.8ms | Allocations: 1232)
+  Rendered users/edit.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1649)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 5351)
+Completed 200 OK in 12ms (Views: 8.4ms | ActiveRecord: 0.1ms | Allocations: 6425)
+
+
+Started PATCH "/users/6" for ::1 at 2021-02-13 18:45:53 -0600
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"pikeypoo", "email"=>"pikeypoo@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30:in `update'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "pikeypoo@email.com"], ["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30:in `update'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "email" = ?, "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["email", "pikeypoo@email.com"], ["password_digest", "$2a$12$xalPBvx9moJjHpyNiBHPs.2M6uPw4T/8mijEDWZvRiAzfSR1mvZYW"], ["updated_at", "2021-02-14 00:45:54.118014"], ["id", 6]]
+  ↳ app/controllers/users_controller.rb:30:in `update'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:30:in `update'
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 231ms (ActiveRecord: 3.3ms | Allocations: 4282)
+
+
+Started GET "/users/6" for ::1 at 2021-02-13 18:45:54 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "events" WHERE "events"."user_id" = ? LIMIT ?[0m  [["user_id", 6], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mRsvp Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? LIMIT ?[0m  [["user_id", 6], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:39
+  Rendered users/show.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1736)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 5431)
+Completed 200 OK in 15ms (Views: 11.8ms | ActiveRecord: 0.4ms | Allocations: 6378)
+
+
+Started GET "/users/5" for ::1 at 2021-02-13 18:46:03 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "events" WHERE "events"."user_id" = ? LIMIT ?[0m  [["user_id", 6], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mRsvp Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? LIMIT ?[0m  [["user_id", 6], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:39
+  Rendered users/show.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1736)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 5431)
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.7ms | Allocations: 6377)
+
+
+Started GET "/users/new" for ::1 at 2021-02-13 18:47:08 -0600
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered users/_form.html.erb (Duration: 2.2ms | Allocations: 1174)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1348)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 5669)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.2ms | Allocations: 6058)
+
+
+Started GET "/" for ::1 at 2021-02-13 18:50:42 -0600
+Processing by EventsController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/event.rb:10:in `block in <class:Event>'
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (end_date >= '2021-02-13') ORDER BY "events"."start_date" ASC[0m
+  ↳ app/views/events/_event.html.erb:9
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/events/_event.html.erb:13
+  Rendered events/_event.html.erb (Duration: 25.7ms | Allocations: 16281)
+  Rendered events/index.html.erb within layouts/application (Duration: 25.8ms | Allocations: 16372)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 39.9ms | Allocations: 27082)
+Completed 200 OK in 47ms (Views: 38.7ms | ActiveRecord: 2.4ms | Allocations: 31509)
+
+
+Started GET "/users/6" for ::1 at 2021-02-13 18:50:46 -0600
+  
+SyntaxError (/Users/sieling/Flatiron/rails-project/penciled-in/app/controllers/users_controller.rb:5: syntax error, unexpected [, expecting do or '{' or '('
+...ion :check_if_logged_in, only [:new]
+...                              ^):
+  
+app/controllers/users_controller.rb:5: syntax error, unexpected [, expecting do or '{' or '('
+app/controllers/users_controller.rb:5: syntax error, unexpected [, expecting do or '{' or '('
+app/controllers/users_controller.rb:5: syntax error, unexpected [, expecting do or '{' or '('
+Started GET "/users/6" for ::1 at 2021-02-13 18:50:58 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "events" WHERE "events"."user_id" = ? LIMIT ?[0m  [["user_id", 6], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mRsvp Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? LIMIT ?[0m  [["user_id", 6], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:39
+  Rendered users/show.html.erb within layouts/application (Duration: 10.9ms | Allocations: 6890)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 10496)
+Completed 200 OK in 29ms (Views: 15.9ms | ActiveRecord: 1.7ms | Allocations: 19122)
+
+
+Started GET "/users/new" for ::1 at 2021-02-13 18:51:03 -0600
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 1223)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"users", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/application_controller.rb:25:in `check_if_logged_in'
+Started GET "/users/new" for ::1 at 2021-02-13 18:51:43 -0600
+Processing by UsersController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+Redirected to http://localhost:3000/users/6
+Filter chain halted as :check_if_logged_in rendered or redirected
+Completed 302 Found in 13ms (ActiveRecord: 1.0ms | Allocations: 8368)
+
+
+Started GET "/users/6" for ::1 at 2021-02-13 18:51:43 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "events" WHERE "events"."user_id" = ? LIMIT ?[0m  [["user_id", 6], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mRsvp Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? LIMIT ?[0m  [["user_id", 6], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:39
+  Rendered users/show.html.erb within layouts/application (Duration: 14.9ms | Allocations: 6888)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 10493)
+Completed 200 OK in 25ms (Views: 20.4ms | ActiveRecord: 1.2ms | Allocations: 11591)
+
+
+Started GET "/users/new" for ::1 at 2021-02-13 18:51:47 -0600
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+Redirected to http://localhost:3000/users/6
+Filter chain halted as :check_if_logged_in rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 828)
+
+
+Started GET "/users/6" for ::1 at 2021-02-13 18:51:48 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mEvent Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "events" WHERE "events"."user_id" = ? LIMIT ?[0m  [["user_id", 6], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:10
+  [1m[36mRsvp Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "rsvps" WHERE "rsvps"."user_id" = ? LIMIT ?[0m  [["user_id", 6], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:39
+  Rendered users/show.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1738)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 5433)
+Completed 200 OK in 14ms (Views: 10.7ms | ActiveRecord: 0.4ms | Allocations: 6382)
+
+

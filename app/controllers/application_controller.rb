@@ -6,7 +6,6 @@ class ApplicationController < ActionController::Base
 
     skip_before_action :verify_authenticity_token
     
-
     def current_user
         @current_user ||= User.find(session[:user_id]) if session[:user_id]
     end
@@ -20,6 +19,10 @@ class ApplicationController < ActionController::Base
             flash[:message] = "Please login to view that page."
             redirect_to login_path
         end
+    end
+
+    def check_if_logged_in
+        redirect_to user_path(current_user) if logged_in?
     end
 
 end
