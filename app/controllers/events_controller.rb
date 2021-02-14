@@ -15,7 +15,6 @@ class EventsController < ApplicationController
     end
 
     def new
-        byebug
         if params[:category_id] && @category
             @event = @category.events.build
         else

@@ -16,4 +16,12 @@ module EventsHelper
         end 
     end 
 
+    def display_nested_header
+        if params[:category_id]
+            "Create a New #{@category.name} Event"
+        else
+            "Create New Event"
+        end 
+    end 
+
 end

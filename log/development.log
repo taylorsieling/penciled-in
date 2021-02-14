@@ -53067,3 +53067,60 @@ Processing by CategoriesController#show as HTML
 Completed 200 OK in 19ms (Views: 14.1ms | ActiveRecord: 1.2ms | Allocations: 7003)
 
 
+Started GET "/categories/10" for ::1 at 2021-02-14 17:39:03 -0600
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:44:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "events" WHERE "events"."category_id" = ? LIMIT ?[0m  [["category_id", 10], ["LIMIT", 1]]
+  ↳ app/views/categories/show.html.erb:13
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 10]]
+  ↳ app/views/categories/show.html.erb:19
+  Rendered categories/show.html.erb within layouts/application (Duration: 24.9ms | Allocations: 11984)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 40.7ms | Allocations: 23244)
+Completed 200 OK in 52ms (Views: 40.9ms | ActiveRecord: 2.1ms | Allocations: 29149)
+
+
+Started GET "/categories/10/events/new" for ::1 at 2021-02-14 17:39:04 -0600
+Processing by EventsController#new as HTML
+  Parameters: {"category_id"=>"10"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:82:in `find_category'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.8ms | Allocations: 221)
+  Rendered events/_form.html.erb (Duration: 5.6ms | Allocations: 2479)
+  Rendered events/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 2812)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 7097)
+Completed 200 OK in 4781ms (Views: 24.5ms | ActiveRecord: 0.2ms | Allocations: 45877)
+
+
+Started GET "/categories/10/events/new" for ::1 at 2021-02-14 17:39:38 -0600
+Processing by EventsController#new as HTML
+  Parameters: {"category_id"=>"10"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/events_controller.rb:81:in `find_category'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:81:in `find_category'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.3ms | Allocations: 221)
+  Rendered events/_form.html.erb (Duration: 12.1ms | Allocations: 2485)
+  Rendered events/new.html.erb within layouts/application (Duration: 12.8ms | Allocations: 2830)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 29.0ms | Allocations: 14162)
+Completed 200 OK in 51ms (Views: 29.7ms | ActiveRecord: 2.2ms | Allocations: 29647)
+
+
