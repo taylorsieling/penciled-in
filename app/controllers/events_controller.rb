@@ -3,6 +3,7 @@ class EventsController < ApplicationController
     before_action :set_event, only: [:index, :show, :edit, :update, :destroy]
     before_action :find_category, only: [:new, :create, :update]
     before_action :authorized_to_edit, only: [:edit, :update, :destroy]
+    before_action :authorized, except: [:index, :show]
 
     def index
         if params[:category_id] && @category
@@ -44,7 +45,6 @@ class EventsController < ApplicationController
     def update
         @category
         if @event.update(event_params)
-            byebug
             redirect_to event_path(@event)
         else
             render "new"

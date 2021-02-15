@@ -2,6 +2,7 @@ class RsvpsController < ApplicationController
 
     before_action :set_rsvp, only: [:show, :edit, :update, :destroy]
     before_action :set_event, only: [:edit]
+    before_action :authorized
 
     def index
       @user = current_user
