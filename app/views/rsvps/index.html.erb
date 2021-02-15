@@ -14,15 +14,12 @@
         <% @rsvps.is_attending.each do |r| %>
 
             <div>
-                <a href="/events/<%= r.event.id %> " class="uk-display-block uk-card uk-card-body uk-card-default uk-link-toggle">
+                <a href="/rsvps/<%= r.id %>/edit" class="uk-display-block uk-card uk-card-body uk-card-default uk-link-toggle">
                     <div class="uk-card-badge uk-label uk-label-warning"><%= r.event.category.name %></div>
                     <div class="uk-margin-top">
                         <h3 class="uk-card-title"><span class="uk-link-heading"><%= r.event.name %></span></h3>
                         <p class="uk-text-meta uk-margin-remove-top"><%= r.event.start_date.strftime("%b %d, %Y") %> at <%= r.event.start_time.strftime(" %l:%M %p") %></time></p>
                         <p><%= r.event.location %></p>
-                    </div>
-                    <div class="uk-card-footer">
-                        <%= link_to "Edit your RSVP", edit_rsvp_path(r), class: 'uk-button uk-button-text' %>
                     </div>
                 </a>
             </div>
@@ -77,15 +74,12 @@
         <% @rsvps.is_declined.each do |r| %>
 
             <div>
-                <a href="/events/<%= r.event.id %> " class="uk-display-block uk-card uk-card-body uk-card-default uk-link-toggle">
+                <a href="/rsvps/<%= r.id %>/edit" class="uk-display-block uk-card uk-card-body uk-card-default uk-link-toggle">
                     <div class="uk-card-badge uk-label uk-label-warning"><%= r.event.category.name %></div>
                     <div class="uk-margin-top">
                         <h3 class="uk-card-title"><span class="uk-link-heading"><%= r.event.name %></span></h3>
                         <p class="uk-text-meta uk-margin-remove-top"><%= r.event.start_date.strftime("%b %d, %Y") %> at <%= r.event.start_time.strftime(" %l:%M %p") %></time></p>
                         <p><%= r.event.location %></p>
-                    </div>
-                    <div class="uk-card-footer">
-                        <%= link_to "Edit your RSVP", edit_rsvp_path(r), class: 'uk-button uk-button-text' %>
                     </div>
                 </a>
             </div>

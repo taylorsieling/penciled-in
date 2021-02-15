@@ -2,6 +2,7 @@ class EventsController < ApplicationController
 
     before_action :set_event, only: [:index, :show, :edit, :update, :destroy]
     before_action :find_category, only: [:new, :create, :update]
+    before_action :authorized_to_edit, only: [:edit, :update, :destroy]
 
     def index
         if params[:category_id] && @category
@@ -79,6 +80,13 @@ class EventsController < ApplicationController
 
     def find_category
         @category = Category.find_by_id(params[:category_id])
+    end
+
+    def authorized_to_edit
+        if current_user != @event.user
+          flash[:message] = "Action not authorized."
+          redirect_to event_path(@event)
+        end
     end
 
 end
