@@ -4,8 +4,6 @@ class ApplicationController < ActionController::Base
     helper_method :logged_in?
     helper_method :authorized 
     helper_method :authorized_to_edit
-
-    skip_before_action :verify_authenticity_token
     
     def current_user
         @current_user ||= User.find(session[:user_id]) if session[:user_id]
