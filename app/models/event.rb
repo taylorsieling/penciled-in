@@ -9,7 +9,7 @@ class Event < ApplicationRecord
 
     scope :ordered_by_date, -> { order(start_date: :asc) }
     scope :future, -> { where("end_date >= ?", Date.today)}
-    scope :past, -> { where("end_date <= ?", Date.today)}
+    scope :past, -> { where("end_date < ?", Date.today)}
     scope :most_rsvps, -> {left_outer_joins(:rsvps).group("events.id").order("sum(rsvps.number_of_attendees) DESC")}
     scope :happening_today, -> {where(:start_date => Date.today)}
 

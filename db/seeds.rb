@@ -28,8 +28,8 @@ description: "Do you want to grow plants that are perfect for pollinators? Your 
 location: "Tom's Thumb Nursery", 
 start_date: "2021-03-06", 
 end_date: "2021-03-06",
-start_time: "01:00:00",
-end_time: "02:00:00", 
+start_time: "13:00:00",
+end_time: "14:00:00", 
 user_id: hh.id, 
 category_id: garden.id})
 
@@ -38,8 +38,8 @@ description: "Join plant expert Holly Hawthorn for her monthly Succulent Propaga
 location: "Tom's Thumb Nursery", 
 start_date: "2021-03-24", 
 end_date: "2021-03-24",
-start_time: "06:00:00",
-end_time: "08:00:00", 
+start_time: "18:00:00",
+end_time: "19:00:00", 
 user_id: hh.id, 
 category_id: garden.id})
 
@@ -58,8 +58,8 @@ description: "Study more efficiently with better notetaking! Perpetual student S
 location: "Online", 
 start_date: "2021-02-25", 
 end_date: "2021-02-25",
-start_time: "03:00:00",
-end_time: "04:00:00", 
+start_time: "15:00:00",
+end_time: "16:00:00", 
 user_id: sa.id, 
 category_id: education.id})
 
@@ -68,8 +68,8 @@ description: "Studying is hard. But with the right tools and attitude, you can m
 location: "Online", 
 start_date: "2021-03-25", 
 end_date: "2021-03-25",
-start_time: "04:00:00",
-end_time: "05:00:00", 
+start_time: "14:00:00",
+end_time: "16:00:00", 
 user_id: sa.id, 
 category_id: education.id})
 
@@ -78,8 +78,8 @@ description: "Improve your handwriting with Ophelia Inkwell's Calligraphy Worksh
 location: "Tombow Studios", 
 start_date: "2021-02-13", 
 end_date: "2021-02-13",
-start_time: "02:00:00",
-end_time: "04:00:00", 
+start_time: "18:00:00",
+end_time: "19:00:00", 
 user_id: oi.id, 
 category_id: crafting.id})
 
