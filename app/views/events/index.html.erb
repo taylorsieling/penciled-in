@@ -1,2 +1,13 @@
+<%= form_tag(events_path, method: :get, class: 'uk-align-right') do %>
+<%= text_field_tag(:search, params[:search], class: 'uk-input uk-form-small uk-form-width-medium') %>
+<%= submit_tag ("Search"), class: 'uk-button uk-button-default uk-button-small' %>
+<% end %>
+
 <h1> Upcoming Events </h1><br>
+
+<br>
+
 <%= render 'event' %>
+
+<br>
+

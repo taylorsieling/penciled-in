@@ -1,0 +1,14 @@
+<% @rsvps.is_attending.each do |r| %>
+
+            <div>
+                <a href="/rsvps/<%= r.id %>/edit" class="uk-display-block uk-card uk-card-body uk-card-default uk-link-toggle">
+                    <div class="uk-card-badge uk-label uk-label-warning"><%= r.event.category.name %></div>
+                    <div class="uk-margin-top">
+                        <h3 class="uk-card-title"><span class="uk-link-heading"><%= r.event.name %></span></h3>
+                        <p class="uk-text-meta uk-margin-remove-top"><%= r.event.start_date.strftime("%b %d, %Y") %> at <%= r.event.start_time.strftime(" %l:%M %p") %></time></p>
+                        <p><%= r.event.location %></p>
+                    </div>
+                </a>
+            </div>
+
+        <% end %>

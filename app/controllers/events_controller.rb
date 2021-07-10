@@ -1,12 +1,16 @@
 class EventsController < ApplicationController
 
     before_action :set_event, only: [:index, :show, :edit, :update, :destroy]
-    before_action :find_category, only: [:new, :create, :update]
+    before_action :find_category, only: [:new, :create, :update, :index]
     before_action :authorized_to_edit, only: [:edit, :update, :destroy]
     before_action :authorized, except: [:index, :show]
 
     def index
-        if params[:category_id] && @category
+        # byebug
+        if params[:search] 
+            @events = Event.where("name like ?", "%#{params[:search]}%")
+        elsif
+            params[:category_id] && @category
             @events = @category.events.ordered_by_date.future
         else
             @events = Event.all.ordered_by_date.future
@@ -75,7 +79,7 @@ class EventsController < ApplicationController
     end
 
     def event_params
-        params.require(:event).permit(:name, :description, :start_date, :end_date, :start_time, :end_time, :location, :category_id, category_attributes: [:name])
+        params.require(:event).permit(:name, :description, :start_date, :end_date, :start_time, :end_time, :location, :search, :category_id, category_attributes: [:name])
     end
 
     def find_category
